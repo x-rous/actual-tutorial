@@ -33,15 +33,17 @@ a{color:var(--blue)}
 .hero-lead{font-size:19px;color:rgba(255,255,255,.66);max-width:560px;font-weight:300;line-height:1.75;margin-bottom:32px}
 .hero-pills{display:flex;flex-wrap:wrap;gap:8px}
 .hero-pill{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.72);font-size:14px;padding:6px 14px;border-radius:20px}
+.hero-source{margin-top:14px;font-size:14px;line-height:1.6;color:rgba(255,255,255,.72)}
+.hero-source a{color:#93c5fd;text-decoration:underline;text-underline-offset:2px}
 
 /* ── PROGRESS NAV ── */
 .pnav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;overflow-x:auto;scrollbar-width:none}
 .pnav::-webkit-scrollbar{display:none}
 .pnav-inner{display:flex;max-width:990px;margin:0 auto;padding:0 16px}
-.pnav-btn{background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--ink3);padding:14px 16px;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;display:flex;align-items:center;gap:7px}
+.pnav-btn{background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:var(--ink3);padding:10px 12px;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;display:flex;align-items:center;gap:6px}
 .pnav-btn:hover{color:var(--ink)}
 .pnav-btn.active{color:var(--blue);border-bottom-color:var(--blue);font-weight:600}
-.pnav-step{font-size:12px;font-weight:700;color:var(--ink4);letter-spacing:.04em}
+.pnav-step{font-size:11px;font-weight:700;color:var(--ink4);letter-spacing:.04em}
 .pnav-btn.active .pnav-step{color:var(--blue)}
 .pnav-btn.done .pnav-step{color:var(--green)}
 .pnav-btn.done{color:var(--green)}
@@ -377,9 +379,9 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
       <span class="hero-pill"><span data-ar="٩ دروس">9 lessons</span></span>
       <span class="hero-pill"><span data-ar="٤٥ دقيقة تقريباً">~45 min total</span></span>
       <span class="hero-pill"><span data-ar="تعليم يبدأ بالمفهوم">Concept-first teaching</span></span>
-      <span class="hero-pill"><span data-ar="لقطات حقيقية من التطبيق">Real app screenshots</span></span>
       <span class="hero-pill"><span data-ar="مناسب من دون خبرة مسبقة">No prior knowledge needed</span></span>
     </div>
+    <p class="hero-source" data-ar='مبني على <a href="https://actualbudget.org/docs/" target="_blank" rel="noopener noreferrer">الوثائق الرسمية لـ Actual</a> حتى يكون الشرح قريباً من المصدر الأصلي.'>Based on the <a href="https://actualbudget.org/docs/" target="_blank" rel="noopener noreferrer">official Actual docs</a> so the tutorial stays close to the original source.</p>
   </div>
 </div>
 
@@ -494,10 +496,10 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
 
   <div class="next-bar">
     <div class="next-bar-info">
-      <p><span data-ar="الدرس التالي — ٠٢">Up next — Lesson 02</span></p>
+      <p><span data-en="Up next — Lesson 02" data-ar="الدرس التالي — ٠٢">Up next — Lesson 02</span></p>
       <strong><span data-ar="نوعا الميزانية: أيهما تختار؟">Two Budgeting Modes: Which One to Start With</span></strong>
     </div>
-    <button class="next-btn" type="button" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(1)">Next Lesson →</button>
+    <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(1)">Next Lesson →</button>
   </div>
 </div>
 
@@ -601,8 +603,8 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   </div>
 
   <div class="next-bar">
-    <div class="next-bar-info"><p><span data-ar="الدرس التالي — ٠٣">Up next — Lesson 03</span></p><strong id="l3-next-title" data-ar="بناء ميزانيتك — Envelope Budget">Building Your Budget — Envelope Budget</strong></div>
-    <button class="next-btn" type="button" data-ar-text="← الدرس التالي" onclick="go(2)"><span data-ar="الدرس التالي →">Next Lesson →</span></button>
+    <div class="next-bar-info"><p><span data-en="Up next — Lesson 03" data-ar="الدرس التالي — ٠٣">Up next — Lesson 03</span></p><strong id="l3-next-title" data-en="Building Your Budget — Envelope Budget" data-ar="بناء ميزانيتك — Envelope Budget">Building Your Budget — Envelope Budget</strong></div>
+    <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" onclick="go(2)"><span data-en="Next Lesson →" data-ar="الدرس التالي →">Next Lesson →</span></button>
   </div>
 </div>
 
@@ -815,8 +817,8 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
 
   <!-- SHARED NEXT BAR -->
   <div class="next-bar" style="margin-top:40px">
-    <div class="next-bar-info"><p><span data-ar="الدرس التالي — ٠٤">Up next — Lesson 04</span></p><strong><span data-ar="الحسابات: الإضافة والإدارة">Accounts: Adding and Managing Your Money</span></strong></div>
-    <button class="next-btn" type="button" data-ar-text="← الدرس التالي" onclick="go(3)"><span data-ar="الدرس التالي →">Next Lesson →</span></button>
+    <div class="next-bar-info"><p><span data-en="Up next — Lesson 04" data-ar="الدرس التالي — ٠٤">Up next — Lesson 04</span></p><strong><span data-en="Accounts: Adding and Managing Your Money" data-ar="الحسابات: الإضافة والإدارة">Accounts: Adding and Managing Your Money</span></strong></div>
+    <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" onclick="go(3)"><span data-en="Next Lesson →" data-ar="الدرس التالي →">Next Lesson →</span></button>
   </div>
 </div>
 
@@ -976,8 +978,8 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   </div>
 
   <div class="next-bar">
-    <div class="next-bar-info"><p><span data-ar="الدرس التالي — ٠٥">Up next — Lesson 05</span></p><strong><span data-ar="بطاقات الائتمان: الجزء الذي يُربك الجميع">Credit Cards: The Part Everyone Gets Wrong</span></strong></div>
-    <button class="next-btn" type="button" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(4)">Next Lesson →</button>
+    <div class="next-bar-info"><p><span data-en="Up next — Lesson 05" data-ar="الدرس التالي — ٠٥">Up next — Lesson 05</span></p><strong><span data-en="Credit Cards: The Part Everyone Gets Wrong" data-ar="بطاقات الائتمان: الجزء الذي يُربك الجميع">Credit Cards: The Part Everyone Gets Wrong</span></strong></div>
+    <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(4)">Next Lesson →</button>
   </div>
 </div>
 
@@ -1088,8 +1090,8 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   </div>
 
   <div class="next-bar">
-    <div class="next-bar-info"><p><span data-ar="الدرس التالي — ٠٦">Up next — Lesson 06</span></p><strong><span data-ar="المعاملات: إدخال البيانات في Actual">Transactions: Getting Data Into Actual</span></strong></div>
-    <button class="next-btn" type="button" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(5)">Next Lesson →</button>
+    <div class="next-bar-info"><p><span data-en="Up next — Lesson 06" data-ar="الدرس التالي — ٠٦">Up next — Lesson 06</span></p><strong><span data-en="Transactions: Getting Data Into Actual" data-ar="المعاملات: إدخال البيانات في Actual">Transactions: Getting Data Into Actual</span></strong></div>
+    <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(5)">Next Lesson →</button>
   </div>
 </div>
 
@@ -1183,8 +1185,8 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   </div>
 
   <div class="next-bar">
-    <div class="next-bar-info"><p><span data-ar="الدرس التالي — ٠٧">Up next — Lesson 07</span></p><strong><span data-ar="القواعد: دعِ Actual يعمل عنك">Rules: Let Actual Do the Work For You</span></strong></div>
-    <button class="next-btn" type="button" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(6)">Next Lesson →</button>
+    <div class="next-bar-info"><p><span data-en="Up next — Lesson 07" data-ar="الدرس التالي — ٠٧">Up next — Lesson 07</span></p><strong><span data-en="Rules: Let Actual Do the Work For You" data-ar="القواعد: دعِ Actual يعمل عنك">Rules: Let Actual Do the Work For You</span></strong></div>
+    <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(6)">Next Lesson →</button>
   </div>
 </div>
 
@@ -1292,8 +1294,8 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   </div>
 
   <div class="next-bar">
-    <div class="next-bar-info"><p><span data-ar="الدرس التالي — ٠٨">Up next — Lesson 08</span></p><strong><span data-ar="التقارير: ما الذي تُخبرك به بياناتك">Reports: Understanding What Your Data Is Telling You</span></strong></div>
-    <button class="next-btn" type="button" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(7)">Next Lesson →</button>
+    <div class="next-bar-info"><p><span data-en="Up next — Lesson 08" data-ar="الدرس التالي — ٠٨">Up next — Lesson 08</span></p><strong><span data-en="Reports: Understanding What Your Data Is Telling You" data-ar="التقارير: ما الذي تُخبرك به بياناتك">Reports: Understanding What Your Data Is Telling You</span></strong></div>
+    <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(7)">Next Lesson →</button>
   </div>
 </div>
 
@@ -1385,8 +1387,8 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   </div>
 
   <div class="next-bar">
-    <div class="next-bar-info"><p><span data-ar="الدرس التالي — ٠٩">Up next — Lesson 09</span></p><strong><span data-ar="نصائح وأسئلة ومسارك القادم">Tips, FAQ & Your Path Forward</span></strong></div>
-    <button class="next-btn" type="button" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(8)">Next Lesson →</button>
+    <div class="next-bar-info"><p><span data-en="Up next — Lesson 09" data-ar="الدرس التالي — ٠٩">Up next — Lesson 09</span></p><strong><span data-en="Tips, FAQ & Your Path Forward" data-ar="نصائح وأسئلة ومسارك القادم">Tips, FAQ & Your Path Forward</span></strong></div>
+    <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(8)">Next Lesson →</button>
   </div>
 </div>
 
