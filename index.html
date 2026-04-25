@@ -657,6 +657,48 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
         <p><span data-ar="انقر على عمود «المُخصَّص» بجانب كل فئة مصروف أو ادخار وأدخل المبلغ. ابدأ بالأهم مثل الإيجار والطعام والفواتير. إذا بقي مال لا تريد استخدامه هذا الشهر، استخدم Hold for Next Month بدلاً من إجبار نفسك على وضعه في فئة. هدفك أن يصل To Budget إلى صفر لأن كل ريال صار له قرار واضح: مُخصَّص الآن أو محفوظ للشهر القادم.">Click the <strong>Budgeted</strong> column next to each expense or saving category and enter an amount. Start with essentials like rent, food, and bills. If money remains that you do not want to use this month, use Hold for Next Month instead of forcing it into a category. Your goal is for To Budget to reach zero because every dollar has a clear decision: assigned now or held for next month.</span></p>
       </div>
 
+      <div class="concept" style="margin-top:18px">
+        <span class="concept-tag blue"><span data-ar="مفهوم">Concept</span></span>
+        <h2><span data-ar="الملخص الشهري: لوحة تحكم Envelope">The monthly summary: Envelope's scoreboard</span></h2>
+        <p><span data-ar="أعلى صفحة Envelope Budget يوضح لك شريط الملخص ماذا لديك فعلياً هذا الشهر: Available Funds، وما تم تجاوزه من الشهر الماضي، وما خصصته للشهر الحالي، وما قررت حفظه للشهر القادم. هذه الأرقام تُترجم في النهاية إلى To Budget أو Overbudget.">At the top of the Envelope Budget page, the summary bar shows what you actually have for this month: Available Funds, anything overspent from last month, what you have Budgeted for this month, and what you chose to Hold for next month. Those numbers roll up into To Budget or Overbudget.</span></p>
+        <div style="margin-top:16px;background:#fafaf8;border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 18px 16px">
+          <div style="display:grid;gap:10px">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span class="badge bg_">+</span>
+              <strong data-ar="المتاح فعلياً">Available Funds</strong>
+              <span style="font-variant-numeric:tabular-nums;font-weight:700;color:var(--green)">+$1,200</span>
+              <span style="color:var(--ink3);font-size:13px" data-ar="كم لديك لتوزعه هذا الشهر">what you have to allocate this month</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span class="badge br">−</span>
+              <strong data-ar="المتجاوز من الشهر الماضي">Overspent Last Month</strong>
+              <span style="font-variant-numeric:tabular-nums;font-weight:700;color:var(--red)">-$43</span>
+              <span style="color:var(--ink3);font-size:13px" data-ar="يقلل ما تستطيع توزيعه الآن">reduces what you can allocate now</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span class="badge bb">−</span>
+              <strong data-ar="المخصّص لهذا الشهر">Budgeted for This Month</strong>
+              <span style="font-variant-numeric:tabular-nums;font-weight:700;color:var(--blue)">-$900</span>
+              <span style="color:var(--ink3);font-size:13px" data-ar="ما خصصته للفئات هذا الشهر">what you assigned to categories this month</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span class="badge ba">−</span>
+              <strong data-ar="محفوظ للشهر القادم">For Next Month</strong>
+              <span style="font-variant-numeric:tabular-nums;font-weight:700;color:var(--amber)">-$200</span>
+              <span style="color:var(--ink3);font-size:13px" data-ar="مال احتفظت به للشهر القادم">money you intentionally held for next month</span>
+            </div>
+            <div style="margin-top:4px;padding-top:12px;border-top:1px solid var(--border);display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span style="font-size:22px;font-weight:800;color:var(--blue)">=</span>
+              <div>
+                <div style="font-weight:800;color:var(--ink)" data-ar="النتيجة: +$57 Remaining To Budget">Result: +$57 Remaining To Budget</div>
+                <div style="font-size:13px;color:var(--ink3)" data-ar="أكبر من صفر = To Budget متبقٍ | أقل من صفر = Overbudget">Above zero = remaining To Budget | Below zero = Overbudget</div>
+              </div>
+            </div>
+            <div style="margin-top:2px;font-size:13px;color:var(--ink3)" data-ar="<strong>مثال:</strong> ١٢٠٠ + ٤٣ − ٩٠٠ − ٢٠٠ = ٥٧">Example: 1,200 - 43 - 900 - 200 = 57</div>
+          </div>
+        </div>
+      </div>
+
       <!-- ENVELOPE MOCK TABLE -->
       <div class="bt" style="margin-top:16px">
         <div class="bt-bar"><div class="bt-dot" style="background:#ff5f57"></div><div class="bt-dot" style="background:#febc2e"></div><div class="bt-dot" style="background:#28c840"></div><span class="bt-lbl" data-ar="الميزانية — مارس ٢٠٢٥ (Envelope Mode) &nbsp;·&nbsp; To Budget: ٠ ريال ✓">Budget — March 2025 (Envelope Mode) &nbsp;·&nbsp; To Budget: $0 ✓</span></div>
