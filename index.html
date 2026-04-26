@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" id="root">
 <head>
 <meta charset="UTF-8">
@@ -667,16 +667,29 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
       <span class="concept-tag green"><span data-ar="جوهر Envelope mode">The core of Envelope Budget</span></span>
       <h2><span data-ar="«To Budget»: قرر ماذا تفعل بالمال المتاح">"To Budget": decide what to do with available money</span></h2>
       <p><span data-ar="في Envelope Budget لا تضع ميزانية للدخل المتوقع. عندما يصل الدخل فعلياً، يصبح Available Funds. بعدها تقرر: هل توزعه على فئات المصاريف والادخار هذا الشهر، أم تحتفظ بجزء منه للشهر القادم باستخدام Hold for Next Month؟">In Envelope Budget, you do not budget projected income. When income actually arrives, it becomes Available Funds. Then you decide: assign it to expense and saving categories this month, or hold part of it for next month with Hold for Next Month.</span></p>
-      <div class="call ci">
-        <span class="call-ic">🧮</span>
-        <div data-ar="<strong>حساب To Budget / Overbudget:</strong><br>Funds Available من الشهر السابق − Overspent Last Month − Budgeted for This Month − Funds Held for Next Month = To Budget / Overbudget."><strong>To Budget / Overbudget calculation:</strong><br>Funds Available from the previous month − Overspent Last Month − Budgeted for This Month − Funds Held for Next Month = To Budget / Overbudget.</div>
-      </div>
       <div class="how">
         <div class="how-title"><span data-ar="خطوة بخطوة">Step by step</span></div>
-        <p><span data-ar="انقر على عمود «المُخصَّص» بجانب كل فئة مصروف أو ادخار وأدخل المبلغ. ابدأ بالأهم مثل الإيجار والطعام والفواتير. إذا بقي مال لا تريد استخدامه هذا الشهر، استخدم Hold for Next Month بدلاً من إجبار نفسك على وضعه في فئة. هدفك أن يصل To Budget إلى صفر لأن كل ريال صار له قرار واضح: مُخصَّص الآن أو محفوظ للشهر القادم.">Click the <strong>Budgeted</strong> column next to each expense or saving category and enter an amount. Start with essentials like rent, food, and bills. If money remains that you do not want to use this month, use Hold for Next Month instead of forcing it into a category. Your goal is for To Budget to reach zero because every dollar has a clear decision: assigned now or held for next month.</span></p>
+        <p><span data-ar="انقر على عمود «المُخصَّص» بجانب كل فئة مصروف أو ادخار وأدخل المبلغ. ابدأ بالأهم مثل الإيجار والطعام والفواتير. إذا بقي مال لا تريد استخدامه هذا الشهر، يمكنك حفظه للشهر القادم. الهدف العملي هو أن يصل To Budget إلى صفر لأن كل ريال صار له قرار واضح.">Click the <strong>Budgeted</strong> column next to each expense or saving category and enter an amount. Start with essentials like rent, food, and bills. If money remains that you do not want to use this month, you can hold it for next month. The practical goal is for To Budget to reach zero because every dollar has a clear decision.</span></p>
       </div>
 
-      <div class="concept" style="margin-top:18px">
+      <!-- ENVELOPE MOCK TABLE -->
+      <div class="bt" style="margin-top:16px">
+        <div class="bt-bar"><div class="bt-dot" style="background:#ff5f57"></div><div class="bt-dot" style="background:#febc2e"></div><div class="bt-dot" style="background:#28c840"></div><span class="bt-lbl" data-ar="الميزانية — مارس ٢٠٢٥ (Envelope Mode) &nbsp;·&nbsp; To Budget: ٠ ريال ✓">Budget — March 2025 (Envelope Mode) &nbsp;·&nbsp; To Budget: $0 ✓</span></div>
+        <div style="padding:4px 0">
+          <div class="bt-row bt-h"><span><span data-ar="الفئة">Category</span></span><span class="bn"><span data-ar="المُخصَّص">Budgeted</span></span><span class="bn"><span data-ar="المُنفَق">Spent</span></span><span class="bn"><span data-ar="الرصيد">Balance</span></span></div>
+          <div class="bt-row bt-g"><span>🏠 <span data-ar="السكن">Housing</span></span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-ar="الإيجار">Rent</span></span><span class="bn" data-ar="١,٥٠٠ ريال">$1,500</span><span class="bn" data-ar="١,٥٠٠ ريال">$1,500</span><span class="bn" data-ar="٠ ريال">$0</span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-ar="الكهرباء">Electricity</span></span><span class="bn" data-ar="١٢٠ ريال">$120</span><span class="bn" data-ar="٩٨ ريال">$98</span><span class="bn p" data-ar="٢٢ ريال">$22</span></div>
+          <div class="bt-row bt-g"><span>🍽️ <span data-ar="الطعام">Food</span></span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-ar="البقالة">Groceries</span></span><span class="bn" data-ar="٥٠٠ ريال">$500</span><span class="bn" data-ar="٤١٢ ريال">$412</span><span class="bn p" data-ar="٨٨ ريال">$88</span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-ar="المطاعم">Eating Out</span></span><span class="bn" data-ar="٢٠٠ ريال">$200</span><span class="bn" data-ar="٢٤٣ ريال">$243</span><span class="bn n" data-ar="−٤٣ ريال ⚠">−$43 ⚠</span></div>
+          <div class="bt-row bt-g"><span>🟢 <span data-ar="الادخار">Savings</span></span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-ar="صندوق الطوارئ">Emergency Fund</span></span><span class="bn" data-ar="٣٠٠ ريال">$300</span><span class="bn" data-ar="٠ ريال">$0</span><span class="bn p" data-ar="٣٠٠ ريال">$300</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept" style="margin-top:18px">
         <span class="concept-tag blue"><span data-ar="مفهوم">Concept</span></span>
         <h2><span data-ar="الملخص الشهري: لوحة تحكم Envelope">The monthly summary: Envelope's scoreboard</span></h2>
         <p><span data-ar="أعلى صفحة Envelope Budget يوضح لك شريط الملخص ماذا لديك فعلياً هذا الشهر: Available Funds، وما تم تجاوزه من الشهر الماضي، وما خصصته للشهر الحالي، وما قررت حفظه للشهر القادم. هذه الأرقام تُترجم في النهاية إلى To Budget أو Overbudget.">At the top of the Envelope Budget page, the summary bar shows what you actually have for this month: Available Funds, anything overspent from last month, what you have Budgeted for this month, and what you chose to Hold for next month. Those numbers roll up into To Budget or Overbudget.</span></p>
@@ -713,32 +726,16 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
                 <div style="font-size:13px;color:var(--ink3)" data-ar="أكبر من صفر = To Budget متبقٍ | أقل من صفر = Overbudget">Above zero = remaining To Budget | Below zero = Overbudget</div>
               </div>
             </div>
-            <div style="margin-top:2px;font-size:13px;color:var(--ink3)" data-ar="<strong>مثال:</strong> ١٢٠٠ + ٤٣ − ٩٠٠ − ٢٠٠ = ٥٧">Example: 1,200 - 43 - 900 - 200 = 57</div>
+            <div style="margin-top:2px;font-size:13px;color:var(--ink3)" data-ar="<strong>مثال:</strong> ١٢٠٠ − ٤٣ − ٩٠٠ − ٢٠٠ = ٥٧">Example: 1,200 - 43 - 900 - 200 = 57</div>
           </div>
         </div>
+        <div class="tip"><span class="tip-ic">💡</span><div data-ar="إذا أردت حفظ المال للشهر القادم، انقر على مبلغ <strong>To Budget</strong> واختر <strong>Hold for next month</strong>. اضغط <kbd>Enter</kbd> لحفظ كل المال المتاح، أو أدخل مبلغاً مخصصاً. هذا اختياري: يمكنك ترك To Budget كما هو، لكن المال المحفوظ يخرج من هذا الشهر ويظهر في To Budget للشهر القادم.">To hold money for next month, click the <strong>To Budget</strong> amount and choose <strong>Hold for next month</strong>. Press <kbd>Enter</kbd> to hold all available money, or enter a custom amount. This is optional: you can leave To Budget alone, but held money leaves this month and appears in next month's To Budget.</div></div>
       </div>
-
-      <!-- ENVELOPE MOCK TABLE -->
-      <div class="bt" style="margin-top:16px">
-        <div class="bt-bar"><div class="bt-dot" style="background:#ff5f57"></div><div class="bt-dot" style="background:#febc2e"></div><div class="bt-dot" style="background:#28c840"></div><span class="bt-lbl" data-ar="الميزانية — مارس ٢٠٢٥ (Envelope Mode) &nbsp;·&nbsp; To Budget: ٠ ريال ✓">Budget — March 2025 (Envelope Mode) &nbsp;·&nbsp; To Budget: $0 ✓</span></div>
-        <div style="padding:4px 0">
-          <div class="bt-row bt-h"><span><span data-ar="الفئة">Category</span></span><span class="bn"><span data-ar="المُخصَّص">Budgeted</span></span><span class="bn"><span data-ar="المُنفَق">Spent</span></span><span class="bn"><span data-ar="الرصيد">Balance</span></span></div>
-          <div class="bt-row bt-g"><span>🏠 <span data-ar="السكن">Housing</span></span></div>
-          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-ar="الإيجار">Rent</span></span><span class="bn" data-ar="١,٥٠٠ ريال">$1,500</span><span class="bn" data-ar="١,٥٠٠ ريال">$1,500</span><span class="bn" data-ar="٠ ريال">$0</span></div>
-          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-ar="الكهرباء">Electricity</span></span><span class="bn" data-ar="١٢٠ ريال">$120</span><span class="bn" data-ar="٩٨ ريال">$98</span><span class="bn p" data-ar="٢٢ ريال">$22</span></div>
-          <div class="bt-row bt-g"><span>🍽️ <span data-ar="الطعام">Food</span></span></div>
-          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-ar="البقالة">Groceries</span></span><span class="bn" data-ar="٥٠٠ ريال">$500</span><span class="bn" data-ar="٤١٢ ريال">$412</span><span class="bn p" data-ar="٨٨ ريال">$88</span></div>
-          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-ar="المطاعم">Eating Out</span></span><span class="bn" data-ar="٢٠٠ ريال">$200</span><span class="bn" data-ar="٢٤٣ ريال">$243</span><span class="bn n" data-ar="−٤٣ ريال ⚠">−$43 ⚠</span></div>
-          <div class="bt-row bt-g"><span>🟢 <span data-ar="الادخار">Savings</span></span></div>
-          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-ar="صندوق الطوارئ">Emergency Fund</span></span><span class="bn" data-ar="٣٠٠ ريال">$300</span><span class="bn" data-ar="٠ ريال">$0</span><span class="bn p" data-ar="٣٠٠ ريال">$300</span></div>
-        </div>
-      </div>
-    </div>
 
     <!-- ENVELOPE: OVERSPENDING -->
     <div class="concept">
       <span class="concept-tag amber"><span data-ar="ماذا تفعل عند التجاوز">When a category goes red in Envelope mode</span></span>
-      <h2><span data-ar="تجاوزت فئة؟ يجب نقل مال من مكان آخر">Overspent a category? You must move money from elsewhere</span></h2>
+      <h2><span data-ar="تجاوزت فئة؟ غطِّها الآن أو اقبل أثرها لاحقاً">Overspent a category? Cover it now or accept the impact later</span></h2>
       <p><span data-ar="هذه قوة Envelope mode. عند تجاوز فئة، لديك خياران واضحان: انقل مالاً من فئة أخرى لتغطية التجاوز، أو اترك التجاوز يؤثر على To Budget في الشهر القادم. بهذا تعرف أثر الإنفاق قبل أن تفاجأ به لاحقاً.">This is the heart and power of Envelope mode. When a category is overspent, you have two clear options: move money from another category to cover it, or let the overspending reduce next month's To Budget. This makes the impact visible before it surprises you later.</span></p>
       <div class="flow" style="margin-top:16px">
         <div class="fn" style="background:var(--red-bg);border-color:var(--red-border)" data-ar="المطاعم: مخصص ٢٠٠ ريال<br><small>المنفق: ٢٤٣ ريال | الرصيد: <strong style=&quot;color:var(--red)&quot;>−٤٣ ريال</strong></small>"><span data-ar="المطاعم: مُخصَّص $200">Eating Out budgeted: $200</span><br><small><span data-ar="المُنفَق: $243 | الرصيد:">Spent: $243 | Balance:</span> <strong style="color:var(--red)">−$43</strong></small></div>
@@ -762,7 +759,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
       <p><span data-ar="إذا أنفقت أقل من الميزانية في فئة ما، الفائض ينتقل تلقائياً للشهر القادم ويُضاف لرصيد تلك الفئة. على مدى أشهر، فئات مثل «صيانة السيارة» تبني رصيداً كافياً لتغطية الإصلاحات الكبيرة دون أزمات.">If you spend less than budgeted in a category, the surplus rolls forward automatically to next month and adds to that category's balance. Over months, categories like "Car Maintenance" build up enough to cover big repairs without any crisis.</span></p>
       <div class="call cs">
         <span class="call-ic">✅</span>
-        <div><strong><span data-ar="الإيقاع الشهري في Envelope mode:">The monthly Envelope rhythm:</span></strong> <span data-ar="عندما تصل الأموال، وزّع المال المتاح على الفئات أو استخدم Hold for Next Month حتى يصل To Budget للصفر. أسبوعياً استورد المعاملات وصنّفها. إذا تجاوزت فئة، موّلها من فئة أخرى أو اقبل أثرها على الشهر القادم. في نهاية الشهر راجع التقارير.">When money arrives, assign available funds to categories or use Hold for Next Month until To Budget reaches zero. Weekly, import and categorize transactions. If a category overspends, fund it from another category or accept its impact on next month. At month end, review Reports.</span></div>
+        <div><strong><span data-ar="الإيقاع الشهري في Envelope mode:">The monthly Envelope rhythm:</span></strong> <span data-ar="عندما تصل الأموال، وزّع المال المتاح على الفئات أو استخدم Hold for Next Month حتى يصل To Budget للصفر. أسبوعياً استورد المعاملات وصنّفها. إذا تجاوزت فئة، موّلها من فئة أخرى أو اقبل أثرها على الشهر القادم. عند بداية شهر جديد، أنشئ ميزانية جديدة أو انسخ ميزانية الشهر السابق وعدّلها بما تعلمته. في نهاية الشهر راجع التقارير.">When money arrives, assign available funds to categories or use Hold for Next Month until To Budget reaches zero. Weekly, import and categorize transactions. If a category overspends, fund it from another category or accept its impact on next month. When a new month starts, create a new budget or copy last month's budget and adjust what you learned. At month end, review Reports.</span></div>
       </div>
     </div>
 
