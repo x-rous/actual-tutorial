@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" id="root">
 <head>
 <meta charset="UTF-8">
@@ -24,17 +24,18 @@ img{max-width:100%;display:block}
 a{color:var(--blue)}
 
 /* ── HERO ── */
-.hero{background:#0c1426;color:#fff;padding:64px 24px 56px;position:relative;overflow:hidden}
+.hero{background:#0c1426;color:#fff;padding:clamp(28px,4vh,44px) 24px;position:relative;overflow:hidden;min-height:30vh;display:flex;align-items:center}
 .hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 80% 50%,rgba(37,99,235,.18) 0%,transparent 70%);pointer-events:none}
-.hi{max-width:990px;margin:0 auto;position:relative;z-index:1}
-.hero-kicker{display:inline-flex;align-items:center;gap:6px;background:rgba(37,99,235,.2);border:1px solid rgba(37,99,235,.4);color:#93c5fd;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:22px}
-.hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(30px,5.5vw,52px);font-weight:800;line-height:1.1;letter-spacing:-.015em;margin-bottom:16px}
+.hi{max-width:990px;margin:0 auto;position:relative;z-index:1;width:100%}
+.hero-kicker{display:inline-flex;align-items:center;gap:6px;background:rgba(37,99,235,.2);border:1px solid rgba(37,99,235,.4);color:#93c5fd;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:14px}
+.hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(28px,4.2vw,44px);font-weight:800;line-height:1.08;letter-spacing:-.015em;margin-bottom:10px}
 .hero h1 span{color:#60a5fa}
-.hero-lead{font-size:19px;color:rgba(255,255,255,.66);max-width:560px;font-weight:300;line-height:1.75;margin-bottom:32px}
-.hero-pills{display:flex;flex-wrap:wrap;gap:8px}
-.hero-pill{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.72);font-size:14px;padding:6px 14px;border-radius:20px}
-.hero-source{margin-top:14px;font-size:14px;line-height:1.6;color:rgba(255,255,255,.72)}
+.hero-lead{font-size:17px;color:rgba(255,255,255,.68);max-width:620px;font-weight:300;line-height:1.6;margin-bottom:18px}
+.hero-pills{display:flex;flex-wrap:wrap;gap:7px}
+.hero-pill{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.72);font-size:13px;padding:5px 12px;border-radius:20px}
+.hero-source{margin-top:10px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.72)}
 .hero-source a{color:#93c5fd;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:640px){.hero{min-height:auto;padding:32px 20px 28px}.hero h1{font-size:30px}.hero-lead{font-size:16px;line-height:1.65}}
 
 /* ── PROGRESS NAV ── */
 .pnav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;overflow-x:auto;scrollbar-width:none}
@@ -316,7 +317,7 @@ body.ar .img-fallback {
   line-height: 2;
   font-size-adjust: none;
 }
-body.ar .hero-lead { font-size: 20px; line-height: 2; }
+body.ar .hero-lead { font-size: 18px; line-height: 1.75; }
 body.ar .opener-desc { font-size: 18px; line-height: 2; }
 body.ar .concept p,
 body.ar .how p { font-size: 16px; line-height: 1.95; }
@@ -364,6 +365,39 @@ body.ar .concept [style*="font-size:13px"],
 body.ar .concept [style*="font-size:14px"],
 body.ar .g2 .mini-card p,
 body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !important; }
+
+
+/* ── TRANSFER CATEGORY TABLE: COMPACT SINGLE-LINE ROWS ── */
+.transfer-category-table {
+  width: 100%;
+  font-size: 12.5px;
+  line-height: 1.35;
+  table-layout: auto;
+}
+.transfer-category-table th,
+.transfer-category-table td {
+  font-size: 12.5px !important;
+  line-height: 1.35 !important;
+  padding: 8px 10px !important;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.transfer-category-table td:nth-child(3) {
+  font-size: 12px !important;
+}
+body.ar .transfer-category-table th,
+body.ar .transfer-category-table td {
+  font-size: 12.5px !important;
+  line-height: 1.45 !important;
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .transfer-category-table {
+    display: block !important;
+    overflow-x: auto;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -394,7 +428,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
     <button class="pnav-btn" type="button" onclick="go(3)"><span class="pnav-step"><span data-ar="٠٤">04</span></span> <span data-ar="الحسابات">Accounts</span></button>
     <button class="pnav-btn" type="button" onclick="go(4)"><span class="pnav-step"><span data-ar="٠٥">05</span></span> <span data-ar="بطاقات الائتمان">Credit Cards</span></button>
     <button class="pnav-btn" type="button" onclick="go(5)"><span class="pnav-step"><span data-ar="٠٦">06</span></span> <span data-ar="المعاملات">Transactions</span></button>
-    <button class="pnav-btn" type="button" onclick="go(6)"><span class="pnav-step"><span data-ar="٠٧">07</span></span> <span data-ar="القواعد">Rules</span></button>
+    <button class="pnav-btn" type="button" onclick="go(6)"><span class="pnav-step"><span data-ar="٠٧">07</span></span> <span data-ar="الأتمتة">Automation</span></button>
     <button class="pnav-btn" type="button" onclick="go(7)"><span class="pnav-step"><span data-ar="٠٨">08</span></span> <span data-ar="التقارير">Reports</span></button>
     <button class="pnav-btn" type="button" onclick="go(8)"><span class="pnav-step"><span data-ar="٠٩">09</span></span> <span data-ar="نصائح وأسئلة">Tips & FAQ</span></button>
   </div>
@@ -411,7 +445,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
       <span class="opener-time"><span data-ar="⏱ ٥ دقائق">⏱ 5 min</span></span>
     </div>
     <h1><span data-ar="مرحباً — ابدأ ببساطة">Welcome — Start Simple</span></h1>
-    <p class="opener-desc"><span data-ar="Actual Budget يساعدك على فهم أموالك والتحكم بها بدون تعقيد أو حبس بياناتك داخل خدمة سحابية. في هذا الدرس ستأخذ الصورة العامة فقط: ما هو Actual، لماذا قد يناسبك، وكيف ستسير الدورة خطوة بخطوة. سنوضح أيضاً خيارين للتشغيل بشكل بسيط: Desktop / Without Server للبداية السريعة، وWith Server للمزامنة لاحقاً.">Actual Budget helps you understand and control your money without unnecessary complexity or locking your data inside a cloud service. In this lesson, you only need the big picture: what Actual is, why it may be useful, and how this course will guide you step by step. You will also see the two setup choices in simple terms: Desktop / Without Server for a quick start, and With Server for sync later.</span></p>
+    <p class="opener-desc"><span data-ar="Actual Budget تطبيق مالي خاص ومفتوح المصدر ومحلي أولاً. هذا الدرس يشرح ما هو، ولماذا يستحق وقتك، وكيف ستسير هذه الدورة حتى تعرف دائماً أين أنت.">Actual Budget is a private, open-source, local-first finance app. This lesson explains what it is, why it's worth your time, and exactly how this course is structured so you always know where you are.</span></p>
   </div>
 
   <div class="learn-box">
@@ -419,7 +453,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
     <div class="learn-items">
       <div class="learn-item"><span data-ar="ما هو Actual Budget وما المشكلة التي يحلها">Know what Actual Budget is and what problem it solves</span></div>
       <div class="learn-item"><span data-ar="ما معنى ملف الميزانية في Actual">Understand the idea of an Actual budget file</span></div>
-      <div class="learn-item"><span data-ar="الفرق بين Desktop / Without Server و With Server">Know the difference between Desktop / Without Server and With Server</span></div>
+      <div class="learn-item"><span data-ar="الفرق بين تطبيق سطح المكتب والخادم الذاتي أو السحابي">Know the difference between the Desktop Application and a Self-Hosted / Cloud Server</span></div>
       <div class="learn-item"><span data-ar="خريطة واضحة لبقية الدورة">Have a clear map for the rest of the course</span></div>
     </div>
   </div>
@@ -427,12 +461,12 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   <!-- CONCEPT 1 -->
   <div class="concept">
     <span class="concept-tag blue"><span data-ar="مفهوم">Concept</span></span>
-    <h2><span data-ar="ما هو Actual Budget؟">What is Actual Budget?</span></h2>
-    <p data-ar="Actual Budget هو تطبيق ميزانية مجاني ومفتوح المصدر. الفكرة بسيطة: تجمع حساباتك، معاملاتك، التصنيفات، والتقارير في مكان واحد حتى ترى أين تذهب أموالك وما الذي تستطيع إنفاقه بثقة.">Actual Budget is a free, open-source budgeting app. The idea is simple: it brings your accounts, transactions, categories, and reports into one place so you can see where your money goes and what you can safely spend.</p>
-    <p data-ar="الأهم أنه محلي أولاً. هذا يعني أن بياناتك تبقى في ملف ميزانية تملكه أنت، ويمكنك تصديرها إذا احتجت. لست مطالباً بالاشتراك في خدمة معينة حتى تبدأ، ولا تحتاج لفهم كل الخيارات التقنية من اليوم الأول.">The important part is that it is local-first. Your data lives in a budget file that you own, and you can export it if you need to. You are not forced into a specific subscription to get started, and you do not need to understand every technical option on day one.</p>
+    <h2><span data-ar="ما الذي يميّز Actual Budget؟">What makes Actual Budget different?</span></h2>
+    <p data-ar="معظم تطبيقات الميزانية خدمات سحابية؛ بياناتك البنكية وسجل معاملاتك تكون على خوادم شركة أخرى. Actual مختلف لأنه محلي أولاً ومفتوح المصدر ويمكن تشغيله بدون خدمة إلزامية. يمكنك إبقاء ميزانيتك على جهازك، أو تشغيل خادم تتحكم فيه عندما تحتاج المزامنة والوصول من عدة أجهزة.">Most budgeting apps are cloud services - your bank details and transaction history live on a company's servers. Actual is different because it is local-first, open-source, and does not require a mandatory hosted service. You can keep your budget on your own device, or run a server you control when you need sync and multi-device access.</p>
+    <p data-ar="Actual مجاني ومفتوح المصدر. يمكنك تشغيله كتطبيق سطح مكتب على جهازك للبدء بسرعة، أو تشغيل خادم منزلي، أو استخدام مزود بسيط مثل <a href=&quot;https://www.pikapods.com/pods?run=actual&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>PikaPods</a> مقابل بضعة دولارات شهرياً. عند استخدام الخادم، تعمل الواجهة من المتصفح والهاتف وتصبح المزامنة أسهل.">Actual is free and open-source. You can run it as a desktop app on your own computer for the quickest start, on a home server, or through a simple provider like <a href="https://www.pikapods.com/pods?run=actual" target="_blank" rel="noopener noreferrer">PikaPods</a> for a few dollars a month. When you use a server, the web interface works in your browser and on your phone, and sync becomes easier.</p>
     <div class="how">
       <div class="how-title"><span data-ar="كيف يبدو هذا في التطبيق">In Actual this looks like…</span></div>
-      <p data-ar="عند فتح Actual لأول مرة، تنشئ ملف ميزانية. داخل هذا الملف ستجد الحسابات، المعاملات، التصنيفات، والجداول والتقارير. في البداية فكّر فيه كدفتر مالي منظم: كل شيء في مكان واحد، ويمكنك تطويره تدريجياً.">When you first open Actual, you create a budget file. That file contains your accounts, transactions, categories, schedules, and reports. At the beginning, think of it like an organized financial notebook: everything in one place, and you can improve it gradually.</p>
+      <p data-ar="عند فتح Actual لأول مرة، تنشئ «ملف ميزانية». كل شيء - الحسابات، المعاملات، التصنيفات، والتقارير - يكون داخل هذا الملف. يمكن أن يبقى الملف محلياً على جهازك، أو تتم مزامنته بين أجهزتك عند استخدام خادم. وإذا قررت التوقف عن استخدام Actual، تصدّر بياناتك وتبقى ملكك بالكامل.">When you first open Actual, you create a "budget file." Everything - your accounts, transactions, categories, and reports - lives in that file. It can stay local on your device, or sync across devices when you use a server. If you ever want to stop using Actual, you export your data and you own it completely.</p>
     </div>
   </div>
 
@@ -440,36 +474,37 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   <div class="concept">
     <span class="concept-tag amber"><span data-ar="التثبيت">Installation</span></span>
     <h2><span data-ar="التثبيت: اختر أحد مسارين">Installation: choose one of two paths</span></h2>
-    <p data-ar="Actual يتكوّن من جزأين: <strong>client</strong> وهو التطبيق الذي تستخدمه، و<strong>server</strong> وهو الخيار الذي يضيف المزامنة والوصول من أجهزة أخرى. لا تحتاج إلى خادم كي تبدأ، لذلك لا تجعل التثبيت يعطلك عن التعلّم.">Actual has two parts: the <strong>client</strong>, which is the app you use, and the <strong>server</strong>, which adds sync and access from other devices. You do not need a server to start, so do not let installation slow down your learning.</p>
+    <p data-ar="Actual يتكوّن من جزأين: <strong>client</strong> وهو التطبيق الذي تستخدمه، و<strong>server</strong> وهو الجزء الذي يضيف المزامنة، وBank Sync، والوصول من المتصفح، وAPI. تطبيق سطح المكتب هو أسهل طريقة للبدء؛ والخادم الذاتي أو السحابي أفضل عندما تريد أن يكون Actual متاحاً عبر عدة أجهزة.">Actual has two parts: the <strong>client</strong>, which is the app you use, and the <strong>server</strong>, which adds sync, Bank Sync, browser access, and API access. The Desktop Application is the easiest way to start; a self-hosted or cloud server is better when you want Actual available across devices.</p>
 
     <div class="g2" style="margin-top:16px">
       <div class="mini-card">
-        <div class="mini-card-title" data-ar="Desktop / بدون خادم">Desktop / Without Server</div>
-        <p style="font-size:13px;color:var(--ink2)" data-ar="أفضل بداية لمعظم المبتدئين: نزّل تطبيق سطح المكتب، أنشئ ملف ميزانية، وابدأ على جهاز واحد. هذا يكفي لتعلّم الحسابات، التصنيفات، المعاملات، الميزانية، والتقارير.">Best first step for most beginners: download the desktop app, create a budget file, and start on one computer. This is enough to learn accounts, categories, transactions, budgeting, and reports.</p>
+        <div class="mini-card-title" data-ar="تطبيق سطح المكتب (مع خادم محلي اختياري)">Desktop Application (with Optional Local Server)</div>
+        <p style="font-size:13px;color:var(--ink2)" data-ar="أسهل نقطة بداية لمعظم المبتدئين: نزّل تطبيق سطح المكتب لنظام Windows أو Mac، أنشئ ميزانية، وابدأ بدون Docker أو استضافة أو إعداد سحابي.">Easiest starting point for most beginners: download the desktop app for Windows or Mac, create a budget, and start without Docker, hosting, or cloud setup.</p>
         <p style="font-size:13px;margin-top:10px"><a href="https://github.com/actualbudget/actual/releases" target="_blank" rel="noopener noreferrer" data-ar="تحميل تطبيق سطح المكتب من GitHub">Download the desktop app from GitHub</a></p>
         <ul class="plain" style="font-size:13px;margin-top:10px">
-          <li data-ar="لا تحتاج إلى استضافة أو Docker أو إعداد خادم">No hosting, Docker, or server setup needed</li>
-          <li data-ar="الميزانية، التقارير، الجداول، واستيراد الملفات تعمل">Budgeting, reports, schedules, and file import work</li>
-          <li data-ar="يدعم الاستخدام بدون اتصال ونسخاً احتياطية تلقائية">Supports offline use and automated backups</li>
-          <li data-ar="القيود: لا توجد مزامنة حقيقية بين الأجهزة، ولا Bank Sync أو API">Limit: no real device sync, Bank Sync, or API access</li>
+          <li data-ar="مناسب لتعلّم Actual والبدء باستخدام التطبيق بسرعة كبيرة">Good for learning Actual and getting started quickly</li>
+          <li data-ar="يعمل بدون اتصال ويدعم نسخاً احتياطية عبر تصدير/استيراد ملف الميزانية">Works offline and supports budget file export/import</li>
+          <li data-ar="يمكنه تشغيل خادم Actual محلي على جهازك اختيارياً لتفعيل Bank Sync">Can optionally run a local server to enable Bank Sync.</li>
+          <li data-ar="الحد: لا يمكنك الوصول إلى التطبيق عن بُعد أو من هاتفك">Limit: you cannot access the app remotely or from your phone</li>
         </ul>
       </div>
       <div class="mini-card" style="border-color:var(--green-border);background:var(--green-bg)">
-        <div class="mini-card-title" style="color:var(--green)" data-ar="With Server / مع خادم">With Server</div>
-        <p style="font-size:13px;color:#166534" data-ar="هذا هو المسار الأفضل عندما تريد استخدام Actual كنظام يومي من أكثر من جهاز: الهاتف، المتصفح، أو أكثر من كمبيوتر. يمكنك تشغيل الخادم بنفسك، أو استخدام خيار مستضاف مثل PikaPods.">This is the better path when you want Actual as a daily system across devices: phone, browser, or more than one computer. You can self-host the server, or use a hosted option like PikaPods.</p>
+        <div class="mini-card-title" style="color:var(--green)" data-ar="خادم ذاتي أو سحابي">Self-Hosted / Cloud Server</div>
+        <p style="font-size:13px;color:#166534" data-ar="أفضل إعداد طويل المدى للوصول الموثوق عن بُعد من الهاتف أو المتصفح أو أي مكان. يمكنك استضافته بنفسك، أو استخدام خيار مستضاف مثل PikaPods.">Best long-term setup for reliable remote web access from your phone, browser, or anywhere. You can self-host it, or use a hosted option such as PikaPods.</p>
         <p style="font-size:13px;margin-top:10px"><a href="https://actualbudget.org/docs/install/pikapods" target="_blank" rel="noopener noreferrer" data-ar="تشغيل Actual مع PikaPods">Run Actual with PikaPods</a></p>
         <ul class="plain" style="font-size:13px;margin-top:10px">
-          <li data-ar="مزامنة الميزانية بين الأجهزة">Sync your budget between devices</li>
-          <li data-ar="فتح Actual من الهاتف أو المتصفح">Open Actual from phone or browser</li>
-          <li data-ar="استخدام Bank Sync عند توفر الدعم في بلدك">Use Bank Sync where supported in your country</li>
-          <li data-ar="استخدام Actual API أو ربط تطبيق سطح المكتب بالخادم">Use the Actual API or connect the desktop app to your server</li>
+          <li data-ar="مزامنة ميزانيتك بين الأجهزة">Sync your budget between devices</li>
+          <li data-ar="الوصول إلى Actual من المتصفح أو متصفح الهاتف/PWA">Access Actual from browser or phone browser/PWA</li>
+          <li data-ar="استخدام Bank Sync عند توفر الدعم وإكمال الإعداد">Use Bank Sync where supported and configured</li>
+          <li data-ar="استخدام Actual API والتكاملات">Use the Actual API and integrations</li>
+          <li data-ar="ربط تطبيق سطح المكتب بخادمك">Connect the desktop app to your server</li>
         </ul>
       </div>
     </div>
 
     <div class="call cs" style="margin-top:14px">
       <span class="call-ic">✅</span>
-      <div data-ar="<strong>الخلاصة العملية:</strong> إذا كنت جديداً، ابدأ بـ Desktop / بدون خادم. انتقل إلى With Server عندما تحتاج المزامنة أو الهاتف أو Bank Sync. إذا لم تكن مرتاحاً للأوامر التقنية، PikaPods هو أبسط خيار خادم مستضاف."><strong>Practical takeaway:</strong> if you are new, start with Desktop / Without Server. Move to With Server when you need sync, phone access, or Bank Sync. If you do not want command-line setup, PikaPods is the simplest hosted-server option.</div>
+      <div data-ar="<strong>الخلاصة العملية:</strong> ابدأ بتطبيق سطح المكتب إذا أردت أسهل بداية. تعلّم Actual محلياً أولاً، ثم انقل ميزانيتك لاحقاً إلى خادم ذاتي أو سحابي عبر تصدير ملف الميزانية واستيراده. اختر الخادم عندما تحتاج وصولاً موثوقاً من عدة أجهزة، أو Bank Sync حيث تكون مدعومة، أو API access. إذا كنت لا تريد التعامل مع سطر الأوامر، فإن PikaPods هو أبسط خيار مستضاف."><strong>Practical takeaway:</strong> start with the desktop app if you want the easiest setup. Learn Actual locally first, then move your budget later to a self-hosted or cloud server by exporting and importing your budget file. Choose a server when you need reliable access from multiple devices, Bank Sync where supported, or API access. If you do not want to use the command line, PikaPods is the simplest hosted option.</div>
     </div>
   </div>
 
@@ -541,7 +576,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
 
   <div class="next-bar">
     <div class="next-bar-info">
-      <p><span data-en="Up next — Lesson 02" data-ar="الدرس التالي — ٠٢">Up next — Lesson 02</span></p>
+      <p><span data-en="Up next - Lesson 02" data-ar="الدرس التالي - ٠٢">Up next - Lesson 02</span></p>
       <strong><span data-ar="نوعا الميزانية: أيهما تختار؟">Two Budgeting Modes: Which One to Start With</span></strong>
     </div>
     <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(1)">Next Lesson →</button>
@@ -558,7 +593,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
       <span class="opener-time"><span data-ar="⏱ ٧ دقائق">⏱ 7 min</span></span>
     </div>
     <h1><span data-ar="نوعا الميزانية — اختر أسلوبك">Two Budgeting Modes — Choose Yours</span></h1>
-    <p class="opener-desc"><span data-ar="Actual يقدّم طريقتين صحيحتين للميزانية. Envelope هو الوضع الافتراضي والمقترح من فريق Actual للتحكم في النقد المتاح، وTracking هو أسلوب تقليدي أخف لمن يريد أهداف دخل ومصاريف ومتابعة الانحراف عنها. اختر الأسلوب الذي يناسب وضعك — سيتكيّف الدرس التالي تلقائياً.">Actual offers two valid budgeting workflows. Envelope is Actual's default and recommended cash-allocation method, while Tracking is a lighter traditional forecast workflow for income and expense targets. Choose the workflow that fits your situation — Lesson 03 will automatically adapt.</span></p>
+    <p class="opener-desc"><span data-ar="Actual يقدّم طريقتين صحيحتين للميزانية. Envelope هو الوضع الافتراضي والمقترح من فريق Actual للتحكم في النقد المتاح، وTracking هو أسلوب تقليدي أخف لمن يريد أهداف دخل ومصاريف ومتابعة الانحراف عنها. اختر الأسلوب الذي يناسب وضعك - سيتكيّف الدرس التالي تلقائياً.">Actual offers two valid budgeting workflows. Envelope is Actual's default and recommended cash-allocation method, while Tracking is a lighter traditional forecast workflow for income and expense targets. Choose the workflow that fits your situation - Lesson 03 will automatically adapt.</span></p>
   </div>
 
   <div class="learn-box">
@@ -657,7 +692,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   </div>
 
   <div class="next-bar">
-    <div class="next-bar-info"><p><span data-en="Up next — Lesson 03" data-ar="الدرس التالي — ٠٣">Up next — Lesson 03</span></p><strong id="l3-next-title" data-en="Building Your Budget — Envelope Budget" data-ar="بناء ميزانيتك — Envelope Budget">Building Your Budget — Envelope Budget</strong></div>
+    <div class="next-bar-info"><p><span data-en="Up next - Lesson 03" data-ar="الدرس التالي - ٠٣">Up next - Lesson 03</span></p><strong id="l3-next-title" data-en="Building Your Budget — Envelope Budget" data-ar="بناء ميزانيتك — Envelope Budget">Building Your Budget — Envelope Budget</strong></div>
     <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" onclick="go(2)"><span data-en="Next Lesson →" data-ar="الدرس التالي →">Next Lesson →</span></button>
   </div>
 </div>
@@ -676,6 +711,17 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
     <p class="opener-desc"><span data-ar="هنا تتعلم كيف تعمل صفحة الميزانية في كل أسلوب. استخدم زر التبديل أدناه للمقارنة، لكن اختر أسلوباً واحداً في التطبيق بناءً على احتياجك.">This is where you learn how the budget page works in each workflow. Use the toggle below to compare, but choose one mode in the app based on your needs.</span></p>
   </div>
 
+  <div class="learn-box">
+    <div class="learn-box-title">🎯 <span data-ar="بنهاية هذا الدرس ستعرف">By the end of this lesson you will…</span></div>
+    <div class="learn-items">
+      <div class="learn-item"><span data-ar="فهم كيف تنظّم الفئات ميزانيتك">Understand how categories organize your budget</span></div>
+      <div class="learn-item"><span data-ar="معرفة كيف يستخدم Envelope Budgeting رقم To Budget">Know how Envelope Budgeting uses To Budget</span></div>
+      <div class="learn-item"><span data-ar="معرفة كيف يستخدم Tracking Budgeting الأهداف الشهرية">Know how Tracking Budgeting uses monthly targets</span></div>
+      <div class="learn-item"><span data-ar="فهم معنى تجاوز الميزانية في كل أسلوب">Understand what overspending means in each mode</span></div>
+      <div class="learn-item"><span data-ar="تصميم هيكل فئات بسيط كبداية">Design a simple starting category structure</span></div>
+    </div>
+  </div>
+
   <!-- ── MODE TOGGLE BAR ── -->
   <div id="l3-mode-toggle" style="display:flex;align-items:center;gap:0;background:var(--bg);border:1.5px solid var(--border);border-radius:999px;padding:4px;margin-bottom:28px;width:fit-content">
     <button id="btn-envelope" type="button" onclick="setL3Mode('envelope')" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;border:none;cursor:pointer;padding:8px 20px;border-radius:999px;background:var(--green);color:#fff;transition:all .18s" data-ar="📦 Envelope Budget">📦 Envelope Budget</button>
@@ -689,8 +735,8 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
     <div class="concept">
       <span class="concept-tag blue"><span data-ar="مفهوم">Concept</span></span>
       <h2><span data-ar="Categories: الأدراج التي يتدفق إليها مالك">Categories: the buckets your money flows into</span></h2>
-      <p><span data-ar="صنّف كل معاملة تؤثر على الميزانية وليست Transfer تحت فئة واضحة. بهذه الطريقة يعرف التطبيق أين أُنفقت أموالك، وتتحول قائمة المعاملات إلى معلومات مفيدة. ينطبق هذا على كلا الأسلوبين.">Every budget-impacting non-transfer transaction should be assigned to a category. Categories are how Actual knows what your money was spent on — without them, you have a list of transactions with less meaning. This applies to both modes.</span></p>
-      <p><span data-ar="يتيح لك Actual تجميع الفئات — فـ«البقالة» و«المطاعم» يمكن أن يقعا داخل مجموعة «الطعام». هذا يُبقي صفحة الميزانية منظمة ويُتيح رؤية إجمالي كل مجموعة دفعة واحدة.">Actual lets you <strong>group categories</strong> — "Groceries" and "Eating Out" can both sit inside a "Food" group. This keeps the budget page readable and lets you see group-level totals at a glance.</span></p>
+      <p><span data-ar="صنّف كل معاملة تؤثر على الميزانية وليست Transfer تحت فئة واضحة. بهذه الطريقة يعرف التطبيق أين أُنفقت أموالك، وتتحول قائمة المعاملات إلى معلومات مفيدة. ينطبق هذا على كلا الأسلوبين.">Every budget-impacting non-transfer transaction should be assigned to a category. Categories are how Actual knows what your money was spent on - without them, you have a list of transactions with less meaning. This applies to both modes.</span></p>
+      <p><span data-ar="يتيح لك Actual تجميع الفئات - فـ«البقالة» و«المطاعم» يمكن أن يقعا داخل مجموعة «الطعام». هذا يُبقي صفحة الميزانية منظمة ويُتيح رؤية إجمالي كل مجموعة دفعة واحدة.">Actual lets you <strong>group categories</strong> - "Groceries" and "Eating Out" can both sit inside a "Food" group. This keeps the budget page readable and lets you see group-level totals at a glance.</span></p>
       <div class="how">
         <div class="how-title"><span data-ar="كيف يبدو هذا في التطبيق">In Actual this looks like…</span></div>
         <p><span data-ar="في صفحة الميزانية، العمود الأيسر قائمة بمجموعات فئاتك، قابلة للطي. تضع مبلغاً «مُخصَّصاً» بجانب كل فئة. عند استيراد المعاملات وتصنيفها تتحدث الأعمدة تلقائياً.">On the Budget page, the left column is a list of your category groups, each expandable. You set a "Budgeted" amount next to each category. As transactions come in and are categorized, the columns update automatically.</span></p>
@@ -699,7 +745,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
 
     <!-- ENVELOPE: ASSIGNING EVERY DOLLAR -->
     <div class="concept">
-      <span class="concept-tag green"><span data-ar="جوهر Envelope mode">The core of Envelope Budget</span></span>
+      <span class="concept-tag green"><span data-ar="جوهر Envelope Budgeting">The core of Envelope Budgeting</span></span>
       <h2><span data-ar="«To Budget»: قرر ماذا تفعل بالمال المتاح">"To Budget": decide what to do with available money</span></h2>
       <p><span data-ar="في Envelope Budget لا تضع ميزانية للدخل المتوقع. عندما يصل الدخل فعلياً، يصبح Available Funds. بعدها تقرر: هل توزعه على فئات المصاريف والادخار هذا الشهر، أم تحتفظ بجزء منه للشهر القادم باستخدام Hold for Next Month؟">In Envelope Budget, you do not budget projected income. When income actually arrives, it becomes Available Funds. Then you decide: assign it to expense and saving categories this month, or hold part of it for next month with Hold for Next Month.</span></p>
       <div class="how">
@@ -814,9 +860,9 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
 
     <!-- TRACKING: SETTING TARGETS -->
     <div class="concept">
-      <span class="concept-tag amber"><span data-ar="جوهر Tracking mode">The core of Tracking Budget</span></span>
+      <span class="concept-tag amber"><span data-ar="جوهر Tracking Budgeting">The core of Tracking Budgeting</span></span>
       <h2><span data-ar="ضع أهدافاً شهرية: توقعاتك للشهر">Set monthly targets: your forecast for the month</span></h2>
-      <p><span data-ar="لكل فئة دخل مثل «الراتب»، أدخل ما تتوقع استلامه هذا الشهر. ولكل فئة مصاريف، أدخل هدف الإنفاق. هذه توقعات وليست عقوداً؛ الهدف هو إنشاء خط أساس تُحسّنه مع الوقت.">For each income category (like "Salary"), enter what you expect to receive. For each expense category, enter your spending target. These are <em>forecasts</em>, not contracts. Being wrong is fine — the goal is a baseline you can refine.</span></p>
+      <p><span data-ar="لكل فئة دخل مثل «الراتب»، أدخل ما تتوقع استلامه هذا الشهر. ولكل فئة مصاريف، أدخل هدف الإنفاق. هذه توقعات وليست عقوداً؛ الهدف هو إنشاء خط أساس تُحسّنه مع الوقت.">For each income category (like "Salary"), enter what you expect to receive. For each expense category, enter your spending target. These are <em>forecasts</em>, not contracts. Being wrong is fine - the goal is a baseline you can refine.</span></p>
       <p><strong><span data-ar="كيف تجد أرقاماً مناسبة للبداية:">How to find good starting numbers:</span></strong> <span data-ar="اطّلع على كشوفات بنكك لآخر شهرين أو ثلاثة، ثم قدّر متوسطك لكل فئة. عند التردد، اختر مبلغاً أوسع قليلاً حتى تبدأ بثقة.">Open 2–3 months of bank statements and estimate your average per category. If unsure, budget generously.</span></p>
 
       <!-- TRACKING MOCK TABLE -->
@@ -898,7 +944,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
     <div class="concept">
       <span class="concept-tag amber"><span data-ar="عملي">Practical</span></span>
       <h2><span data-ar="تصميم categories — إطار للبداية">Designing your categories — a starting framework</span></h2>
-      <p><span data-ar="الفئات المثالية شخصية، لكن هذا الهيكل يناسب معظم الناس. ابدأ بهذا وطوّره. أقل فئات في البداية أفضل.">The right categories are personal, but here's a framework that works for most people. Start broad and refine. <strong>Fewer categories is better to start</strong> — you can always split later.</span></p>
+      <p><span data-ar="الفئات المثالية شخصية، لكن هذا الهيكل يناسب معظم الناس. ابدأ بهذا وطوّره. أقل فئات في البداية أفضل.">The right categories are personal, but here's a framework that works for most people. Start broad and refine. <strong>Fewer categories is better to start</strong> - you can always split later.</span></p>
       <div class="g2" style="margin-top:18px">
         <div class="mini-card"><div class="mini-card-title">🔴 <span data-ar="الالتزامات الثابتة">Fixed Essentials</span></div><p style="font-size:13px;color:var(--ink2)"><span data-ar="فواتير دورية غير قابلة للتفاوض.">Bills that are the same every month and non-negotiable.</span></p><ul class="plain" style="margin-top:10px;font-size:13px"><li><span data-ar="الإيجار أو التمويل العقاري">Rent or Mortgage</span></li><li><span data-ar="التأمين (صحي، سيارة، منزل)">Insurance (health, car, home)</span></li><li><span data-ar="الإنترنت والجوال">Internet &amp; Phone</span></li><li><span data-ar="الكهرباء والماء والغاز">Electricity / Gas / Water</span></li></ul></div>
         <div class="mini-card"><div class="mini-card-title">🟡 <span data-ar="المصاريف اليومية المتغيرة">Variable Daily Spending</span></div><p style="font-size:13px;color:var(--ink2)"><span data-ar="إنفاق متغيّر يحدث كل شهر.">Spending that fluctuates but happens every month.</span></p><ul class="plain" style="margin-top:10px;font-size:13px"><li><span data-ar="البقالة">Groceries</span></li><li><span data-ar="المطاعم والكافيهات">Eating Out / Restaurants</span></li><li><span data-ar="الوقود والتنقل">Fuel / Transport</span></li><li><span data-ar="العناية الشخصية والملابس">Personal Care &amp; Clothing</span></li></ul></div>
@@ -923,7 +969,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
     </ul>
   </div>
   <div class="next-bar" style="margin-top:40px">
-    <div class="next-bar-info"><p><span data-en="Up next — Lesson 04" data-ar="الدرس التالي — ٠٤">Up next — Lesson 04</span></p><strong><span data-en="Accounts: Adding and Managing Your Money" data-ar="الحسابات: الإضافة والإدارة">Accounts: Adding and Managing Your Money</span></strong></div>
+    <div class="next-bar-info"><p><span data-en="Up next - Lesson 04" data-ar="الدرس التالي - ٠٤">Up next - Lesson 04</span></p><strong><span data-en="Accounts: Adding and Managing Your Money" data-ar="الحسابات: الإضافة والإدارة">Accounts: Adding and Managing Your Money</span></strong></div>
     <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" onclick="go(3)"><span data-en="Next Lesson →" data-ar="الدرس التالي →">Next Lesson →</span></button>
   </div>
 </div>
@@ -936,10 +982,10 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   <div class="opener">
     <div class="opener-meta">
       <span class="opener-num"><span data-ar="الدرس ٠٤ من ٠٩">Lesson 04 of 09</span></span>
-      <span class="opener-time"><span data-ar="⏱ ٧ دقائق">⏱ 7 min</span></span>
+      <span class="opener-time"><span data-ar="⏱ ٦ دقائق">⏱ 6 min</span></span>
     </div>
-    <h1><span data-ar="الحسابات — الإضافة والإدارة">Accounts — Adding and Managing Your Money</span></h1>
-    <p class="opener-desc"><span data-ar="يحتاج Actual معرفة الحسابات التي تُنفق منها، ويمكنك أيضاً إضافة حسابات أخرى لصافي الثروة. هذا الدرس يشرح الفرق بين On Budget وOff Budget، وكيفية الإضافة، والتحويلات، وReconciliation، والمدفوعين، والوسوم، والتحرير الجماعي.">Actual needs to know about the accounts you spend from, and you can also add other accounts for net worth. This lesson covers On Budget vs Off Budget accounts, how to add them, transfers, reconciliation, payees, tags, and bulk editing.</span></p>
+    <h1><span data-ar="الحسابات — إضافة وإدارة مكان المال">Accounts — Adding and Managing Where Your Money Lives</span></h1>
+    <p class="opener-desc"><span data-ar="يحتاج Actual معرفة الحسابات التي تُنفق منها، ويمكنك أيضاً إضافة حسابات أخرى لصافي الثروة. هذا الدرس يركز على مكان وجود المال: الفرق بين On Budget وOff Budget، أنواع الحسابات الشائعة، كيفية إضافتها، وكيفية تسجيل التحويلات بين حساباتك.">Actual needs to know about the accounts you spend from, and you can also add other accounts for net worth. This lesson focuses on where money lives: On Budget vs Off Budget accounts, common account types, how to add them, and how to record transfers between your own accounts.</span></p>
   </div>
 
   <div class="learn-box">
@@ -947,28 +993,41 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
     <div class="learn-items">
       <div class="learn-item"><span data-ar="الفرق بين On Budget وOff Budget accounts">Know the difference between On Budget and Off Budget accounts</span></div>
       <div class="learn-item"><span data-ar="كيف تُضيف حساباتك بالإعدادات الصحيحة">Know how to add all your accounts with the right settings</span></div>
-      <div class="learn-item"><span data-ar="فهم Transfers وReconciliation والمدفوعين والوسوم">Understand transfers, reconciliation, payees, and tags</span></div>
-      <div class="learn-item"><span data-ar="كيف تُحرّر معاملات متعددة دفعة واحدة">Know how to bulk-edit transactions</span></div>
+      <div class="learn-item"><span data-ar="اختيار نوع الحساب المناسب: جارٍ، توفير، كاش، بطاقة ائتمان، أو Tracking">Choose the right account type: checking, savings, cash, credit card, or tracking</span></div>
+      <div class="learn-item"><span data-ar="فهم Transfers بين حساباتك ومتى تحتاج تصنيفاً">Understand transfers between your own accounts and when they need a category</span></div>
     </div>
   </div>
 
   <div class="concept">
     <span class="concept-tag blue"><span data-ar="مفهوم">Concept</span></span>
-    <h2><span data-ar="On Budget مقابل Off Budget: نوعان من الحسابات">On Budget vs Off Budget: two kinds of accounts</span></h2>
-    <p data-ar="Actual يفرّق بين الحسابات التي تؤثر على ميزانيتك، والحسابات التي تُستخدم فقط لحساب صافي الثروة. فهم هذا الفرق مهم قبل إضافة أي حساب.">Actual makes a distinction between accounts that affect your budget and accounts that are just tracked for your net worth. Understanding this is important before you add a single account.</p>
-    <div class="g2" style="margin-top:16px">
+    <h2><span data-ar="On Budget مقابل Off Budget: اختر الدور الصحيح للحساب">On Budget vs Off Budget: choose the right account role</span></h2>
+    <p data-ar="Actual يفرّق بين الحسابات التي تؤثر على ميزانيتك الشهرية، والحسابات التي تُستخدم فقط لمتابعة صافي الثروة. قبل إضافة أي حساب، اسأل نفسك: هل إنفاق هذا الحساب يجب أن يظهر في الميزانية، أم أريد فقط متابعة قيمته؟">Actual makes a distinction between accounts that affect your monthly budget and accounts that are only tracked for net worth. Before adding any account, ask: should spending from this account affect my budget, or do I only want to track its value?</p>
+    <p data-ar="هذا القرار يحدد هل يكون الحساب On Budget أو Off Budget. حسابات الإنفاق اليومي عادة تكون On Budget، بينما حسابات الاستثمار والقروض والأصول الكبيرة غالباً تكون Off Budget لأنها للمتابعة فقط.">That decision determines whether the account should be On Budget or Off Budget. Everyday spending accounts are usually On Budget, while investments, loans, and large assets are usually Off Budget because they are for tracking only.</p>
+
+    <div class="g2" style="margin-top:16px;margin-bottom:16px;gap:20px">
       <div class="mini-card" style="border-color:var(--green-border);background:var(--green-bg)">
-        <div class="mini-card-title" style="color:var(--green)" data-ar="✅ داخل الميزانية">✅ On Budget</div>
-        <p style="font-size:13px;color:#166534;margin-bottom:10px" data-ar="أي إنفاق من هذه الحسابات يُحسب على تصنيفات الميزانية.">Spending from these accounts is tracked against your budget categories.</p>
-        <ul class="plain" style="font-size:13px"><li data-ar="حساب جارٍ">Checking / Current account</li><li data-ar="حساب توفير">Savings account</li><li data-ar="بطاقات ائتمان">Credit cards</li><li data-ar="محفظة كاش">Cash wallet</li></ul>
+        <div class="mini-card-title" style="color:var(--green)" data-ar="✅ On Budget — يؤثر على ميزانيتك الشهرية">✅ On Budget — affects your monthly budget</div>
+        <p style="font-size:13px;color:#166534;margin-bottom:10px" data-ar="استخدمه للحسابات التي تنفق منها أو تسدد منها مصاريفك. معاملات هذه الحسابات تُصنّف وتظهر في الميزانية والتقارير.">Use this for accounts you spend from or use to pay expenses. Transactions in these accounts are categorized and appear in your budget and reports.</p>
+        <ul class="plain" style="font-size:13px">
+          <li data-ar="الحساب الجاري أو الراتب">Checking / current account</li>
+          <li data-ar="حساب توفير للمصاريف القريبة">Savings used for near-term spending</li>
+          <li data-ar="محفظة الكاش">Cash wallet</li>
+          <li data-ar="بطاقة ائتمان نشطة">Active credit card</li>
+        </ul>
       </div>
       <div class="mini-card" style="border-color:var(--purple-border);background:var(--purple-bg)">
-        <div class="mini-card-title" style="color:var(--purple)" data-ar="📊 خارج الميزانية">📊 Off Budget</div>
-        <p style="font-size:13px;color:#4c1d95;margin-bottom:10px" data-ar="تُتابَع لصافي الثروة فقط. تبقى معاملاتها خارج تصنيفات الميزانية.">Tracked for net worth only. Transactions can't be categorized.</p>
-        <ul class="plain" style="font-size:13px"><li data-ar="حسابات تقاعد أو ادخار طويلة الأجل">401(k), IRA, HSA</li><li data-ar="استثمارات أو محفظة تداول">Investment / brokerage</li><li data-ar="تمويل عقاري أو قرض سيارة">Mortgage, car loan</li><li data-ar="قيمة عقار">Property value</li></ul>
+        <div class="mini-card-title" style="color:var(--purple)" data-ar="📊 Off Budget — للمتابعة وصافي الثروة فقط">📊 Off Budget — tracking and net worth only</div>
+        <p style="font-size:13px;color:#4c1d95;margin-bottom:10px" data-ar="استخدمه للحسابات أو الأصول التي تريد رؤيتها ضمن صافي الثروة، لكنها لا تُستخدم لتصنيف مصاريفك اليومية.">Use this for accounts or assets you want to include in net worth, but not for day-to-day category spending.</p>
+        <ul class="plain" style="font-size:13px">
+          <li data-ar="استثمارات أو محفظة تداول">Investments / brokerage</li>
+          <li data-ar="تقاعد أو ادخار طويل الأجل">Retirement or long-term savings</li>
+          <li data-ar="قروض وتمويل عقاري">Loans and mortgage balances</li>
+          <li data-ar="قيمة عقار أو سيارة">Property or car value</li>
+        </ul>
       </div>
     </div>
-    <div class="call cd" style="margin-top:4px">
+
+    <div class="call cd" style="margin-top:16px">
       <span class="call-ic">🚫</span>
       <div data-ar="<strong>اختر نوع الحساب بعناية قبل الحفظ.</strong> يدعم Actual هذا الاختيار كإعداد ثابت بعد إنشاء الحساب. استخدم On Budget لأي بطاقة ائتمان نشطة. لا تستخدم Off Budget للبطاقة إلا إذا لن تكون هناك مشتريات جديدة وستُغلق بعد السداد."><strong>You cannot change an Off Budget account to On Budget later.</strong> Always double-check this setting. Use On Budget for any active credit card; only consider Off Budget if there will be no new purchases and the card will be closed after payoff.</div>
     </div>
@@ -1000,10 +1059,10 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   <div class="concept">
     <span class="concept-tag blue"><span data-ar="مفهوم">Concept</span></span>
     <h2><span data-ar="Transfers: نقل المال بين حساباتك">Transfers: moving money between your own accounts</span></h2>
-    <p data-ar="عند نقل مبلغ بين حسابين تملكهما—مثل التحويل من الجاري إلى التوفير، أو سداد بطاقة ائتمان—استخدم <strong>Transfer</strong> بدلاً من معاملة عادية بتصنيف. يبقي التحويل ميزانيتك كما هي؛ المال ما زال مالكاً لك لكنه انتقل من حساب لآخر.">When you move money between two accounts you own — checking to savings, or paying a credit card — you use a <strong>Transfer</strong>, not a regular categorized transaction. This matters because a transfer doesn't affect your budget: the money is still yours, it just moved.</p>
+    <p data-ar="عند نقل مبلغ بين حسابين تملكهما-مثل التحويل من الجاري إلى التوفير، أو سداد بطاقة ائتمان-استخدم <strong>Transfer</strong> بدلاً من معاملة عادية. إذا كان الحسابان داخل الميزانية، فلا تحتاج إلى تصنيف لأن المال ما زال داخل ميزانيتك. أما إذا كان أحد الحسابين خارج الميزانية، فسيحتاج جانب On Budget إلى تصنيف.">When you move money between two accounts you own - checking to savings, or paying a credit card - use a <strong>Transfer</strong> instead of a normal transaction. If both accounts are On Budget, it does not need a category because the money stays inside your budget. If one side is Off Budget, the On Budget side needs a category.</p>
     <div class="how">
       <div class="how-title"><span data-ar="كيف يبدو هذا في التطبيق">In Actual this looks like…</span></div>
-      <p data-ar="في حقل Payee اضغط <strong>Make Transfer</strong> واختر الحساب الوجهة. Actual ينشئ تلقائياً قيدين متقابلين في الحسابين — خصم في حساب وإضافة في الآخر. القيدان مرتبطان: تعديل أحدهما يحدّث الآخر.">In the Payee field, click <strong>Make Transfer</strong> and choose the destination account. Actual automatically creates matching entries in both accounts — a debit in one, a credit in the other. They're linked: editing one updates the other.</p>
+      <p data-ar="في حقل Payee اضغط <strong>Make Transfer</strong> واختر الحساب الوجهة. Actual ينشئ تلقائياً قيدين متقابلين في الحسابين - خصم في حساب وإضافة في الآخر. القيدان مرتبطان: تعديل أحدهما يحدّث الآخر.">In the Payee field, click <strong>Make Transfer</strong> and choose the destination account. Actual automatically creates matching entries in both accounts - a debit in one, a credit in the other. They're linked: editing one updates the other.</p>
     </div>
     <div class="ss" style="margin-top:14px">
       <img src="https://actualbudget.org/assets/images/payees-dropdown-68b5d2485d1e714b8b871ba99d61859b.webp" alt="Make Transfer in payee dropdown" loading="lazy">
@@ -1016,72 +1075,42 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   </div>
 
   <div class="concept">
-    <span class="concept-tag blue"><span data-ar="مفهوم">Concept</span></span>
-    <h2><span data-ar="Reconciliation: التحقق من تطابق سجلاتك مع بنكك">Reconciliation: verifying your records against your bank</span></h2>
-    <p data-ar="Reconciliation تعني مطابقة معاملات Actual مع كشف البنك الرسمي والتأكد أنها متطابقة. هذه العادة تكشف المعاملات الناقصة، والتكرارات غير المقصودة، والمبالغ المدخلة بالخطأ.">Reconciliation is the habit of comparing Actual's transaction list to your official bank statement and confirming they match. It catches missing transactions, accidental duplicates, and amounts you may have mistyped.</p>
-    <div class="how">
-      <div class="how-title"><span data-ar="كيف يبدو هذا في التطبيق">In Actual this looks like…</span></div>
-      <p data-ar="اضغط أيقونة القفل 🔒 أعلى يمين أي حساب. أدخل الرصيد الحالي من البنك ثم اضغط <strong>Reconcile</strong>. سيعرض Actual رقم Difference. راجع المعاملات وعلّم المعاملات الموجودة في كشف البنك (الدائرة الرمادية = غير مؤكدة، والخضراء = مؤكدة). عندما يصبح Difference يساوي ٠ ريال، اضغط <strong>Lock transactions</strong> لقفل المعاملات المطابقة.">Click the 🔒 lock icon in the top-right of any account. Enter your current bank balance, then click <strong>Reconcile</strong>. Actual shows you a "Difference" number. Go through transactions ticking the ones that appear on your statement (grey circle = unconfirmed, green = confirmed). When Difference reaches $0, click <strong>Lock transactions</strong> to lock the matched transactions.</p>
-    </div>
-    <div class="ss" style="margin-top:14px">
-      <img src="https://actualbudget.org/assets/images/reconcile-1-96dc7a0b08844e80466b75acd3d337c9.webp" alt="Reconciliation account header" loading="lazy">
-      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>اضغط الرصيد الأخضر في رأس الحساب لمشاهدة إجمالي Cleared وUncleared — هذا يساعدك تعرف مكان الفرق قبل بدء المطابقة."><span class="ss-cap-icon">📍</span>Click the green balance in the account header to see Cleared vs Uncleared totals — helps you know where the discrepancy is before you start reconciling.</div>
-    </div>
-    <div class="tip"><span class="tip-ic">💡</span><div data-ar="طابق الحسابات مرة واحدة شهرياً لمعظم الحالات. اجعلها عادة شهرية ثابتة خصوصاً إذا كنت تستورد المعاملات يدوياً.">You don't need to reconcile every day. Once a month is fine for most people — just make sure you do it at least monthly if you import transactions manually.</div></div>
+    <span class="concept-tag amber"><span data-ar="التحويلات">Transfers</span></span>
+    <h2><span data-ar="متى أضع تصنيفاً للتحويل؟">When do I categorize a transfer?</span></h2>
+    <p data-ar="التحويل يعني نقل المال بين حساباتك أنت. قاعدة التصنيف تعتمد على نوعَي الحسابين: هل هما داخل الميزانية أم خارجها؟">A transfer means moving money between your own accounts. The category rule depends on the account types: are both accounts On Budget, or is one of them Off Budget?</p>
+    <table class="dt transfer-category-table" style="margin-top:14px;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;display:table">
+      <thead>
+        <tr>
+          <th data-ar="التحويل">Transfer</th>
+          <th data-ar="هل أضع تصنيفاً؟">Category?</th>
+          <th data-ar="السبب">Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>On Budget → On Budget</strong></td>
+          <td data-ar="لا يوجد تصنيف">No category</td>
+          <td data-ar="داخل الميزانية فقط؛ تغيّر الحساب.">Money stays inside the budget; only the account changes.</td>
+        </tr>
+        <tr>
+          <td><strong>On Budget → Off Budget</strong></td>
+          <td data-ar="نعم — جهة On Budget">Yes — On Budget side</td>
+          <td data-ar="المال خرج من الميزانية؛ صنّف الغرض.">Money leaves the budget, so categorize the purpose.</td>
+        </tr>
+        <tr>
+          <td><strong>Off Budget → On Budget</strong></td>
+          <td data-ar="نعم — جهة On Budget">Yes — On Budget side</td>
+          <td data-ar="المال دخل الميزانية؛ صنّف المصدر/السياق.">Money enters the budget, so categorize the source/context.</td>
+        </tr>
+        <tr>
+          <td><strong>Off Budget → Off Budget</strong></td>
+          <td data-ar="لا يوجد تصنيف في الميزانية">No budget category</td>
+          <td data-ar="الحسابان خارج الميزانية؛ لا تتأثر الفئات.">Both accounts are outside the budget; no category is affected.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <div class="concept">
-    <span class="concept-tag amber"><span data-ar="عملي">Practical</span></span>
-    <h2><span data-ar="Payees والوسوم والتحرير الجماعي">Payees, tags, and bulk editing</span></h2>
-    <p data-ar="هذه ثلاث ميزات تجعل إدارة المعاملات أسرع بكثير بعد أن تبدأ بياناتك الفعلية بالوصول.">Three features that make managing transactions much faster once you have real data coming in.</p>
-
-    <h3 style="margin-top:18px" data-ar="Payees — ترتيب أسماء الجهات المشوشة من البنك">Payees — cleaning up ugly bank names</h3>
-    <p style="font-size:14px;color:var(--ink2)" data-ar="قد ترسل البنوك أسماء جهات دفع طويلة وغير واضحة مثل <code style=&quot;background:#f3f4f6;padding:1px 5px;border-radius:3px;font-size:12px&quot;>TARGET DEBIT CRD ACH TRAN CO ID:XXX15170</code>. من قائمة More ثم Payees، يمكنك إعادة تسميتها، ودمج التكرارات، وتحديد تصنيفات افتراضية. يتعلم Actual من إعادة التسمية وينشئ Rules تلقائياً، لذلك غالباً تنظف كل جهة دفع مرة واحدة فقط.">Banks give payees names like <code style="background:#f3f4f6;padding:1px 5px;border-radius:3px;font-size:12px">TARGET DEBIT CRD ACH TRAN CO ID:XXX15170</code>. From More → Payees, you can rename them, merge duplicates, and set default categories. Actual also learns from your renaming and creates Rules automatically — so you only clean up each payee once.</p>
-    <div class="ss" style="margin-top:10px">
-      <img src="https://actualbudget.org/assets/images/MergePayeesSearch-7d231695827abe064e24b6fb19431c8a.webp" alt="Searching payees" loading="lazy">
-      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>من قائمة More ثم Payees: ابحث عن كل صيغ اسم الجهة لدمجها في جهة واحدة مرتبة."><span class="ss-cap-icon">📍</span>More → Payees: search for all variations of a payee name to merge them into one clean entry.</div>
-    </div>
-    <div class="ss">
-      <img src="https://actualbudget.org/assets/images/PayeesMerged-3fee2f20fe2bd8d44c7cc38c1cbb1e2a.webp" alt="After merging payees" loading="lazy">
-      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>بعد الدمج — كل الصيغ تصبح Payee واحد. اضغط الاسم وأعد تسميته بشكل واضح مثل Morrisons."><span class="ss-cap-icon">📍</span>After merging — all variations become one payee. Click the name to rename it to something clean like "Morrisons."</div>
-    </div>
-
-    <h3 style="margin-top:20px" data-ar="Tags — وسوم تربط معاملات من تصنيفات مختلفة">Tags — cross-category labels</h3>
-    <p style="font-size:14px;color:var(--ink2)" data-ar="أضف #وسم في حقل Notes لأي معاملة لتجميع معاملات تتوزع على أكثر من تصنيف. مفيد لحساب التكلفة الفعلية لرحلة مثلاً: الطيران في Transport، الفنادق في Accommodation، والمطاعم في Eating Out — وكلها تحمل الوسم #spain2025.">Add #hashtags to any transaction's Notes field to group transactions that cross categories. Useful for tracking the real cost of a holiday (flights in Transport, hotels in Accommodation, meals in Eating Out — all tagged #spain2025).</p>
-    <div class="ss" style="margin-top:10px">
-      <img src="https://actualbudget.org/assets/images/input-b5149fdbf17deb4328ed2b41ce9c803c.webp" alt="Adding a tag" loading="lazy">
-      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>اكتب # في حقل Notes لإضافة وسم — ستظهر لك اقتراحات تلقائية للوسوم الموجودة."><span class="ss-cap-icon">📍</span>Type # in the Notes field to add a tag — you'll see autocomplete for existing tags.</div>
-    </div>
-    <div class="ss">
-      <img src="https://actualbudget.org/assets/images/manage-dbb35481174f7376ca1a4de94692917e.webp" alt="Tag management page" loading="lazy">
-      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>صفحة إدارة Tags في الشريط الجانبي — خصص ألواناً للوسوم واعرض كل المعاملات المرتبطة بأي وسم."><span class="ss-cap-icon">📍</span>The Tags management page (sidebar) — assign colours to tags and view all transactions for any tag.</div>
-    </div>
-
-    <h3 style="margin-top:20px" data-ar="التحرير الجماعي — تعديل عدة معاملات دفعة واحدة">Bulk editing — update many transactions at once</h3>
-    <p style="font-size:14px;color:var(--ink2)" data-ar="حدد المربع بجانب عدة معاملات، ثم استخدم شريط الأدوات لتغيير التصنيف، أو Payee، أو الملاحظات، أو الحساب، أو حذفها كلها دفعة واحدة. استخدم Filters أولاً لتضييق النتائج والوصول للمعاملات التي تريد تعديلها بالضبط.">Check the box on the left of multiple transactions, then use the toolbar to change category, payee, notes, account, or delete them all at once. Use Filters first to narrow down to exactly what you want to change.</p>
-    <div class="call cw">
-      <span class="call-ic">⚠️</span>
-      <div data-ar="استخدم التحرير الجماعي مع المعاملات غير المقسمة. عند التعامل مع معاملة مقسمة، افتحها وعدّلها بشكل منفصل للحصول على نتيجة أدق.">Bulk editing doesn't work well with split transactions. Avoid selecting split transactions when using bulk actions.</div>
-    </div>
-  </div>
-
-  <div class="concept">
-    <span class="concept-tag amber"><span data-ar="عملي">Practical</span></span>
-    <h2><span data-ar="تصفية المعاملات">Filtering transactions</span></h2>
-    <p data-ar="زر Filter أعلى أي قائمة معاملات يسمح لك بتضييق النتائج باستخدام عدة شروط معاً. هذا أقوى بكثير من البحث النصي؛ يمكنك الجمع بين نطاقات التاريخ، والتصنيفات، والمبالغ، وجهات الدفع، والوسوم.">The Filter button above any transaction list lets you narrow what you see using multiple stacked conditions. This is far more powerful than text search — you can combine date ranges, categories, amounts, payees, and tags.</p>
-    <div class="ss" style="margin-top:12px">
-      <img src="https://actualbudget.org/assets/images/filter-d3be3a9ef5f5e1206279bea9c92aa2a0.webp" alt="Filter dropdown" loading="lazy">
-      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>قائمة Filter — اختر من التاريخ، التصنيف، Payee، المبلغ، الحساب، الملاحظات، والوسوم. اجمع الشروط التي تخدم بحثك."><span class="ss-cap-icon">📍</span>The Filter dropdown — choose from date, category, payee, amount, account, notes, and tags. Combine as many as you need.</div>
-    </div>
-    <div class="ss">
-      <img src="https://actualbudget.org/assets/images/multiple-filters-699119cc4ced089d989907cda05a48d5.webp" alt="Stacked filters" loading="lazy">
-      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>عدة فلاتر مجتمعة — هنا يتم التصفية حسب #وسم + تصنيف + سنة لمعرفة التكلفة الإجمالية لسيارة محددة في ٢٠٢٤."><span class="ss-cap-icon">📍</span>Multiple stacked filters — here filtering by a #tag + category + year to find the total cost of running a specific car in 2024.</div>
-    </div>
-    <div class="ss">
-      <img src="https://actualbudget.org/assets/images/save-filter-ff460fe40595ef931731e20501027bc7.webp" alt="Save filter" loading="lazy">
-      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>احفظ الفلاتر التي تستخدمها كثيراً: اضغط Unsaved filter ثم Save new filter، واختر اسماً لها."><span class="ss-cap-icon">📍</span>Save filters you use regularly — click "Unsaved filter" → "Save new filter" to give it a name.</div>
-    </div>
-  </div>
 
   <div class="concept">
     <span class="concept-tag blue"><span data-ar="مصادر رسمية">Official Docs</span></span>
@@ -1089,13 +1118,12 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
     <ul class="plain">
       <li data-ar="<a href=&quot;https://actualbudget.org/docs/accounts/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Accounts &amp; Transactions overview</a> — الحسابات داخل وخارج الميزانية وإضافة الحسابات"><a href="https://actualbudget.org/docs/accounts/" target="_blank" rel="noopener noreferrer">Accounts &amp; Transactions overview</a> — On/Off Budget accounts and adding accounts</li>
       <li data-ar="<a href=&quot;https://actualbudget.org/docs/transactions/transfers/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Transfers</a> — التحويلات بين الحسابات وتصنيفات التحويلات"><a href="https://actualbudget.org/docs/transactions/transfers/" target="_blank" rel="noopener noreferrer">Transfers</a> — transfers between accounts and transfer categories</li>
-      <li data-ar="<a href=&quot;https://actualbudget.org/docs/accounts/reconciliation/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Reconciliation</a> — مطابقة الحسابات وقفل المعاملات"><a href="https://actualbudget.org/docs/accounts/reconciliation/" target="_blank" rel="noopener noreferrer">Reconciliation</a> — matching accounts and locking transactions</li>
-      <li data-ar="<a href=&quot;https://actualbudget.org/docs/transactions/payees/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Payees</a>، <a href=&quot;https://actualbudget.org/docs/transactions/tags/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Tags</a>، <a href=&quot;https://actualbudget.org/docs/transactions/bulk-editing/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Bulk Actions</a>، و<a href=&quot;https://actualbudget.org/docs/transactions/filters/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Filters</a> — أدوات إدارة المعاملات"><a href="https://actualbudget.org/docs/transactions/payees/" target="_blank" rel="noopener noreferrer">Payees</a>, <a href="https://actualbudget.org/docs/transactions/tags/" target="_blank" rel="noopener noreferrer">Tags</a>, <a href="https://actualbudget.org/docs/transactions/bulk-editing/" target="_blank" rel="noopener noreferrer">Bulk Actions</a>, and <a href="https://actualbudget.org/docs/transactions/filters/" target="_blank" rel="noopener noreferrer">Filters</a> — transaction management tools</li>
+
     </ul>
   </div>
 
   <div class="next-bar">
-    <div class="next-bar-info"><p><span data-en="Up next — Lesson 05" data-ar="الدرس التالي — ٠٥">Up next — Lesson 05</span></p><strong><span data-en="Credit Cards: The Part Everyone Gets Wrong" data-ar="بطاقات الائتمان: الجزء الذي يُربك الجميع">Credit Cards: The Part Everyone Gets Wrong</span></strong></div>
+    <div class="next-bar-info"><p><span data-en="Up next - Lesson 05" data-ar="الدرس التالي - ٠٥">Up next - Lesson 05</span></p><strong><span data-en="Credit Cards: The Part Everyone Gets Wrong" data-ar="بطاقات الائتمان: الجزء الذي يُربك الجميع">Credit Cards: The Part Everyone Gets Wrong</span></strong></div>
     <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(4)">Next Lesson →</button>
   </div>
 </div>
@@ -1127,11 +1155,11 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   <div class="concept">
     <span class="concept-tag blue"><span data-ar="المفهوم الجوهري">Core Concept</span></span>
     <h2><span data-ar="الإطار الذهني: بطاقات الائتمان تحمل أرصدة سالبة">The mental model: credit cards hold negative dollars</span></h2>
-    <p data-ar="في Actual، بطاقة الائتمان مجرد حساب آخر — لكنه يحمل مالاً <em>سالباً</em>. عند إنشاء الحساب يكون رصيده سالباً، أي المبلغ الذي عليك حالياً. كل عملية شراء تجعل الرصيد أكثر سلبية. وعند السداد، تقلل الأموال الخارجة من حسابك الجاري هذا الرصيد السالب.">In Actual, a credit card is just another account — but it holds <em>negative</em> money. When you create the account, its balance is negative (what you currently owe). As you make purchases, the balance gets more negative. When you pay the card, positive dollars from your checking account cancel out the negative ones.</p>
-    <p data-ar="أهم فكرة هنا: <strong>تصنيفات الميزانية تتأثر وقت الشراء، وليس وقت سداد البطاقة.</strong> عندما تشتري مقاضي بـ ٥٠ ريال ببطاقة Visa، ينقص تصنيف المقاضي ٥٠ ريال فوراً. سداد البطاقة لاحقاً مجرد حركة محاسبية — نقل مال بين حساباتك.">The most important thing to understand: <strong>your budget categories are updated at the moment of purchase, not when you pay the bill.</strong> When you buy $50 of groceries on your Visa, your Groceries category decreases by $50 immediately. Paying the card later is just accounting — moving money between accounts.</p>
+    <p data-ar="في Actual، بطاقة الائتمان مجرد حساب آخر - لكنه يحمل مالاً <em>سالباً</em>. عند إنشاء الحساب يكون رصيده سالباً، أي المبلغ الذي عليك حالياً. كل عملية شراء تجعل الرصيد أكثر سلبية. وعند السداد، تقلل الأموال الخارجة من حسابك الجاري هذا الرصيد السالب.">In Actual, a credit card is just another account - but it holds <em>negative</em> money. When you create the account, its balance is negative (what you currently owe). As you make purchases, the balance gets more negative. When you pay the card, positive dollars from your checking account cancel out the negative ones.</p>
+    <p data-ar="أهم فكرة هنا: <strong>تصنيفات الميزانية تتأثر وقت الشراء، وليس وقت سداد البطاقة.</strong> عندما تشتري مقاضي بـ ٥٠ ريال ببطاقة Visa، ينقص تصنيف المقاضي ٥٠ ريال فوراً. سداد البطاقة لاحقاً مجرد حركة محاسبية - نقل مال بين حساباتك.">The most important thing to understand: <strong>your budget categories are updated at the moment of purchase, not when you pay the bill.</strong> When you buy $50 of groceries on your Visa, your Groceries category decreases by $50 immediately. Paying the card later is just accounting - moving money between accounts.</p>
     <div class="how">
       <div class="how-title"><span data-ar="لماذا هذا أفضل من طريقة تفكيرك المعتادة">Why this is better than how you might be thinking about it</span></div>
-      <p data-ar="بعض الناس يتعاملون مع مشتريات بطاقة الائتمان كأنها «ليست فلوساً حقيقية بعد» إلى أن تصدر الفاتورة. Actual يتعامل معها بشكل أدق: أنت التزمت بالمبلغ لحظة الشراء. تسجيله فوراً يجعل ميزانيتك تعكس الواقع الحالي، وليس صورة متأخرة بشهر.">Some people think of credit card spending as "not real money yet" until the bill arrives. Actual disagrees — and rightly so. You've committed to that $50 the moment you bought the groceries. Recording it immediately means your budget always reflects reality, not a month-old picture.</p>
+      <p data-ar="بعض الناس يتعاملون مع مشتريات بطاقة الائتمان كأنها «ليست فلوساً حقيقية بعد» إلى أن تصدر الفاتورة. Actual يتعامل معها بشكل أدق: أنت التزمت بالمبلغ لحظة الشراء. تسجيله فوراً يجعل ميزانيتك تعكس الواقع الحالي، وليس صورة متأخرة بشهر.">Some people think of credit card spending as "not real money yet" until the bill arrives. Actual disagrees - and rightly so. You've committed to that $50 the moment you bought the groceries. Recording it immediately means your budget always reflects reality, not a month-old picture.</p>
     </div>
   </div>
 
@@ -1160,7 +1188,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
           <span class="fa">=</span>
           <div class="fn" style="background:var(--green-bg);border-color:var(--green-border)" data-ar="تصنيفات الميزانية<br><small style=&quot;color:var(--green)&quot;>تبقى كما هي ✓</small>">Budget categories<br><small style="color:var(--green)">unchanged ✓</small></div>
         </div>
-        <p style="font-size:13px;color:var(--ink2)" data-ar="هذه عملية Transfer. تم تحديث ميزانيتك وقت الشراء، وسداد البطاقة هنا تسوية بين حسابين.">This is a Transfer — no category needed. Your budget was already updated at purchase time. Paying the card is just two accounts settling up.</p>
+        <p style="font-size:13px;color:var(--ink2)" data-ar="هذه عملية Transfer. تم تحديث ميزانيتك وقت الشراء، وسداد البطاقة هنا تسوية بين حسابين.">This is a Transfer - no category needed. Your budget was already updated at purchase time. Paying the card is just two accounts settling up.</p>
       </div>
     </div>
   </div>
@@ -1217,7 +1245,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   </div>
 
   <div class="next-bar">
-    <div class="next-bar-info"><p><span data-en="Up next — Lesson 06" data-ar="الدرس التالي — ٠٦">Up next — Lesson 06</span></p><strong><span data-en="Transactions: Getting Data Into Actual" data-ar="المعاملات: إدخال البيانات في Actual">Transactions: Getting Data Into Actual</span></strong></div>
+    <div class="next-bar-info"><p><span data-en="Up next - Lesson 06" data-ar="الدرس التالي - ٠٦">Up next - Lesson 06</span></p><strong><span data-en="Transactions: Getting Data Into Actual" data-ar="المعاملات: إدخال البيانات في Actual">Transactions: Getting Data Into Actual</span></strong></div>
     <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(5)">Next Lesson →</button>
   </div>
 </div>
@@ -1230,10 +1258,10 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   <div class="opener">
     <div class="opener-meta">
       <span class="opener-num"><span data-ar="الدرس ٠٦ من ٠٩">Lesson 06 of 09</span></span>
-      <span class="opener-time"><span data-ar="⏱ ٨ دقائق">⏱ 8 min</span></span>
+      <span class="opener-time"><span data-ar="⏱ ١٠ دقائق">⏱ 10 min</span></span>
     </div>
-    <h1><span data-ar="المعاملات: إدخال البيانات في Actual">Transactions: Getting Data Into Actual</span></h1>
-    <p class="opener-desc"><span data-ar="تزداد فائدة Actual كلما زادت جودة بيانات المعاملات داخله. هذا الدرس يستعرض الطرق الأساسية لإدخال المعاملات—من Bank Sync اليدوي إلى الإدخال اليدوي—وكيف تتعامل مع التكرار.">Actual is only as useful as the transaction data inside it. This lesson covers the main ways to get transactions in — from manual Bank Sync to manual entry — and how to handle duplicates.</span></p>
+    <h1><span data-ar="المعاملات: إدخال البيانات وتنظيفها في Actual">Transactions: Getting Data Into Actual</span></h1>
+    <p class="opener-desc"><span data-ar="تزداد فائدة Actual كلما زادت جودة بيانات المعاملات داخله. هذا الدرس يستعرض طرق إدخال المعاملات، فهم صف المعاملة، التقسيمات، Payees، الوسوم، الفلاتر، التكرارات، وReconciliation حتى تصبح بياناتك موثوقة.">Actual is only as useful as the transaction data inside it. This lesson covers how transactions get in, what each row means, splits, payees, tags, filters, duplicates, and reconciliation so your data stays trustworthy.</span></p>
   </div>
 
   <div class="learn-box">
@@ -1242,7 +1270,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
       <div class="learn-item"><span data-ar="الطرق الأساسية لإدخال المعاملات في Actual">Know the main ways to get transactions into Actual</span></div>
       <div class="learn-item"><span data-ar="كيف تعمل مزامنة البنك ومتى تستخدمها">Understand Bank Sync and when to use it</span></div>
       <div class="learn-item"><span data-ar="كيف تستورد ملف CSV من بنكك">Be able to import a CSV file from your bank</span></div>
-      <div class="learn-item"><span data-ar="كيف تتعامل مع المعاملات المكررة والمقسمة والمجدولة">Know how to handle duplicate, split, and scheduled transactions</span></div>
+      <div class="learn-item"><span data-ar="كيف تتعامل مع المعاملات المقسمة والمكررة وتطابق الحسابات">Know how to handle split transactions, duplicates, and reconciliation</span></div>
     </div>
   </div>
 
@@ -1284,7 +1312,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
 
   <div class="concept">
     <span class="concept-tag amber"><span data-ar="اختياري">Optional</span></span>
-    <h2><span data-ar="Connecting Your Bank: مزامنة البنك">Connecting Your Bank: bank sync</span></h2>
+    <h2><span data-ar="Connecting Your Bank: مزامنة البنك">Connecting Your Bank: Bank Sync</span></h2>
     <p data-ar="Bank Sync اختياري. إذا كان بنكك ومزود منطقتك مدعومين، يمكنك ربط الحساب ثم الضغط على <strong>Bank Sync</strong> لجلب معاملات جديدة. هذا لا يلغي الحاجة للمراجعة: ما زلت تحتاج تصنيف المعاملات، مراجعة Rules، ومطابقة الحسابات.">Bank Sync is optional. If your bank and regional provider are supported, you can connect the account and click <strong>Bank Sync</strong> to fetch new transactions. It does not remove the need to review: you still categorize transactions, check Rules, and reconcile accounts.</p>
     <div class="g2" style="margin-top:14px">
       <div class="mini-card">
@@ -1317,6 +1345,23 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
 
   <div class="concept">
     <span class="concept-tag blue"><span data-ar="مفهوم">Concept</span></span>
+    <h2><span data-ar="تشريح المعاملة: ماذا يعني كل حقل؟">Transaction anatomy: what each row means</span></h2>
+    <p data-ar="بعد دخول المعاملات إلى Actual، يصبح العمل الأساسي هو المراجعة والتنظيف. لا تحتاج تعديل كل شيء، لكن يجب أن تفهم أهم الحقول حتى تصنّف وتبحث وتطابق بثقة.">Once transactions are inside Actual, your main job is review and cleanup. You do not need to edit everything, but you should understand the key fields so you can categorize, search, and reconcile confidently.</p>
+    <div class="g2" style="margin-top:16px">
+      <div class="mini-card">
+        <div class="mini-card-title" data-ar="الحقول الأساسية">Core fields</div>
+        <ul class="plain" style="font-size:13px"><li data-ar="Date — متى حدثت المعاملة">Date — when the transaction happened</li><li data-ar="Account — الحساب الذي دخلت أو خرجت منه الأموال">Account — where the money moved</li><li data-ar="Payee — الجهة أو الحساب الآخر في التحويل">Payee — merchant, person, or transfer account</li><li data-ar="Amount — دخل أو مصروف">Amount — inflow or outflow</li></ul>
+      </div>
+      <div class="mini-card">
+        <div class="mini-card-title" data-ar="حقول التنظيم">Organization fields</div>
+        <ul class="plain" style="font-size:13px"><li data-ar="Category — أين يظهر الإنفاق في الميزانية">Category — where spending appears in the budget</li><li data-ar="Notes — تفاصيل إضافية أو #وسوم">Notes — extra detail or #tags</li><li data-ar="Cleared — هل ظهرت في البنك؟">Cleared — has it appeared at the bank?</li><li data-ar="Imported Payee — الاسم الأصلي القادم من البنك">Imported Payee — original bank-provided name</li></ul>
+      </div>
+    </div>
+    <div class="tip"><span class="tip-ic">💡</span><div data-ar="روتينك اليومي البسيط: راجع المعاملات الجديدة، نظّف Payee عند الحاجة، اختر Category، ثم اترك Rules تتعلم من قراراتك.">Your simple routine: review new transactions, clean the payee when needed, choose the category, then let Rules learn from your decisions.</div></div>
+  </div>
+
+  <div class="concept">
+    <span class="concept-tag blue"><span data-ar="مفهوم">Concept</span></span>
     <h2><span data-ar="Split Transactions: معاملة واحدة، أكثر من تصنيف">Split Transactions: one transaction, multiple categories</span></h2>
     <p data-ar="أحياناً تكون معاملة البنك الواحدة مزيجاً من أكثر من نوع إنفاق. مثال: زيارة للسوبرماركت فيها بقالة، أدوات منزلية، وهدية. بدلاً من إنشاء معاملات منفصلة، قسّم المعاملة إلى أسطر فرعية، وكل سطر له تصنيفه ومبلغه.">Sometimes one bank transaction contains multiple kinds of spending. Example: one supermarket trip includes groceries, household supplies, and a gift. Instead of creating separate transactions, split the transaction into child lines, each with its own category and amount.</p>
     <div class="ss" style="margin-top:14px">
@@ -1332,24 +1377,55 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   </div>
 
   <div class="concept">
-    <span class="concept-tag green"><span data-ar="تخطيط">Planning</span></span>
-    <h2><span data-ar="Schedules: المعاملات المتكررة والمتوقعة">Schedules: recurring and expected transactions</span></h2>
-    <p data-ar="Schedules تساعدك على رؤية المعاملات القادمة قبل أن تحدث: راتب، إيجار، اشتراك، قسط، أو سداد تلقائي لبطاقة ائتمان. يمكن أن تكون متكررة أو لمرة واحدة، ويمكن إدخالها تلقائياً أو تركها للموافقة اليدوية.">Schedules help you see upcoming transactions before they happen: salary, rent, subscriptions, loan payments, or credit card autopay. They can be recurring or one-time, and can be entered automatically or left for manual approval.</p>
-    <div class="ss" style="margin-top:14px">
-      <img src="https://actualbudget.org/assets/images/schedules-overview-082e66ce8939714130d2c5af3fa2146a.webp" alt="Schedules overview in Actual" loading="lazy">
-      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>صفحة Schedules — تعرض المعاملات المتكررة أو المتوقعة حتى ترى ما سيحدث قبل موعده."><span class="ss-cap-icon">📍</span>Schedules overview — recurring or expected transactions appear here so you can see what is coming before it happens.</div>
+    <span class="concept-tag amber"><span data-ar="عملي">Practical</span></span>
+    <h2><span data-ar="Payees والوسوم والتحرير الجماعي">Payees, tags, and bulk editing</span></h2>
+    <p data-ar="هذه ثلاث ميزات تجعل إدارة المعاملات أسرع بكثير بعد أن تبدأ بياناتك الفعلية بالوصول.">Three features that make managing transactions much faster once you have real data coming in.</p>
+
+    <h3 style="margin-top:18px" data-ar="Payees — ترتيب أسماء الجهات المشوشة من البنك">Payees — cleaning up ugly bank names</h3>
+    <p style="font-size:14px;color:var(--ink2)" data-ar="قد ترسل البنوك أسماء جهات دفع طويلة وغير واضحة مثل <code style=&quot;background:#f3f4f6;padding:1px 5px;border-radius:3px;font-size:12px&quot;>TARGET DEBIT CRD ACH TRAN CO ID:XXX15170</code>. من قائمة More ثم Payees، يمكنك إعادة تسميتها، ودمج التكرارات، وتحديد تصنيفات افتراضية. يتعلم Actual من إعادة التسمية وينشئ Rules تلقائياً، لذلك غالباً تنظف كل جهة دفع مرة واحدة فقط.">Banks give payees names like <code style="background:#f3f4f6;padding:1px 5px;border-radius:3px;font-size:12px">TARGET DEBIT CRD ACH TRAN CO ID:XXX15170</code>. From More → Payees, you can rename them, merge duplicates, and set default categories. Actual also learns from your renaming and creates Rules automatically - so you only clean up each payee once.</p>
+    <div class="ss" style="margin-top:10px">
+      <img src="https://actualbudget.org/assets/images/MergePayeesSearch-7d231695827abe064e24b6fb19431c8a.webp" alt="Searching payees" loading="lazy">
+      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>من قائمة More ثم Payees: ابحث عن كل صيغ اسم الجهة لدمجها في جهة واحدة مرتبة."><span class="ss-cap-icon">📍</span>More → Payees: search for all variations of a payee name to merge them into one clean entry.</div>
     </div>
-    <div class="g2" style="margin-top:14px">
-      <div class="mini-card">
-        <div class="mini-card-title" data-ar="استخدمها لـ">Use them for</div>
-        <ul class="plain" style="font-size:13px"><li data-ar="الدخل المتكرر مثل الراتب">Recurring income like salary</li><li data-ar="الفواتير والاشتراكات والقروض">Bills, subscriptions, and loan payments</li><li data-ar="دفعات البطاقة التلقائية">Credit card autopay</li><li data-ar="المصاريف المتغيرة تقريبياً مثل الكهرباء">Approximate variable bills like utilities</li></ul>
-      </div>
-      <div class="mini-card">
-        <div class="mini-card-title" data-ar="كيف تساعدك؟">Why they help</div>
-        <ul class="plain" style="font-size:13px"><li data-ar="تعرض القادم في الحساب قبل تاريخ الدفع">Show upcoming items in the account before payment date</li><li data-ar="تقلل الإدخال اليدوي للمعاملات المتكررة">Reduce manual entry for recurring transactions</li><li data-ar="يمكن ربطها بـ Rules للتصنيف والملاحظات">Can be linked with Rules for categories and notes</li><li data-ar="تساعدك ألا تفاجأ بالفواتير">Help you avoid surprise bills</li></ul>
-      </div>
+    <div class="ss">
+      <img src="https://actualbudget.org/assets/images/PayeesMerged-3fee2f20fe2bd8d44c7cc38c1cbb1e2a.webp" alt="After merging payees" loading="lazy">
+      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>بعد الدمج — كل الصيغ تصبح Payee واحد. اضغط الاسم وأعد تسميته بشكل واضح مثل Morrisons."><span class="ss-cap-icon">📍</span>After merging — all variations become one payee. Click the name to rename it to something clean like "Morrisons."</div>
     </div>
-    <div class="tip"><span class="tip-ic">💡</span><div data-ar="ابدأ بثلاثة أو أربعة Schedules فقط: الراتب، الإيجار، أهم الاشتراكات، وسداد البطاقة إن كان تلقائياً. أضف الباقي عندما تلاحظ نمطاً متكرراً.">Start with only three or four schedules: salary, rent, key subscriptions, and card autopay if you use it. Add more when you notice a recurring pattern.</div></div>
+
+    <h3 style="margin-top:20px" data-ar="Tags — وسوم تربط معاملات من تصنيفات مختلفة">Tags — cross-category labels</h3>
+    <p style="font-size:14px;color:var(--ink2)" data-ar="أضف #وسم في حقل Notes لأي معاملة لتجميع معاملات تتوزع على أكثر من تصنيف. مفيد لحساب التكلفة الفعلية لرحلة مثلاً: الطيران في Transport، الفنادق في Accommodation، والمطاعم في Eating Out - وكلها تحمل الوسم #spain2025.">Add #hashtags to any transaction's Notes field to group transactions that cross categories. Useful for tracking the real cost of a holiday (flights in Transport, hotels in Accommodation, meals in Eating Out - all tagged #spain2025).</p>
+    <div class="ss" style="margin-top:10px">
+      <img src="https://actualbudget.org/assets/images/input-b5149fdbf17deb4328ed2b41ce9c803c.webp" alt="Adding a tag" loading="lazy">
+      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>اكتب # في حقل Notes لإضافة وسم — ستظهر لك اقتراحات تلقائية للوسوم الموجودة."><span class="ss-cap-icon">📍</span>Type # in the Notes field to add a tag — you'll see autocomplete for existing tags.</div>
+    </div>
+    <div class="ss">
+      <img src="https://actualbudget.org/assets/images/manage-dbb35481174f7376ca1a4de94692917e.webp" alt="Tag management page" loading="lazy">
+      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>صفحة إدارة Tags في الشريط الجانبي — خصص ألواناً للوسوم واعرض كل المعاملات المرتبطة بأي وسم."><span class="ss-cap-icon">📍</span>The Tags management page (sidebar) — assign colours to tags and view all transactions for any tag.</div>
+    </div>
+
+    <h3 style="margin-top:20px" data-ar="التحرير الجماعي — تعديل عدة معاملات دفعة واحدة">Bulk editing — update many transactions at once</h3>
+    <p style="font-size:14px;color:var(--ink2)" data-ar="حدد المربع بجانب عدة معاملات، ثم استخدم شريط الأدوات لتغيير التصنيف، أو Payee، أو الملاحظات، أو الحساب، أو حذفها كلها دفعة واحدة. استخدم Filters أولاً لتضييق النتائج والوصول للمعاملات التي تريد تعديلها بالضبط.">Check the box on the left of multiple transactions, then use the toolbar to change category, payee, notes, account, or delete them all at once. Use Filters first to narrow down to exactly what you want to change.</p>
+    <div class="call cw">
+      <span class="call-ic">⚠️</span>
+      <div data-ar="استخدم التحرير الجماعي مع المعاملات غير المقسمة. عند التعامل مع معاملة مقسمة، افتحها وعدّلها بشكل منفصل للحصول على نتيجة أدق.">Bulk editing doesn't work well with split transactions. Avoid selecting split transactions when using bulk actions.</div>
+    </div>
+  </div>
+  <div class="concept">
+    <span class="concept-tag amber"><span data-ar="عملي">Practical</span></span>
+    <h2><span data-ar="تصفية المعاملات">Filtering transactions</span></h2>
+    <p data-ar="زر Filter أعلى أي قائمة معاملات يسمح لك بتضييق النتائج باستخدام عدة شروط معاً. هذا أقوى بكثير من البحث النصي؛ يمكنك الجمع بين نطاقات التاريخ، والتصنيفات، والمبالغ، وجهات الدفع، والوسوم.">The Filter button above any transaction list lets you narrow what you see using multiple stacked conditions. This is far more powerful than text search - you can combine date ranges, categories, amounts, payees, and tags.</p>
+    <div class="ss" style="margin-top:12px">
+      <img src="https://actualbudget.org/assets/images/filter-d3be3a9ef5f5e1206279bea9c92aa2a0.webp" alt="Filter dropdown" loading="lazy">
+      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>قائمة Filter — اختر من التاريخ، التصنيف، Payee، المبلغ، الحساب، الملاحظات، والوسوم. اجمع الشروط التي تخدم بحثك."><span class="ss-cap-icon">📍</span>The Filter dropdown — choose from date, category, payee, amount, account, notes, and tags. Combine as many as you need.</div>
+    </div>
+    <div class="ss">
+      <img src="https://actualbudget.org/assets/images/multiple-filters-699119cc4ced089d989907cda05a48d5.webp" alt="Stacked filters" loading="lazy">
+      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>عدة فلاتر مجتمعة — هنا يتم التصفية حسب #وسم + تصنيف + سنة لمعرفة التكلفة الإجمالية لسيارة محددة في ٢٠٢٤."><span class="ss-cap-icon">📍</span>Multiple stacked filters — here filtering by a #tag + category + year to find the total cost of running a specific car in 2024.</div>
+    </div>
+    <div class="ss">
+      <img src="https://actualbudget.org/assets/images/save-filter-ff460fe40595ef931731e20501027bc7.webp" alt="Save filter" loading="lazy">
+      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>احفظ الفلاتر التي تستخدمها كثيراً: اضغط Unsaved filter ثم Save new filter، واختر اسماً لها."><span class="ss-cap-icon">📍</span>Save filters you use regularly — click "Unsaved filter" → "Save new filter" to give it a name.</div>
+    </div>
   </div>
 
   <div class="concept">
@@ -1365,38 +1441,53 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
       <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>حدد معاملتين متطابقتين واضغط G — يدمجهما Actual في معاملة واحدة ويحتفظ بالنسخة الأكثر موثوقية."><span class="ss-cap-icon">📍</span>Select two matching transactions and press G — Actual merges them into one, keeping the most reliable version.</div>
     </div>
   </div>
+  <div class="concept">
+    <span class="concept-tag green"><span data-ar="روتين">Routine</span></span>
+    <h2><span data-ar="Reconciliation: التحقق من تطابق سجلاتك مع بنكك">Reconciliation: verifying your records against your bank</span></h2>
+    <p data-ar="Reconciliation تعني مطابقة معاملات Actual مع كشف البنك الرسمي والتأكد أنها متطابقة. هذه العادة تكشف المعاملات الناقصة، والتكرارات غير المقصودة، والمبالغ المدخلة بالخطأ.">Reconciliation is the habit of comparing Actual's transaction list to your official bank statement and confirming they match. It catches missing transactions, accidental duplicates, and amounts you may have mistyped.</p>
+    <div class="how">
+      <div class="how-title"><span data-ar="كيف يبدو هذا في التطبيق">In Actual this looks like…</span></div>
+      <p data-ar="اضغط أيقونة القفل 🔒 أعلى يمين أي حساب. أدخل الرصيد الحالي من البنك ثم اضغط <strong>Reconcile</strong>. سيعرض Actual رقم Difference. راجع المعاملات وعلّم المعاملات الموجودة في كشف البنك (الدائرة الرمادية = غير مؤكدة، والخضراء = مؤكدة). عندما يصبح Difference يساوي ٠ ريال، اضغط <strong>Lock transactions</strong> لقفل المعاملات المطابقة.">Click the 🔒 lock icon in the top-right of any account. Enter your current bank balance, then click <strong>Reconcile</strong>. Actual shows you a "Difference" number. Go through transactions ticking the ones that appear on your statement (grey circle = unconfirmed, green = confirmed). When Difference reaches $0, click <strong>Lock transactions</strong> to lock the matched transactions.</p>
+    </div>
+    <div class="ss" style="margin-top:14px">
+      <img src="https://actualbudget.org/assets/images/reconcile-1-96dc7a0b08844e80466b75acd3d337c9.webp" alt="Reconciliation account header" loading="lazy">
+      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>اضغط الرصيد الأخضر في رأس الحساب لمشاهدة إجمالي Cleared وUncleared — هذا يساعدك تعرف مكان الفرق قبل بدء المطابقة."><span class="ss-cap-icon">📍</span>Click the green balance in the account header to see Cleared vs Uncleared totals — helps you know where the discrepancy is before you start reconciling.</div>
+    </div>
+    <div class="tip"><span class="tip-ic">💡</span><div data-ar="طابق الحسابات مرة واحدة شهرياً لمعظم الحالات. اجعلها عادة شهرية ثابتة خصوصاً إذا كنت تستورد المعاملات يدوياً.">You don't need to reconcile every day. Once a month is fine for most people — just make sure you do it at least monthly if you import transactions manually.</div></div>
+  </div>
 
   <div class="concept">
     <span class="concept-tag blue"><span data-ar="مصادر رسمية">Official Docs</span></span>
     <h2><span data-ar="اقرأ لاحقاً">Read later</span></h2>
     <ul class="plain">
-      <li data-ar="<a href=&quot;https://actualbudget.org/docs/transactions/importing/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Importing Transactions</a> — Bank Sync، استيراد الملفات، CSV، والإدخال اليدوي"><a href="https://actualbudget.org/docs/transactions/importing/" target="_blank" rel="noopener noreferrer">Importing Transactions</a> — bank sync, file import, CSV, and manual entry</li>
-      <li data-ar="<a href=&quot;https://actualbudget.org/docs/advanced/bank-sync/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Connecting Your Bank</a> — مزامنة البنك والمزودون المدعومون"><a href="https://actualbudget.org/docs/advanced/bank-sync/" target="_blank" rel="noopener noreferrer">Connecting Your Bank</a> — bank sync and supported providers</li>
+      <li data-ar="<a href=&quot;https://actualbudget.org/docs/transactions/importing/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Importing Transactions</a> — Bank Sync، استيراد الملفات، CSV، والإدخال اليدوي"><a href="https://actualbudget.org/docs/transactions/importing/" target="_blank" rel="noopener noreferrer">Importing Transactions</a> — Bank Sync, file import, CSV, and manual entry</li>
+      <li data-ar="<a href=&quot;https://actualbudget.org/docs/advanced/bank-sync/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Connecting Your Bank</a> — مزامنة البنك والمزودون المدعومون"><a href="https://actualbudget.org/docs/advanced/bank-sync/" target="_blank" rel="noopener noreferrer">Connecting Your Bank</a> — Bank Sync and supported providers</li>
       <li data-ar="<a href=&quot;https://actualbudget.org/docs/transactions/merging/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Merging Duplicate Transactions</a> — دمج المعاملات المكررة ومنطق النسخة المحتفظ بها"><a href="https://actualbudget.org/docs/transactions/merging/" target="_blank" rel="noopener noreferrer">Merging Duplicate Transactions</a> — duplicate merging and kept-transaction logic</li>
       <li data-ar="<a href=&quot;https://actualbudget.org/docs/transactions/split-transactions/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Split Transactions</a> — تقسيم معاملة واحدة على أكثر من تصنيف"><a href="https://actualbudget.org/docs/transactions/split-transactions/" target="_blank" rel="noopener noreferrer">Split Transactions</a> — splitting one transaction across categories</li>
-      <li data-ar="<a href=&quot;https://actualbudget.org/docs/schedules/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Schedules</a> — المعاملات المتكررة والمتوقعة"><a href="https://actualbudget.org/docs/schedules/" target="_blank" rel="noopener noreferrer">Schedules</a> — recurring and expected transactions</li>
+      <li data-ar="<a href=&quot;https://actualbudget.org/docs/transactions/payees/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Payees</a>، <a href=&quot;https://actualbudget.org/docs/transactions/tags/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Tags</a>، <a href=&quot;https://actualbudget.org/docs/transactions/bulk-editing/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Bulk Actions</a>، و<a href=&quot;https://actualbudget.org/docs/transactions/filters/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Filters</a> — أدوات إدارة وتنظيف المعاملات"><a href="https://actualbudget.org/docs/transactions/payees/" target="_blank" rel="noopener noreferrer">Payees</a>, <a href="https://actualbudget.org/docs/transactions/tags/" target="_blank" rel="noopener noreferrer">Tags</a>, <a href="https://actualbudget.org/docs/transactions/bulk-editing/" target="_blank" rel="noopener noreferrer">Bulk Actions</a>, and <a href="https://actualbudget.org/docs/transactions/filters/" target="_blank" rel="noopener noreferrer">Filters</a> — transaction cleanup and management tools</li>
+      <li data-ar="<a href=&quot;https://actualbudget.org/docs/accounts/reconciliation/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Reconciliation</a> — مطابقة الحسابات وقفل المعاملات"><a href="https://actualbudget.org/docs/accounts/reconciliation/" target="_blank" rel="noopener noreferrer">Reconciliation</a> — matching accounts and locking transactions</li>
       <li data-ar="<a href=&quot;https://actualbudget.org/docs/transactions/transfers/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Transfers</a> — مهم عند استيراد حسابين فيهما نفس التحويل"><a href="https://actualbudget.org/docs/transactions/transfers/" target="_blank" rel="noopener noreferrer">Transfers</a> — important when importing both sides of a transfer</li>
     </ul>
   </div>
 
   <div class="next-bar">
-    <div class="next-bar-info"><p><span data-en="Up next — Lesson 07" data-ar="الدرس التالي — ٠٧">Up next — Lesson 07</span></p><strong><span data-en="Rules: Let Actual Do the Work For You" data-ar="القواعد: دعِ Actual يعمل عنك">Rules: Let Actual Do the Work For You</span></strong></div>
+    <div class="next-bar-info"><p><span data-en="Up next - Lesson 07" data-ar="الدرس التالي - ٠٧">Up next - Lesson 07</span></p><strong><span data-en="Rules &amp; Automation: Let Actual Do the Work For You" data-ar="القواعد والأتمتة: دعِ Actual يعمل عنك">Rules &amp; Automation: Let Actual Do the Work For You</span></strong></div>
     <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(6)">Next Lesson →</button>
   </div>
 </div>
 
 
 <!-- ╔══════════════════════════════════════════════════════════╗ -->
-<!-- ║  07  RULES                                              ║ -->
+<!-- ║  07  RULES & AUTOMATION                                 ║ -->
 <!-- ╚══════════════════════════════════════════════════════════╝ -->
 <div class="page" id="p6">
   <div class="opener">
     <div class="opener-meta">
       <span class="opener-num"><span data-ar="الدرس ٠٧ من ٠٩">Lesson 07 of 09</span></span>
-      <span class="opener-time"><span data-ar="⏱ ٥ دقائق">⏱ 5 min</span></span>
+      <span class="opener-time"><span data-ar="⏱ ٧ دقائق">⏱ 7 min</span></span>
     </div>
-    <h1><span data-ar="القواعد: دعِ Actual يعمل عنك">Rules: Let Actual Do the Work For You</span></h1>
-    <p class="opener-desc"><span data-ar="تصنيف معاملات الميزانية يدوياً أمر مُرهق. Rules هي الطريقة التي يتعلم بها Actual من سلوكك ويُؤتمِت العمل المتكرر — حتى يصبح استيراد المعاملات شبه تلقائي.">Manually categorizing budget transactions gets old fast. Rules are how Actual learns from you and automates the repetitive work — so importing transactions eventually requires almost no effort.</span></p>
+    <h1><span data-ar="القواعد والأتمتة: دعِ Actual يعمل عنك">Rules &amp; Automation: Let Actual Do the Work For You</span></h1>
+    <p class="opener-desc"><span data-ar="بعد أن أصبحت معاملاتك تدخل وتُنظف بشكل صحيح، استخدم Rules وSchedules لتقليل العمل المتكرر. Rules تنظف وتُصنف المعاملات المستوردة، وSchedules تساعدك على رؤية المعاملات المتكررة والمتوقعة قبل حدوثها.">Once your transactions are coming in and getting cleaned up correctly, use Rules and Schedules to reduce repetitive work. Rules clean and categorize imported transactions, while Schedules help you see recurring and expected transactions before they happen.</span></p>
   </div>
 
   <div class="learn-box">
@@ -1405,7 +1496,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
       <div class="learn-item"><span data-ar="ما هي Rules وكيف تعمل">Understand what rules are and how they work</span></div>
       <div class="learn-item"><span data-ar="كيف ينشئ Actual قواعد تلقائياً من سلوكك">Know how Actual creates rules automatically from your behaviour</span></div>
       <div class="learn-item"><span data-ar="كيف تعرض وتحرر وتنشئ Rules يدوياً">Know how to view, edit, and create rules manually</span></div>
-      <div class="learn-item"><span data-ar="مراحل القواعد (pre, default, post)">Understand rule stages (pre, default, post)</span></div>
+      <div class="learn-item"><span data-ar="مراحل القواعد (pre, default, post) وكيف تستخدم Schedules">Understand rule stages and how Schedules support automation</span></div>
     </div>
   </div>
 
@@ -1423,7 +1514,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
       <div class="rb-row"><span class="rc" data-ar="تعيين Payee">Set Payee</span><span style="color:var(--ink3)">→</span><span class="rc a">Amazon</span></div>
       <div class="rb-row"><span class="rc" data-ar="تعيين التصنيف">Set Category</span><span style="color:var(--ink3)">→</span><span class="rc a" data-ar="تسوق">Shopping</span></div>
     </div>
-    <p style="font-size:13px;color:var(--ink3);margin-top:8px" data-ar="هذا يحوّل <code style=&quot;background:#f3f4f6;padding:1px 5px;border-radius:3px&quot;>AMAZON.COM*5C7QC7MH0 AM 10/26</code> إلى Amazon / تسوق في كل مرة — تلقائياً.">This turns <code style="background:#f3f4f6;padding:1px 5px;border-radius:3px">AMAZON.COM*5C7QC7MH0 AM 10/26</code> into "Amazon / Shopping" every single time — automatically.</p>
+    <p style="font-size:13px;color:var(--ink3);margin-top:8px" data-ar="هذا يحوّل <code style=&quot;background:#f3f4f6;padding:1px 5px;border-radius:3px&quot;>AMAZON.COM*5C7QC7MH0 AM 10/26</code> إلى Amazon / تسوق في كل مرة - تلقائياً.">This turns <code style="background:#f3f4f6;padding:1px 5px;border-radius:3px">AMAZON.COM*5C7QC7MH0 AM 10/26</code> into "Amazon / Shopping" every single time - automatically.</p>
   </div>
 
   <div class="concept">
@@ -1489,17 +1580,38 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   </div>
 
   <div class="concept">
+    <span class="concept-tag green"><span data-ar="تخطيط">Planning</span></span>
+    <h2><span data-ar="Schedules: المعاملات المتكررة والمتوقعة">Schedules: recurring and expected transactions</span></h2>
+    <p data-ar="Schedules تساعدك على رؤية المعاملات القادمة قبل أن تحدث: راتب، إيجار، اشتراك، قسط، أو سداد تلقائي لبطاقة ائتمان. يمكن أن تكون متكررة أو لمرة واحدة، ويمكن إدخالها تلقائياً أو تركها للموافقة اليدوية.">Schedules help you see upcoming transactions before they happen: salary, rent, subscriptions, loan payments, or credit card autopay. They can be recurring or one-time, and can be entered automatically or left for manual approval.</p>
+    <div class="ss" style="margin-top:14px">
+      <img src="https://actualbudget.org/assets/images/schedules-overview-082e66ce8939714130d2c5af3fa2146a.webp" alt="Schedules overview in Actual" loading="lazy">
+      <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>صفحة Schedules — تعرض المعاملات المتكررة أو المتوقعة حتى ترى ما سيحدث قبل موعده."><span class="ss-cap-icon">📍</span>Schedules overview — recurring or expected transactions appear here so you can see what is coming before it happens.</div>
+    </div>
+    <div class="g2" style="margin-top:14px">
+      <div class="mini-card">
+        <div class="mini-card-title" data-ar="استخدمها لـ">Use them for</div>
+        <ul class="plain" style="font-size:13px"><li data-ar="الدخل المتكرر مثل الراتب">Recurring income like salary</li><li data-ar="الفواتير والاشتراكات والقروض">Bills, subscriptions, and loan payments</li><li data-ar="دفعات البطاقة التلقائية">Credit card autopay</li><li data-ar="المصاريف المتغيرة تقريبياً مثل الكهرباء">Approximate variable bills like utilities</li></ul>
+      </div>
+      <div class="mini-card">
+        <div class="mini-card-title" data-ar="كيف تساعدك؟">Why they help</div>
+        <ul class="plain" style="font-size:13px"><li data-ar="تعرض القادم في الحساب قبل تاريخ الدفع">Show upcoming items in the account before payment date</li><li data-ar="تقلل الإدخال اليدوي للمعاملات المتكررة">Reduce manual entry for recurring transactions</li><li data-ar="يمكن ربطها بـ Rules للتصنيف والملاحظات">Can be linked with Rules for categories and notes</li><li data-ar="تساعدك ألا تفاجأ بالفواتير">Help you avoid surprise bills</li></ul>
+      </div>
+    </div>
+    <div class="tip"><span class="tip-ic">💡</span><div data-ar="ابدأ بثلاثة أو أربعة Schedules فقط: الراتب، الإيجار، أهم الاشتراكات، وسداد البطاقة إن كان تلقائياً. أضف الباقي عندما تلاحظ نمطاً متكرراً.">Start with only three or four schedules: salary, rent, key subscriptions, and card autopay if you use it. Add more when you notice a recurring pattern.</div></div>
+  </div>
+  <div class="concept">
     <span class="concept-tag blue"><span data-ar="مصادر رسمية">Official Docs</span></span>
     <h2><span data-ar="اقرأ لاحقاً">Read later</span></h2>
     <ul class="plain">
       <li data-ar="<a href=&quot;https://actualbudget.org/docs/budgeting/rules/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Rules</a> — الشروط والحقول والمراحل والقواعد التلقائية"><a href="https://actualbudget.org/docs/budgeting/rules/" target="_blank" rel="noopener noreferrer">Rules</a> — conditions, fields, stages, and automatic rules</li>
-      <li data-ar="<a href=&quot;https://actualbudget.org/docs/budgeting/rules/custom/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Rules Examples</a> — أمثلة لقواعد مخصصة وتحويلات Bank Sync"><a href="https://actualbudget.org/docs/budgeting/rules/custom/" target="_blank" rel="noopener noreferrer">Rules Examples</a> — custom rules and bank-sync transfer examples</li>
+      <li data-ar="<a href=&quot;https://actualbudget.org/docs/budgeting/rules/custom/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Rules Examples</a> — أمثلة لقواعد مخصصة وتحويلات Bank Sync"><a href="https://actualbudget.org/docs/budgeting/rules/custom/" target="_blank" rel="noopener noreferrer">Rules Examples</a> — custom rules and Bank Sync transfer examples</li>
+      <li data-ar="<a href=&quot;https://actualbudget.org/docs/schedules/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Schedules</a> — المعاملات المتكررة والمتوقعة"><a href="https://actualbudget.org/docs/schedules/" target="_blank" rel="noopener noreferrer">Schedules</a> — recurring and expected transactions</li>
       <li data-ar="<a href=&quot;https://actualbudget.org/docs/experimental/rule-templating/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Rule Action Templating</a> — ميزة تجريبية للقواعد المتقدمة"><a href="https://actualbudget.org/docs/experimental/rule-templating/" target="_blank" rel="noopener noreferrer">Rule Action Templating</a> — experimental advanced rule actions</li>
     </ul>
   </div>
 
   <div class="next-bar">
-    <div class="next-bar-info"><p><span data-en="Up next — Lesson 08" data-ar="الدرس التالي — ٠٨">Up next — Lesson 08</span></p><strong><span data-en="Reports: Understanding What Your Data Is Telling You" data-ar="التقارير: ما الذي تُخبرك به بياناتك">Reports: Understanding What Your Data Is Telling You</span></strong></div>
+    <div class="next-bar-info"><p><span data-en="Up next - Lesson 08" data-ar="الدرس التالي - ٠٨">Up next - Lesson 08</span></p><strong><span data-en="Reports: Understanding What Your Data Is Telling You" data-ar="التقارير: ما الذي تُخبرك به بياناتك">Reports: Understanding What Your Data Is Telling You</span></strong></div>
     <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(7)">Next Lesson →</button>
   </div>
 </div>
@@ -1556,7 +1668,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   <div class="concept">
     <span class="concept-tag amber"><span data-ar="التقرير الثاني">Report 2</span></span>
     <h2><span data-ar="Net Worth: «هل أبني ثروة؟»">Net Worth: "Am I building wealth?"</span></h2>
-    <p data-ar="صافي الثروة هو كل ما تملكه ناقص كل ما عليك — نقد، استثمارات، حقوق ملكية في عقار، ناقص الديون والتمويلات والقروض. هذا من أهم الأرقام في حياتك المالية، والمفترض أن يتجه للأعلى مع الوقت.">Net worth is everything you own minus everything you owe — cash, investments, property equity, minus debts, mortgages, and loans. It's the single most important number in your financial life, and it should trend upward over time.</p>
+    <p data-ar="صافي الثروة هو كل ما تملكه ناقص كل ما عليك - نقد، استثمارات، حقوق ملكية في عقار، ناقص الديون والتمويلات والقروض. هذا من أهم الأرقام في حياتك المالية، والمفترض أن يتجه للأعلى مع الوقت.">Net worth is everything you own minus everything you owe - cash, investments, property equity, minus debts, mortgages, and loans. It's the single most important number in your financial life, and it should trend upward over time.</p>
     <div class="ss" style="margin-top:14px">
       <img src="https://actualbudget.org/assets/images/net-worth-0b5d32c239d7543894671a51f4ba3f3d.webp" alt="Net Worth graph" loading="lazy">
       <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>Net Worth عبر الوقت — يشمل كل الحسابات داخل الميزانية وخارجها. أضف التمويل العقاري وحسابات الاستثمار كحسابات Off Budget لرؤية الصورة كاملة."><span class="ss-cap-icon">📍</span>Net Worth over time — includes all accounts (On Budget and Off Budget). Add your mortgage and investment accounts as Off Budget accounts to see the full picture.</div>
@@ -1566,7 +1678,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   <div class="concept">
     <span class="concept-tag amber"><span data-ar="التقرير الثالث">Report 3</span></span>
     <h2><span data-ar="Spending Analysis: اتجاهات المصاريف عبر الوقت">Spending Analysis: expense trends over time</span></h2>
-    <p data-ar="يتتبع Spending Analysis مصاريفك ويقارنها خلال فترة محددة. استخدمه لرؤية الاتجاهات، التقلبات، ومناطق الإنفاق العالي أو التوفير — وليس فقط لمعرفة أكبر تصنيف صرفت عليه.">Spending Analysis tracks and compares your expenses over a selected period. Use it to see trends, fluctuations, and areas of high spending or savings — not just the single biggest category you spent on.</p>
+    <p data-ar="يتتبع Spending Analysis مصاريفك ويقارنها خلال فترة محددة. استخدمه لرؤية الاتجاهات، التقلبات، ومناطق الإنفاق العالي أو التوفير - وليس فقط لمعرفة أكبر تصنيف صرفت عليه.">Spending Analysis tracks and compares your expenses over a selected period. Use it to see trends, fluctuations, and areas of high spending or savings - not just the single biggest category you spent on.</p>
     <div class="ss" style="margin-top:14px">
       <img src="https://actualbudget.org/assets/images/spending-analysis-2a188e66c232c7384af5c2a513fa4b1a.webp" alt="Spending Analysis" loading="lazy">
       <div class="ss-cap" data-ar="<span class=&quot;ss-cap-icon&quot;>📍</span>Spending Analysis — مقارنة المصاريف خلال فترة محددة لرؤية الاتجاهات، التقلبات، ومناطق الإنفاق العالي أو التوفير."><span class="ss-cap-icon">📍</span>Spending Analysis — compare expenses across a selected period to spot trends, fluctuations, and areas of high spending or savings.</div>
@@ -1633,7 +1745,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   </div>
 
   <div class="next-bar">
-    <div class="next-bar-info"><p><span data-en="Up next — Lesson 09" data-ar="الدرس التالي — ٠٩">Up next — Lesson 09</span></p><strong><span data-en="Tips, FAQ & Your Path Forward" data-ar="نصائح وأسئلة ومسارك القادم">Tips, FAQ & Your Path Forward</span></strong></div>
+    <div class="next-bar-info"><p><span data-en="Up next - Lesson 09" data-ar="الدرس التالي - ٠٩">Up next - Lesson 09</span></p><strong><span data-en="Tips, FAQ & Your Path Forward" data-ar="نصائح وأسئلة ومسارك القادم">Tips, FAQ & Your Path Forward</span></strong></div>
     <button class="next-btn" type="button" data-en-text="Next Lesson →" data-ar-text="← الدرس التالي" data-ar="← الدرس التالي" onclick="go(8)">Next Lesson →</button>
   </div>
 </div>
@@ -1645,19 +1757,58 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
   <div class="opener">
     <div class="opener-meta">
       <span class="opener-num"><span data-ar="الدرس ٠٩ من ٠٩">Lesson 09 of 09</span></span>
-      <span class="opener-time"><span data-ar="⏱ ٦ دقائق">⏱ 6 min</span></span>
+      <span class="opener-time"><span data-ar="⏱ ٧ دقائق">⏱ 7 min</span></span>
     </div>
     <h1><span data-ar="نصائح وأسئلة ومسارك القادم">Tips, FAQ & Your Path Forward</span></h1>
     <p class="opener-desc"><span data-ar="أتممت الدورة الأساسية. هذا الدرس الأخير يستعرض اختصارات المستخدم المتقدم، يجيب على أكثر الأسئلة شيوعاً، ويمنحك إطاراً واضحاً لاختيار أسلوب الميزانية المناسب لك على المدى الطويل.">You've completed the core course. This final lesson covers power user shortcuts, answers the most common questions, and gives you a clear framework for choosing the budgeting workflow that fits you long term.</span></p>
   </div>
 
+
+
   <div class="learn-box">
     <div class="learn-box-title">🎯 <span data-ar="بنهاية هذا الدرس ستعرف">By the end of this lesson you will…</span></div>
     <div class="learn-items">
-      <div class="learn-item"><span data-ar="أكثر اختصارات لوحة المفاتيح والميزات الاحترافية فائدةً">Know the most useful keyboard shortcuts and power features</span></div>
+      <div class="learn-item"><span data-ar="عادة أسبوعية بسيطة لإبقاء أرقامك موثوقة">Know a simple weekly habit to keep your numbers trustworthy</span></div>
       <div class="learn-item"><span data-ar="إجابات أكثر أسئلة المبتدئين شيوعاً">Have answers to the most common beginner questions</span></div>
       <div class="learn-item"><span data-ar="إطار قرار واضح للاختيار بين Tracking وEnvelope">Have a clear framework for choosing between Tracking and Envelope</span></div>
       <div class="learn-item"><span data-ar="أين تذهب عند الحاجة لمساعدة إضافية">Know where to go when you have questions beyond this course</span></div>
+    </div>
+  </div>
+
+  <div class="concept">
+    <span class="concept-tag green"><span data-ar="استمر ببساطة">Keep Simple</span></span>
+    <h2><span data-ar="حافظ على بساطة Actual: عادتك الأسبوعية">Keep Actual Simple: Your Weekly Rhythm</span></h2>
+    <p data-ar="الهدف ليس بناء نظام مثالي. الهدف أن تبقي أرقامك موثوقة بما يكفي لاتخاذ قرارات إنفاق أفضل. عادة أسبوعية بسيطة أفضل من إعداد معقد تتوقف عن استخدامه.">The goal is not to build a perfect system. The goal is to keep your numbers trustworthy enough to make better spending decisions. A simple weekly habit is better than a complex setup you stop using.</p>
+
+    <div class="g2" style="margin-top:18px">
+      <div class="mini-card" style="border-color:var(--green-border);background:var(--green-bg)">
+        <span class="concept-tag green"><span data-ar="افعل">Do</span></span>
+        <h3 style="font-size:20px;line-height:1.35;margin:4px 0 12px" data-ar="العادات الأسبوعية">Weekly habit</h3>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.65;color:#14532d"><input type="checkbox" style="margin-top:5px;flex-shrink:0"><span data-ar="استورد أو زامن أو أدخل المعاملات الجديدة.">Import, sync, or enter new transactions.</span></label>
+          <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.65;color:#14532d"><input type="checkbox" style="margin-top:5px;flex-shrink:0"><span data-ar="صنّف أي معاملات غير مصنفة.">Categorize anything uncategorized.</span></label>
+          <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.65;color:#14532d"><input type="checkbox" style="margin-top:5px;flex-shrink:0"><span data-ar="راجع التجاوزات قبل أن تصبح غير مرئية.">Review overspending before it becomes invisible.</span></label>
+          <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.65;color:#14532d"><input type="checkbox" style="margin-top:5px;flex-shrink:0"><span data-ar="تحقق من التحويلات بين حساباتك الخاصة.">Check transfers between your own accounts.</span></label>
+          <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.65;color:#14532d"><input type="checkbox" style="margin-top:5px;flex-shrink:0"><span data-ar="طابق حساباتك الرئيسية شهرياً.">Reconcile your main accounts monthly.</span></label>
+        </div>
+      </div>
+
+      <div class="mini-card" style="border-color:var(--amber-border);background:var(--amber-bg)">
+        <span class="concept-tag amber"><span data-ar="تجنب">Avoid</span></span>
+        <h3 style="font-size:20px;line-height:1.35;margin:4px 0 12px" data-ar="أخطاء المبتدئين">Beginner traps</h3>
+        <ul class="plain" style="font-size:13px">
+          <li data-ar="إنشاء عدد كبير جداً من التصنيفات في اليوم الأول.">Creating too many categories on day one.</li>
+          <li data-ar="استخدام Tracking mode عندما تحتاج فعلياً إلى تحكم نقدي.">Using Tracking mode when you actually need cash control.</li>
+          <li data-ar="تصنيف مدفوعات بطاقة الائتمان عندما يكون الحسابان On Budget.">Categorizing credit card payments when both accounts are On Budget.</li>
+          <li data-ar="ترك المعاملات غير المصنفة لفترة طويلة.">Ignoring uncategorized transactions for too long.</li>
+          <li data-ar="الحكم على التقارير قبل وجود شهر كامل من البيانات.">Judging reports before you have a full month of data.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="call ci" style="margin-top:18px">
+      <span class="call-ic">💡</span>
+      <div data-ar="<strong>قاعدة بسيطة:</strong> إذا فتحت Actual مرة واحدة أسبوعياً ونظفت المعاملات غير المصنفة والتحويلات والتجاوزات، ستبقى الميزانية مفيدة بدون أن تصبح عبئاً يومياً."><strong>Simple rule:</strong> if you open Actual once a week and clean up uncategorized transactions, transfers, and overspending, the budget stays useful without becoming a daily burden.</div>
     </div>
   </div>
 
@@ -1761,11 +1912,11 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
     <div style="display:flex;flex-direction:column;margin-top:4px">
       <div style="padding:16px 0;border-bottom:1px solid var(--border)">
         <p style="font-weight:600;margin-bottom:6px" data-ar="السؤال: هل يجب تصنيف كل معاملة؟">Q: Do I have to categorize every single transaction?</p>
-        <p style="font-size:14px;color:var(--ink2)" data-ar="<strong>الإجابة:</strong> نعم، في كلا الوضعين تحتاج كل معاملة تؤثر على الميزانية وليست Transfer إلى تصنيف. معاملات Off Budget لا تُصنّف، والتحويلات بين حسابات On Budget لا تحتاج تصنيفاً. التصنيفات تجعل التقارير مفيدة وتُشغّل الميزانية بشكل صحيح. الخبر الجيد: Rules تتولى أغلب التصنيف تلقائياً بعد أسابيع قليلة."><strong>A:</strong> Yes — in both modes, every budget-impacting non-transfer transaction needs a category. Off Budget transactions are not categorized, and transfers between On Budget accounts do not need categories. Categories make reports useful and keep the budget working. The good news: Rules handle most categorization automatically after a few weeks.</p>
+        <p style="font-size:14px;color:var(--ink2)" data-ar="<strong>الإجابة:</strong> نعم، في كلا الوضعين تحتاج كل معاملة تؤثر على الميزانية وليست Transfer إلى تصنيف. معاملات Off Budget لا تُصنّف، والتحويلات بين حسابات On Budget لا تحتاج تصنيفاً. التصنيفات تجعل التقارير مفيدة وتُشغّل الميزانية بشكل صحيح. الخبر الجيد: Rules تتولى أغلب التصنيف تلقائياً بعد أسابيع قليلة."><strong>A:</strong> Yes - in both modes, every budget-impacting non-transfer transaction needs a category. Off Budget transactions are not categorized, and transfers between On Budget accounts do not need categories. Categories make reports useful and keep the budget working. The good news: Rules handle most categorization automatically after a few weeks.</p>
       </div>
       <div style="padding:16px 0;border-bottom:1px solid var(--border)">
         <p style="font-weight:600;margin-bottom:6px" data-ar="السؤال: في Tracking mode، ماذا يحدث لمبالغ الميزانية غير المستخدمة؟">Q: In Tracking mode, do unused budget amounts carry over to next month?</p>
-        <p style="font-size:14px;color:var(--ink2)" data-ar="<strong>الإجابة:</strong> يبدأ كل شهر في Tracking mode بأهداف جديدة. يمكنك وضع أهداف جديدة كل شهر أو نسخ ميزانية الشهر السابق بضغطة واحدة. في Envelope mode، تنتقل المبالغ المتبقية في التصنيفات تلقائياً وتتراكم مع الوقت."><strong>A:</strong> No. This is a fundamental difference from Envelope mode. In Tracking mode, each month starts fresh — you set new targets each month (or copy last month's with one click). In Envelope mode, leftover money in categories rolls forward automatically and builds up over time.</p>
+        <p style="font-size:14px;color:var(--ink2)" data-ar="<strong>الإجابة:</strong> يبدأ كل شهر في Tracking mode بأهداف جديدة. يمكنك وضع أهداف جديدة كل شهر أو نسخ ميزانية الشهر السابق بضغطة واحدة. في Envelope mode، تنتقل المبالغ المتبقية في التصنيفات تلقائياً وتتراكم مع الوقت."><strong>A:</strong> No. This is a fundamental difference from Envelope mode. In Tracking mode, each month starts fresh - you set new targets each month (or copy last month's with one click). In Envelope mode, leftover money in categories rolls forward automatically and builds up over time.</p>
       </div>
       <div style="padding:16px 0;border-bottom:1px solid var(--border)">
         <p style="font-weight:600;margin-bottom:6px" data-ar="السؤال: هل يمكن مزامنة الحساب البنكي؟">Q: Can I sync my bank?</p>
@@ -1773,7 +1924,7 @@ body.ar .g3 .mini-card p { font-size: 15px !important; line-height: 1.9 !importa
       </div>
       <div style="padding:16px 0;border-bottom:1px solid var(--border)">
         <p style="font-weight:600;margin-bottom:6px" data-ar="السؤال: هل يوجد تطبيق جوال؟">Q: Is there a mobile app?</p>
-        <p style="font-size:14px;color:var(--ink2)" data-ar="<strong>الإجابة:</strong> تطبيقات الجوال القديمة غير مدعومة حالياً. استخدم Actual من متصفح الجوال؛ الواجهة متجاوبة وتعمل بشكل جيد. على iOS اضغط مشاركة ثم Add to Home Screen لتجربة قريبة من التطبيق الكامل. وعلى Android استخدم Add to Home Screen من قائمة المتصفح."><strong>A:</strong> The dedicated mobile apps are no longer maintained. Use Actual in your phone's browser — the interface is responsive and works well. On iOS, tap Share → "Add to Home Screen" for a full-screen app experience. On Android, use "Add to Home Screen" from the browser menu.</p>
+        <p style="font-size:14px;color:var(--ink2)" data-ar="<strong>الإجابة:</strong> تطبيقات الجوال القديمة غير مدعومة حالياً. استخدم Actual من متصفح الجوال؛ الواجهة متجاوبة وتعمل بشكل جيد. على iOS اضغط مشاركة ثم Add to Home Screen لتجربة قريبة من التطبيق الكامل. وعلى Android استخدم Add to Home Screen من قائمة المتصفح."><strong>A:</strong> The dedicated mobile apps are no longer maintained. Use Actual in your phone's browser - the interface is responsive and works well. On iOS, tap Share → "Add to Home Screen" for a full-screen app experience. On Android, use "Add to Home Screen" from the browser menu.</p>
       </div>
       <div style="padding:16px 0;border-bottom:1px solid var(--border)">
         <p style="font-weight:600;margin-bottom:6px" data-ar="السؤال: ماذا أفعل إذا تجاوزت تصنيفاً بشكل كبير في Tracking mode؟">Q: What if I overspend a category badly in Tracking mode?</p>
