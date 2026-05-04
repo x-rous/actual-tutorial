@@ -415,7 +415,7 @@ body.ar .transfer-category-table td {
       <span class="hero-pill"><span data-ar="تعليم يبدأ بالمفهوم">Concept-first teaching</span></span>
       <span class="hero-pill"><span data-ar="مناسب من دون خبرة مسبقة">No prior knowledge needed</span></span>
     </div>
-    <p class="hero-source" data-ar='مبني على <a href="https://actualbudget.org/docs/" target="_blank" rel="noopener noreferrer">الوثائق الرسمية لـ Actual</a> حتى يكون الشرح قريباً من المصدر الأصلي.'>Based on the <a href="https://actualbudget.org/docs/" target="_blank" rel="noopener noreferrer">official Actual docs</a> so the tutorial stays close to the original source.</p>
+    <p class="hero-source" data-ar='مبني على <a href="https://actualbudget.org/docs/" target="_blank" rel="noopener noreferrer">الوثائق الرسمية لـ Actual</a> حتى يكون الشرح قريباً من المصدر الأصلي. <a href="https://github.com/x-rous/actual-tutorial/edit/main/index.html" target="_blank" rel="noopener">حرّر هذا الدرس على GitHub</a>'>Based on the <a href="https://actualbudget.org/docs/" target="_blank" rel="noopener noreferrer">official Actual docs</a> so the tutorial stays close to the original source. <a href="https://github.com/x-rous/actual-tutorial/edit/main/index.html" target="_blank" rel="noopener">Edit this tutorial on GitHub</a></p>
   </div>
 </div>
 
@@ -453,7 +453,7 @@ body.ar .transfer-category-table td {
     <div class="learn-items">
       <div class="learn-item"><span data-ar="ما هو Actual Budget وما المشكلة التي يحلها">Know what Actual Budget is and what problem it solves</span></div>
       <div class="learn-item"><span data-ar="ما معنى ملف الميزانية في Actual">Understand the idea of an Actual budget file</span></div>
-      <div class="learn-item"><span data-ar="الفرق بين تطبيق سطح المكتب والخادم الذاتي أو السحابي">Know the difference between the Desktop Application and a Self-Hosted / Cloud Server</span></div>
+      <div class="learn-item"><span data-ar="الفرق بين تطبيق سطح المكتب والخادم الذاتي أو السحابي">Know the difference between the Desktop Client and a Self-Hosted / Cloud Server</span></div>
       <div class="learn-item"><span data-ar="خريطة واضحة لبقية الدورة">Have a clear map for the rest of the course</span></div>
     </div>
   </div>
@@ -463,7 +463,6 @@ body.ar .transfer-category-table td {
     <span class="concept-tag blue"><span data-ar="مفهوم">Concept</span></span>
     <h2><span data-ar="ما الذي يميّز Actual Budget؟">What makes Actual Budget different?</span></h2>
     <p data-ar="معظم تطبيقات الميزانية خدمات سحابية؛ بياناتك البنكية وسجل معاملاتك تكون على خوادم شركة أخرى. Actual مختلف لأنه محلي أولاً ومفتوح المصدر ويمكن تشغيله بدون خدمة إلزامية. يمكنك إبقاء ميزانيتك على جهازك، أو تشغيل خادم تتحكم فيه عندما تحتاج المزامنة والوصول من عدة أجهزة.">Most budgeting apps are cloud services - your bank details and transaction history live on a company's servers. Actual is different because it is local-first, open-source, and does not require a mandatory hosted service. You can keep your budget on your own device, or run a server you control when you need sync and multi-device access.</p>
-    <p data-ar="Actual مجاني ومفتوح المصدر. يمكنك تشغيله كتطبيق سطح مكتب على جهازك للبدء بسرعة، أو تشغيل خادم منزلي، أو استخدام مزود بسيط مثل <a href=&quot;https://www.pikapods.com/pods?run=actual&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>PikaPods</a> مقابل بضعة دولارات شهرياً. عند استخدام الخادم، تعمل الواجهة من المتصفح والهاتف وتصبح المزامنة أسهل.">Actual is free and open-source. You can run it as a desktop app on your own computer for the quickest start, on a home server, or through a simple provider like <a href="https://www.pikapods.com/pods?run=actual" target="_blank" rel="noopener noreferrer">PikaPods</a> for a few dollars a month. When you use a server, the web interface works in your browser and on your phone, and sync becomes easier.</p>
     <div class="how">
       <div class="how-title"><span data-ar="كيف يبدو هذا في التطبيق">In Actual this looks like…</span></div>
       <p data-ar="عند فتح Actual لأول مرة، تنشئ «ملف ميزانية». كل شيء - الحسابات، المعاملات، التصنيفات، والتقارير - يكون داخل هذا الملف. يمكن أن يبقى الملف محلياً على جهازك، أو تتم مزامنته بين أجهزتك عند استخدام خادم. وإذا قررت التوقف عن استخدام Actual، تصدّر بياناتك وتبقى ملكك بالكامل.">When you first open Actual, you create a "budget file." Everything - your accounts, transactions, categories, and reports - lives in that file. It can stay local on your device, or sync across devices when you use a server. If you ever want to stop using Actual, you export your data and you own it completely.</p>
@@ -474,18 +473,18 @@ body.ar .transfer-category-table td {
   <div class="concept">
     <span class="concept-tag amber"><span data-ar="التثبيت">Installation</span></span>
     <h2><span data-ar="التثبيت: اختر أحد مسارين">Installation: choose one of two paths</span></h2>
-    <p data-ar="Actual يتكوّن من جزأين: <strong>client</strong> وهو التطبيق الذي تستخدمه، و<strong>server</strong> وهو الجزء الذي يضيف المزامنة، وBank Sync، والوصول من المتصفح، وAPI. تطبيق سطح المكتب هو أسهل طريقة للبدء؛ والخادم الذاتي أو السحابي أفضل عندما تريد أن يكون Actual متاحاً عبر عدة أجهزة.">Actual has two parts: the <strong>client</strong>, which is the app you use, and the <strong>server</strong>, which adds sync, Bank Sync, browser access, and API access. The Desktop Application is the easiest way to start; a self-hosted or cloud server is better when you want Actual available across devices.</p>
+    <p data-ar="Actual يتكوّن من جزأين: <strong>client</strong> وهو التطبيق الذي تستخدمه، و<strong>server</strong> وهو الجزء الذي يضيف المزامنة، وBank Sync، والوصول من المتصفح، وAPI. تطبيق سطح المكتب هو أسهل طريقة للبدء؛ والخادم الذاتي أو السحابي أفضل عندما تريد أن يكون Actual متاحاً عبر عدة أجهزة.">Actual has two parts: the <strong>client</strong>, which is the app you use, and the <strong>server</strong>, which adds sync, Bank Sync, browser access, and API access. The Desktop Client is the easiest way to start; a self-hosted or cloud server is better when you want Actual available across devices.</p>
 
     <div class="g2" style="margin-top:16px">
       <div class="mini-card">
-        <div class="mini-card-title" data-ar="تطبيق سطح المكتب (مع خادم محلي اختياري)">Desktop Application (with Optional Local Server)</div>
-        <p style="font-size:13px;color:var(--ink2)" data-ar="أسهل نقطة بداية لمعظم المبتدئين: نزّل تطبيق سطح المكتب لنظام Windows أو Mac، أنشئ ميزانية، وابدأ بدون Docker أو استضافة أو إعداد سحابي.">Easiest starting point for most beginners: download the desktop app for Windows or Mac, create a budget, and start without Docker, hosting, or cloud setup.</p>
-        <p style="font-size:13px;margin-top:10px"><a href="https://github.com/actualbudget/actual/releases" target="_blank" rel="noopener noreferrer" data-ar="تحميل تطبيق سطح المكتب من GitHub">Download the desktop app from GitHub</a></p>
+        <div class="mini-card-title" data-ar="تطبيق سطح المكتب (مع خادم محلي اختياري)">Desktop Client (with Optional Local Server)</div>
+        <p style="font-size:13px;color:var(--ink2)" data-ar="أسهل نقطة بداية لمعظم المبتدئين: نزّل تطبيق سطح المكتب لنظام Windows أو Mac، أنشئ ميزانية، وابدأ بدون Docker أو استضافة أو إعداد سحابي.">Easiest starting point for most beginners: download the desktop app for Windows, Linux, or Mac, create a budget, and start without Docker, hosting, or cloud setup.</p>
+        <p style="font-size:13px;margin-top:10px"><a href="https://actualbudget.org/download" target="_blank" rel="noopener noreferrer" data-ar="تحميل تطبيق سطح المكتب من">Download the Desktop App</a></p>
         <ul class="plain" style="font-size:13px;margin-top:10px">
           <li data-ar="مناسب لتعلّم Actual والبدء باستخدام التطبيق بسرعة كبيرة">Good for learning Actual and getting started quickly</li>
           <li data-ar="يعمل بدون اتصال ويدعم نسخاً احتياطية عبر تصدير/استيراد ملف الميزانية">Works offline and supports budget file export/import</li>
           <li data-ar="يمكنه تشغيل خادم Actual محلي على جهازك اختيارياً لتفعيل Bank Sync">Can optionally run a local server to enable Bank Sync.</li>
-          <li data-ar="الحد: لا يمكنك الوصول إلى التطبيق عن بُعد أو من هاتفك">Limit: you cannot access the app remotely or from your phone</li>
+          <li data-ar="الحد: لا يمكنك الوصول إلى التطبيق عن بُعد أو من هاتفك">Limit: No app access remotely or from your phone</li>
         </ul>
       </div>
       <div class="mini-card" style="border-color:var(--green-border);background:var(--green-bg)">
@@ -608,22 +607,6 @@ body.ar .transfer-category-table td {
 
   <!-- TWO CARDS SIDE BY SIDE -->
   <div id="mode-cards-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px">
-    <!-- TRACKING CARD -->
-    <div id="mode-card-tracking" class="mode-select-card" role="button" tabindex="0" aria-pressed="false" onclick="selectMode('tracking')" onkeydown="handleModeCardKey(event,'tracking')" style="text-align:left;font:inherit;background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);padding:22px;cursor:pointer;transition:border-color .2s,box-shadow .2s">
-      <div style="font-size:28px;margin-bottom:10px">📊</div>
-      <div style="font-size:15px;font-weight:700;margin-bottom:6px" data-ar="Tracking Budget">Tracking Budget</div>
-      <div style="font-size:12px;font-weight:600;color:var(--amber);background:var(--amber-bg);display:inline-block;padding:2px 9px;border-radius:20px;margin-bottom:12px"><span data-ar="تخطيط وتوعية بإنفاق أخف صيانة">Lower-maintenance planning and awareness</span></div>
-      <p style="font-size:13px;color:var(--ink2);line-height:1.65"><span data-ar="ضع أهدافاً شهرية للدخل المتوقع والمصاريف المتوقعة، ثم قارن الواقع بالخطة. هذا الأسلوب لا يطلب منك توزيع كل ريال متاح أو تمويل كل تجاوز من فئة أخرى.">Set monthly targets for expected income and expected expenses, then compare reality against the plan. This workflow does not require you to account for every available dollar or fund every overspend from another category.</span></p>
-      <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
-        <div style="font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px">✓ <span data-ar="مناسب لمن لديه هامش نقدي مريح">Good when you already have a comfortable cash buffer</span></div>
-        <div style="font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px">✓ <span data-ar="يعرض الانحراف عن الهدف ولا يحجز النقد المتاح">Shows variance from target; does not reserve available cash</span></div>
-        <div style="font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px">✓ <span data-ar="لا يرحّل الأموال تلقائياً بين الشهور">Funds do not automatically roll over month to month</span></div>
-      </div>
-      <div id="tracking-selected-badge" style="display:none;margin-top:14px;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--radius-sm);padding:8px 12px;font-size:12px;font-weight:700;color:var(--amber);text-align:center">
-        ✓ <span data-ar="اخترت هذا الأسلوب — تخطيط ومتابعة أخف">Your chosen mode — lighter planning and awareness</span>
-      </div>
-    </div>
-
     <!-- ENVELOPE CARD -->
     <div id="mode-card-envelope" class="mode-select-card" role="button" tabindex="0" aria-pressed="true" onclick="selectMode('envelope')" onkeydown="handleModeCardKey(event,'envelope')" style="text-align:left;font:inherit;background:var(--surface);border:2px solid var(--green);border-radius:var(--radius);padding:22px;cursor:pointer;transition:border-color .2s,box-shadow .2s;box-shadow:0 0 0 3px rgba(22,163,74,.12)">
       <div style="font-size:28px;margin-bottom:10px">📦</div>
@@ -639,20 +622,36 @@ body.ar .transfer-category-table td {
         ✓ <span data-ar="اخترت هذا الأسلوب — افتراضي Actual">Your chosen mode — Actual default</span>
       </div>
     </div>
+
+    <!-- TRACKING CARD -->
+    <div id="mode-card-tracking" class="mode-select-card" role="button" tabindex="0" aria-pressed="false" onclick="selectMode('tracking')" onkeydown="handleModeCardKey(event,'tracking')" style="text-align:left;font:inherit;background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);padding:22px;cursor:pointer;transition:border-color .2s,box-shadow .2s">
+      <div style="font-size:28px;margin-bottom:10px">📊</div>
+      <div style="font-size:15px;font-weight:700;margin-bottom:6px" data-ar="Tracking Budget">Tracking Budget</div>
+      <div style="font-size:12px;font-weight:600;color:var(--amber);background:var(--amber-bg);display:inline-block;padding:2px 9px;border-radius:20px;margin-bottom:12px"><span data-ar="تخطيط وتوعية بإنفاق أخف صيانة">Lower-maintenance planning and awareness</span></div>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.65"><span data-ar="ضع أهدافاً شهرية للدخل المتوقع والمصاريف المتوقعة، ثم قارن الواقع بالخطة. هذا الأسلوب لا يطلب منك توزيع كل ريال متاح أو تمويل كل تجاوز من فئة أخرى.">Set monthly targets for expected income and expected expenses, then compare reality against the plan. This workflow does not require you to account for every available dollar or fund every overspend from another category.</span></p>
+      <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
+        <div style="font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px">✓ <span data-ar="مناسب لمن لديه هامش نقدي مريح">Good when you already have a comfortable cash buffer</span></div>
+        <div style="font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px">✓ <span data-ar="يعرض الانحراف عن الهدف ولا يحجز النقد المتاح">Shows variance from target; does not reserve available cash</span></div>
+        <div style="font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px">✓ <span data-ar="لا يرحّل الأموال تلقائياً بين الشهور">Funds do not automatically roll over month to month</span></div>
+      </div>
+      <div id="tracking-selected-badge" style="display:none;margin-top:14px;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--radius-sm);padding:8px 12px;font-size:12px;font-weight:700;color:var(--amber);text-align:center">
+        ✓ <span data-ar="اخترت هذا الأسلوب — تخطيط ومتابعة أخف">Your chosen mode — lighter planning and awareness</span>
+      </div>
+    </div>
   </div>
   <!-- COMPARISON TABLE -->
   <div class="concept">
     <span class="concept-tag blue"><span data-ar="مقارنة">Side by Side</span></span>
     <h2><span data-ar="المقارنة الكاملة">Full Comparison</span></h2>
     <table class="dt" style="margin-top:12px">
-      <thead><tr><th data-ar="الموضوع">Topic</th><th>📊 Tracking Budget</th><th>📦 Envelope Budget</th></tr></thead>
+      <thead><tr><th data-ar="الموضوع">Topic</th><th>� Envelope Budget</th><th>📊 Tracking Budget</th></tr></thead>
       <tbody>
-        <tr><td data-ar="أساس التخطيط">Planning basis</td><td data-ar="توقعات: أهداف للدخل المتوقع والمصاريف المتوقعة">Forecast: expected income and expected expense targets</td><td data-ar="النقد المتاح: المال الموجود فعلياً الآن">Available cash: money you actually have now</td></tr>
-        <tr><td data-ar="الدخل">Income</td><td data-ar="تضع هدفاً للدخل المتوقع هذا الشهر">You budget expected income for the month</td><td data-ar="الدخل يصبح Available Funds عند وصوله فقط">Income becomes Available Funds only when received</td></tr>
-        <tr><td data-ar="المصاريف والادخار">Expenses and savings</td><td data-ar="تضع أهدافاً لما تتوقع إنفاقه أو ادخاره">You set targets for what you expect to spend or save</td><td data-ar="توزّع المال المتاح على فئات المصاريف والادخار">You assign available money to expense and saving categories</td></tr>
-        <tr><td data-ar="التجاوز">Overspending</td><td data-ar="انحراف عن الهدف. تعديل الرقم يحدّث التوقع ويخفض Projected Savings، لكنه لا ينقل نقداً حقيقياً">Variance from target. Increasing the amount updates the forecast and lowers Projected Savings; it does not move real cash</td><td data-ar="قرار تمويل. انقل مالاً من فئة أخرى، أو اسمح للتجاوز أن يقلل To Budget في الشهر القادم">Funding decision. Move money from another category, or let overspending reduce next month's To Budget</td></tr>
-        <tr><td data-ar="الترحيل">Rollover</td><td data-ar="الأموال لا تنتقل تلقائياً بين الشهور">Funds do not automatically roll over month to month</td><td data-ar="أرصدة الفئات تنتقل، ويمكنك استخدام Hold for Next Month للمال غير المراد استخدامه الآن">Category balances roll forward, and Hold for Next Month can reserve money you do not want to use now</td></tr>
-        <tr><td data-ar="الأفضل لمن">Best for</td><td data-ar="من لديه هامش نقدي مريح ويريد وعيًا بالإنفاق وأهداف دخل/مصاريف مع صيانة أقل">People with a comfortable cash buffer who want spending awareness and income/expense targets with lower maintenance</td><td data-ar="من يحتاج تحكماً نقدياً ويبحث عن إجابة واضحة: هل أستطيع تحمل هذا الإنفاق؟">People who need cash control and a clear answer to: can I afford this spending?</td></tr>
+        <tr><td data-ar="أساس التخطيط">Planning basis</td><td data-ar="النقد المتاح: المال الموجود فعلياً الآن">Available cash: money you actually have now</td><td data-ar="توقعات: أهداف للدخل المتوقع والمصاريف المتوقعة">Forecast: expected income and expected expense targets</td></tr>
+        <tr><td data-ar="الدخل">Income</td><td data-ar="الدخل يصبح Available Funds عند وصوله فقط">Income becomes Available Funds only when received</td><td data-ar="تضع هدفاً للدخل المتوقع هذا الشهر">You budget expected income for the month</td></tr>
+        <tr><td data-ar="المصاريف والادخار">Expenses and savings</td><td data-ar="توزّع المال المتاح على فئات المصاريف والادخار">You assign available money to expense and saving categories</td><td data-ar="تضع أهدافاً لما تتوقع إنفاقه أو ادخاره">You set targets for what you expect to spend or save</td></tr>
+        <tr><td data-ar="التجاوز">Overspending</td><td data-ar="قرار تمويل. انقل مالاً من فئة أخرى، أو اسمح للتجاوز أن يقلل To Budget في الشهر القادم">Funding decision. Move money from another category, or let overspending reduce next month's To Budget</td><td data-ar="انحراف عن الهدف. تعديل الرقم يحدّث التوقع ويخفض Projected Savings، لكنه لا ينقل نقداً حقيقياً">Variance from target. Increasing the amount updates the forecast and lowers Projected Savings; it does not move real cash</td></tr>
+        <tr><td data-ar="الترحيل">Rollover</td><td data-ar="أرصدة الفئات تنتقل، ويمكنك استخدام Hold for Next Month للمال غير المراد استخدامه الآن">Category balances roll forward, and Hold for Next Month can reserve money you do not want to use now</td><td data-ar="الأموال لا تنتقل تلقائياً بين الشهور">Funds do not automatically roll over month to month</td></tr>
+        <tr><td data-ar="الأفضل لمن">Best for</td><td data-ar="من يحتاج تحكماً نقدياً ويبحث عن إجابة واضحة: هل أستطيع تحمل هذا الإنفاق؟">People who need cash control and a clear answer to: can I afford this spending?</td><td data-ar="من لديه هامش نقدي مريح ويريد وعيًا بالإنفاق وأهداف دخل/مصاريف مع صيانة أقل">People with a comfortable cash buffer who want spending awareness and income/expense targets with lower maintenance</td></tr>
       </tbody>
     </table>
   </div>
