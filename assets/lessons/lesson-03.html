@@ -1,0 +1,274 @@
+<div class="opener">
+    <div class="opener-meta">
+      <span class="opener-num"><span data-i18n="lesson03.t001">Lesson 03 of 09</span></span>
+      <span class="opener-time"><span data-i18n="lesson03.t002">⏱ 8 min</span></span>
+    </div>
+    <h1 id="l3-title" data-i18n="lesson03.t003">Building Your Budget — Envelope Budget</h1>
+    <p class="opener-desc"><span data-i18n="lesson03.t004">This is where you learn how the budget page works in each workflow. Use the toggle below to compare, but choose one mode in the app based on your needs.</span></p>
+  </div>
+
+  <div class="learn-box">
+    <div class="learn-box-title">🎯 <span data-i18n="lesson03.t005">By the end of this lesson you will…</span></div>
+    <div class="learn-items">
+      <div class="learn-item"><span data-i18n="lesson03.t006">Understand how categories organize your budget</span></div>
+      <div class="learn-item"><span data-i18n="lesson03.t007">Know how Envelope Budgeting uses To Budget</span></div>
+      <div class="learn-item"><span data-i18n="lesson03.t008">Know how Tracking Budgeting uses monthly targets</span></div>
+      <div class="learn-item"><span data-i18n="lesson03.t009">Understand what overspending means in each mode</span></div>
+      <div class="learn-item"><span data-i18n="lesson03.t010">Design a simple starting category structure</span></div>
+    </div>
+  </div>
+
+  <!-- ── MODE TOGGLE BAR ── -->
+  <div id="l3-mode-toggle" style="display:flex;align-items:center;gap:0;background:var(--bg);border:1.5px solid var(--border);border-radius:999px;padding:4px;margin-bottom:28px;width:fit-content">
+    <button id="btn-envelope" type="button" style="font-family:&#x27;Plus Jakarta Sans&#x27;,sans-serif;font-size:13px;font-weight:700;border:none;cursor:pointer;padding:8px 20px;border-radius:999px;background:var(--green);color:#fff;transition:all .18s" data-l3-mode="envelope" data-i18n="lesson03.t011">📦 Envelope Budget</button>
+    <button id="btn-tracking" type="button" style="font-family:&#x27;Plus Jakarta Sans&#x27;,sans-serif;font-size:13px;font-weight:600;border:none;cursor:pointer;padding:8px 20px;border-radius:999px;background:transparent;color:var(--ink3);transition:all .18s" data-l3-mode="tracking" data-i18n="lesson03.t012">📊 Tracking Budget</button>
+  </div>
+
+  <!-- ░░░░░░░ ENVELOPE CONTENT ░░░░░░░ -->
+  <div id="l3-envelope">
+
+    <!-- CATEGORIES (shared concept, shown in envelope first) -->
+    <div class="concept">
+      <span class="concept-tag blue"><span data-i18n="lesson03.t013">Concept</span></span>
+      <h2><span data-i18n="lesson03.t014">Categories: the buckets your money flows into</span></h2>
+      <p><span data-i18n="lesson03.t015">Every budget-impacting non-transfer transaction should be assigned to a category. Categories are how Actual knows what your money was spent on - without them, you have a list of transactions with less meaning. This applies to both modes.</span></p>
+      <p><span data-i18n-html="lesson03.t016">Actual lets you <strong>group categories</strong> - "Groceries" and "Eating Out" can both sit inside a "Food" group. This keeps the budget page readable and lets you see group-level totals at a glance.</span></p>
+      <p><span data-i18n="lesson03.t017">Income categories appear in the budget too, but Actual keeps them in one income group. Add your income sources there, such as Salary or Freelance.</span></p>
+      <div class="how">
+        <div class="how-title"><span data-i18n="lesson03.t018">In Actual this looks like…</span></div>
+        <p><span data-i18n="lesson03.t019">On the Budget page, the left column is a list of your category groups, each expandable. You set a "Budgeted" amount next to each category. As transactions come in and are categorized, the columns update automatically.</span></p>
+      </div>
+    </div>
+
+    <!-- ENVELOPE: ASSIGNING EVERY DOLLAR -->
+    <div class="concept">
+      <span class="concept-tag green"><span data-i18n="lesson03.t020">The core of Envelope Budgeting</span></span>
+      <h2><span data-i18n="lesson03.t021">"To Budget": decide what to do with available money</span></h2>
+      <p><span data-i18n="lesson03.t022">In Envelope Budget, you do not budget projected income. When income actually arrives, it becomes Available Funds. Then you decide: assign it to expense and saving categories this month, or hold part of it for next month with Hold for Next Month.</span></p>
+      <div class="how">
+        <div class="how-title"><span data-i18n="lesson03.t023">Step by step</span></div>
+        <p><span data-i18n-html="lesson03.t024">Click the <strong>Budgeted</strong> column next to each expense or saving category and enter an amount. Start with essentials like rent, food, and bills. If money remains that you do not want to use this month, you can hold it for next month. The practical goal is for To Budget to reach zero because every dollar has a clear decision.</span></p>
+      </div>
+
+      <!-- ENVELOPE MOCK TABLE -->
+      <div class="bt" style="margin-top:16px">
+        <div class="bt-bar"><div class="bt-dot" style="background:#ff5f57"></div><div class="bt-dot" style="background:#febc2e"></div><div class="bt-dot" style="background:#28c840"></div><span class="bt-lbl" data-i18n="lesson03.t025">Budget — March 2025 (Envelope Mode) &nbsp;·&nbsp; To Budget: $0 ✓</span></div>
+        <div style="padding:4px 0">
+          <div class="bt-row bt-h"><span><span data-i18n="lesson03.t026">Category</span></span><span class="bn"><span data-i18n="lesson03.t027">Budgeted</span></span><span class="bn"><span data-i18n="lesson03.t028">Spent</span></span><span class="bn"><span data-i18n="lesson03.t029">Balance</span></span></div>
+          <div class="bt-row bt-g"><span>🏠 <span data-i18n="lesson03.t030">Housing</span></span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-i18n="lesson03.t031">Rent</span></span><span class="bn" data-i18n="lesson03.t032">$1,500</span><span class="bn" data-i18n="lesson03.t033">$1,500</span><span class="bn" data-i18n="lesson03.t034">$0</span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-i18n="lesson03.t035">Electricity</span></span><span class="bn" data-i18n="lesson03.t036">$120</span><span class="bn" data-i18n="lesson03.t037">$98</span><span class="bn p" data-i18n="lesson03.t038">$22</span></div>
+          <div class="bt-row bt-g"><span>🍽️ <span data-i18n="lesson03.t039">Food</span></span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-i18n="lesson03.t040">Groceries</span></span><span class="bn" data-i18n="lesson03.t041">$500</span><span class="bn" data-i18n="lesson03.t042">$412</span><span class="bn p" data-i18n="lesson03.t043">$88</span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-i18n="lesson03.t044">Eating Out</span></span><span class="bn" data-i18n="lesson03.t045">$200</span><span class="bn" data-i18n="lesson03.t046">$243</span><span class="bn n" data-i18n="lesson03.t047">−$43 ⚠</span></div>
+          <div class="bt-row bt-g"><span>🟢 <span data-i18n="lesson03.t048">Savings</span></span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-i18n="lesson03.t049">Emergency Fund</span></span><span class="bn" data-i18n="lesson03.t050">$300</span><span class="bn" data-i18n="lesson03.t051">$0</span><span class="bn p" data-i18n="lesson03.t052">$300</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept" style="margin-top:18px">
+        <span class="concept-tag blue"><span data-i18n="lesson03.t053">Concept</span></span>
+        <h2><span data-i18n="lesson03.t054">The monthly summary: Envelope's scoreboard</span></h2>
+        <p><span data-i18n="lesson03.t055">At the top of the Envelope Budget page, the summary bar shows what you actually have for this month: Available Funds, anything overspent from last month, what you have Budgeted for this month, and what you chose to Hold for next month. Those numbers roll up into To Budget or Overbudget.</span></p>
+        <div style="margin-top:16px;background:#fafaf8;border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 18px 16px">
+          <div style="display:grid;gap:10px">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span class="badge bg_">+</span>
+              <strong data-i18n="lesson03.t056">Available Funds</strong>
+              <span style="font-variant-numeric:tabular-nums;font-weight:700;color:var(--green)">+$1,200</span>
+              <span style="color:var(--ink3);font-size:13px" data-i18n="lesson03.t057">what you have to allocate this month</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span class="badge br">−</span>
+              <strong data-i18n="lesson03.t058">Overspent Last Month</strong>
+              <span style="font-variant-numeric:tabular-nums;font-weight:700;color:var(--red)">-$43</span>
+              <span style="color:var(--ink3);font-size:13px" data-i18n="lesson03.t059">reduces what you can allocate now</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span class="badge bb">−</span>
+              <strong data-i18n="lesson03.t060">Budgeted for This Month</strong>
+              <span style="font-variant-numeric:tabular-nums;font-weight:700;color:var(--blue)">-$900</span>
+              <span style="color:var(--ink3);font-size:13px" data-i18n="lesson03.t061">what you assigned to categories this month</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span class="badge ba">−</span>
+              <strong data-i18n="lesson03.t062">For Next Month</strong>
+              <span style="font-variant-numeric:tabular-nums;font-weight:700;color:var(--amber)">-$200</span>
+              <span style="color:var(--ink3);font-size:13px" data-i18n="lesson03.t063">money you intentionally held for next month</span>
+            </div>
+            <div style="margin-top:4px;padding-top:12px;border-top:1px solid var(--border);display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <span style="font-size:22px;font-weight:800;color:var(--blue)">=</span>
+              <div>
+                <div style="font-weight:800;color:var(--ink)" data-i18n="lesson03.t064">Result: +$57 Remaining To Budget</div>
+                <div style="font-size:13px;color:var(--ink3)" data-i18n="lesson03.t065">Above zero = remaining To Budget | Below zero = Overbudget</div>
+              </div>
+            </div>
+            <div style="margin-top:2px;font-size:13px;color:var(--ink3)" data-i18n-html="lesson03.t066">Example: 1,200 - 43 - 900 - 200 = 57</div>
+          </div>
+        </div>
+        <div class="tip"><span class="tip-ic">💡</span><div data-i18n-html="lesson03.t067">To hold money for next month, click the <strong>To Budget</strong> amount and choose <strong>Hold for next month</strong>. Press <kbd>Enter</kbd> to hold all available money, or enter a custom amount. This is optional: you can leave To Budget alone, but held money leaves this month and appears in next month's To Budget.</div></div>
+      </div>
+
+    <!-- ENVELOPE: OVERSPENDING -->
+    <div class="concept">
+      <span class="concept-tag amber"><span data-i18n="lesson03.t068">When a category goes red in Envelope mode</span></span>
+      <h2><span data-i18n="lesson03.t069">Overspent a category? Cover it now or accept the impact later</span></h2>
+      <p><span data-i18n="lesson03.t070">This is the heart and power of Envelope mode. When a category is overspent, you have two clear options: move money from another category to cover it, or let the overspending reduce next month's To Budget. This makes the impact visible before it surprises you later.</span></p>
+      <div class="flow" style="margin-top:16px">
+        <div class="fn" style="background:var(--red-bg);border-color:var(--red-border)" data-i18n-html="lesson03.t071"><span>Eating Out budgeted: $200</span><br><small><span>Spent: $243 | Balance:</span> <strong style="color:var(--red)">−$43</strong></small></div>
+        <span class="fa">→</span>
+        <div class="fn"><span data-i18n="lesson03.t072">Click the red balance</span><br><small><span data-i18n="lesson03.t073">"Transfer from category"</span></small></div>
+        <span class="fa">→</span>
+        <div class="fn" style="background:var(--amber-bg);border-color:var(--amber-border)" data-i18n-html="lesson03.t074"><span>Take $43 from Entertainment</span><br><small><span><em>or Clothing, or Savings</em></span></small></div>
+        <span class="fa">→</span>
+        <div class="fn" style="background:var(--green-bg);border-color:var(--green-border)" data-i18n-html="lesson03.t075"><span>Eating Out: $0 ✓</span><br><small style="color:var(--green)"><span>Conscious trade-off made</span></small></div>
+      </div>
+      <div class="call ci">
+        <span class="call-ic">💡</span>
+        <div><strong><span data-i18n="lesson03.t076">Why is this powerful?</span></strong> <span data-i18n="lesson03.t077">Because you're consciously deciding: is eating out worth sacrificing entertainment? That question is what changes spending habits over the long term.</span></div>
+      </div>
+    </div>
+
+    <!-- ENVELOPE: ROLLOVER -->
+    <div class="concept">
+      <span class="concept-tag green"><span data-i18n="lesson03.t078">Envelope advantage</span></span>
+      <h2><span data-i18n="lesson03.t079">Surpluses roll over — building a cushion over time</span></h2>
+      <p><span data-i18n="lesson03.t080">If you spend less than budgeted in a category, the surplus rolls forward automatically to next month and adds to that category's balance. Over months, categories like "Car Maintenance" build up enough to cover big repairs without any crisis.</span></p>
+      <div class="call cs">
+        <span class="call-ic">✅</span>
+        <div><strong><span data-i18n="lesson03.t081">The monthly Envelope rhythm:</span></strong> <span data-i18n="lesson03.t082">When money arrives, assign available funds to categories or use Hold for Next Month until To Budget reaches zero. Weekly, import and categorize transactions. If a category overspends, fund it from another category or accept its impact on next month. When a new month starts, create a new budget or copy last month's budget and adjust what you learned. At month end, review Reports.</span></div>
+      </div>
+    </div>
+
+  </div><!-- end #l3-envelope -->
+
+
+  <!-- ░░░░░░░ TRACKING CONTENT ░░░░░░░ -->
+  <div id="l3-tracking" style="display:none">
+
+    <!-- CATEGORIES (brief, points back to shared) -->
+    <div class="concept">
+      <span class="concept-tag blue"><span data-i18n="lesson03.t083">Concept</span></span>
+      <h2><span data-i18n="lesson03.t084">Categories: the buckets your money flows into</span></h2>
+      <p><span data-i18n="lesson03.t085">Every budget-impacting non-transfer transaction should be assigned to a category. Categories turn a raw list of transactions into meaningful information. You can group categories (e.g. "Food", "Housing") for better organisation.</span></p>
+      <p><span data-i18n="lesson03.t086">Income categories appear in the budget too, but Actual keeps them in one income group. Add your income sources there, such as Salary or Freelance.</span></p>
+      <div class="tip"><span class="tip-ic">💡</span><div><span data-i18n="lesson03.t087">Start with 10–15 broad categories. After one month of real data you'll know which need splitting.</span></div></div>
+    </div>
+
+    <!-- TRACKING: SETTING TARGETS -->
+    <div class="concept">
+      <span class="concept-tag amber"><span data-i18n="lesson03.t088">The core of Tracking Budgeting</span></span>
+      <h2><span data-i18n="lesson03.t089">Set monthly targets: your forecast for the month</span></h2>
+      <p><span data-i18n-html="lesson03.t090">For each income category (like "Salary"), enter what you expect to receive. For each expense category, enter your spending target. These are <em>forecasts</em>, not contracts. Being wrong is fine - the goal is a baseline you can refine.</span></p>
+      <p><strong><span data-i18n="lesson03.t091">How to find good starting numbers:</span></strong> <span data-i18n="lesson03.t092">Open 2–3 months of bank statements and estimate your average per category. If unsure, budget generously.</span></p>
+
+      <!-- TRACKING MOCK TABLE -->
+      <div class="bt" style="margin-top:16px">
+        <div class="bt-bar"><div class="bt-dot" style="background:#ff5f57"></div><div class="bt-dot" style="background:#febc2e"></div><div class="bt-dot" style="background:#28c840"></div><span class="bt-lbl" data-i18n="lesson03.t093">Budget — March 2025 (Tracking Mode)</span></div>
+        <div style="padding:4px 0">
+          <div class="bt-row bt-h"><span><span data-i18n="lesson03.t094">Category</span></span><span class="bn"><span data-i18n="lesson03.t095">Budgeted</span></span><span class="bn"><span data-i18n="lesson03.t096">Spent</span></span><span class="bn"><span data-i18n="lesson03.t097">Balance</span></span></div>
+          <div class="bt-row bt-g"><span>🏠 <span data-i18n="lesson03.t098">Housing</span></span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-i18n="lesson03.t099">Rent</span></span><span class="bn" data-i18n="lesson03.t100">$1,500</span><span class="bn" data-i18n="lesson03.t101">$1,500</span><span class="bn" data-i18n="lesson03.t102">$0</span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-i18n="lesson03.t103">Electricity</span></span><span class="bn" data-i18n="lesson03.t104">$120</span><span class="bn" data-i18n="lesson03.t105">$98</span><span class="bn p" data-i18n="lesson03.t106">$22</span></div>
+          <div class="bt-row bt-g"><span>🍽️ <span data-i18n="lesson03.t107">Food</span></span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-i18n="lesson03.t108">Groceries</span></span><span class="bn" data-i18n="lesson03.t109">$500</span><span class="bn" data-i18n="lesson03.t110">$412</span><span class="bn p" data-i18n="lesson03.t111">$88</span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-i18n="lesson03.t112">Eating Out</span></span><span class="bn" data-i18n="lesson03.t113">$200</span><span class="bn" data-i18n="lesson03.t114">$243</span><span class="bn n" data-i18n="lesson03.t115">−$43</span></div>
+          <div class="bt-row bt-g"><span>🟢 <span data-i18n="lesson03.t116">Savings</span></span></div>
+          <div class="bt-row bt-c"><span style="padding-left:12px;color:var(--ink2)"><span data-i18n="lesson03.t117">Emergency Fund</span></span><span class="bn" data-i18n="lesson03.t118">$300</span><span class="bn" data-i18n="lesson03.t119">$0</span><span class="bn p" data-i18n="lesson03.t120">$300</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRACKING: MONTHLY SUMMARY -->
+    <div class="concept">
+      <span class="concept-tag blue"><span data-i18n="lesson03.t121">Concept</span></span>
+      <h2><span data-i18n="lesson03.t122">The monthly summary: your budget's scoreboard</span></h2>
+      <p><span data-i18n="lesson03.t123">At the top of the Tracking Budget page sits a summary bar comparing your budgeted amounts (the plan) against your actual amounts (reality).</span></p>
+      <div class="stat-row">
+        <div class="stat" style="background:var(--green-bg);border:1px solid var(--green-border)">
+          <div class="stat-label" style="color:var(--green)"><span data-i18n="lesson03.t124">Budgeted Income</span></div>
+          <div class="stat-val" style="color:var(--green)" data-i18n="lesson03.t125">$4,200</div>
+          <div class="stat-desc" style="color:#166534"><span data-i18n="lesson03.t126">What you planned to receive vs what actually arrived</span></div>
+        </div>
+        <div class="stat" style="background:var(--red-bg);border:1px solid var(--red-border)">
+          <div class="stat-label" style="color:var(--red)"><span data-i18n="lesson03.t127">Budgeted Expenses</span></div>
+          <div class="stat-val" style="color:var(--red)" data-i18n="lesson03.t128">$3,650</div>
+          <div class="stat-desc" style="color:#7f1d1d"><span data-i18n="lesson03.t129">What you planned to spend vs what you actually spent</span></div>
+        </div>
+        <div class="stat" style="background:var(--blue-bg);border:1px solid var(--blue-border)">
+          <div class="stat-label" style="color:var(--blue)" data-i18n="lesson03.t130">Projected Savings</div>
+          <div class="stat-val" style="color:var(--blue)" data-i18n="lesson03.t131">$550</div>
+          <div class="stat-desc" style="color:#1e3a8a"><span data-i18n="lesson03.t132">Income − Expenses. Your planned surplus.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRACKING: OVERSPENDING -->
+    <div class="concept">
+      <span class="concept-tag amber"><span data-i18n="lesson03.t133">Practical</span></span>
+      <h2><span data-i18n="lesson03.t134">When a category goes red in Tracking mode</span></h2>
+      <p><span data-i18n="lesson03.t135">Red means variance from the target you planned, not a cash envelope that must be refilled. You can leave it as a review signal, or adjust the target if the original forecast was unrealistic.</span></p>
+      <div class="flow" style="margin-top:16px">
+        <div class="fn" style="background:var(--red-bg);border-color:var(--red-border)" data-i18n-html="lesson03.t136"><span>Eating Out budgeted: $200</span><br><small><span>Spent: $243 | Balance:</span> <strong style="color:var(--red)">−$43</strong></small></div>
+        <span class="fa">→</span>
+        <div class="fn" data-i18n-html="lesson03.t137"><span>Review the<br>$43 variance</span></div>
+        <span class="fa">→</span>
+        <div class="fn" style="background:var(--blue-bg);border-color:var(--blue-border)" data-i18n-html="lesson03.t138"><span>Leave as signal</span><br><small><span>or update the target</span></small></div>
+        <span class="fa">→</span>
+        <div class="fn" style="background:var(--amber-bg);border-color:var(--amber-border)" data-i18n-html="lesson03.t139"><span>If you raise the target</span><br><small><span>Projected Savings drops</span></small></div>
+      </div>
+      <div class="call cs">
+        <span class="call-ic">✅</span>
+        <div><strong><span data-i18n="lesson03.t140">Changing the number in Tracking mode updates the forecast only.</span></strong> <span data-i18n="lesson03.t141">Projected Savings will decrease, but no real cash is reserved or moved from another category. If you need to know whether money is available before spending, that is Envelope mode's job.</span></div>
+      </div>
+    </div>
+
+    <!-- TRACKING: RHYTHM -->
+    <div class="concept">
+      <span class="concept-tag green"><span data-i18n="lesson03.t142">Habit</span></span>
+      <h2><span data-i18n="lesson03.t143">The monthly Tracking mode rhythm</span></h2>
+      <div class="steps">
+        <div class="step"><div class="sn">1</div><div class="step-b"><div class="step-t"><span data-i18n="lesson03.t144">Start of month: copy last month's budget</span></div><span data-i18n="lesson03.t145">Click the copy icon at the top of the budget columns. Adjust anything you know will be different.</span></div></div>
+        <div class="step"><div class="sn">2</div><div class="step-b"><div class="step-t"><span data-i18n="lesson03.t146">Weekly: import and categorize transactions</span></div><span data-i18n="lesson03.t147">Set aside 10 minutes. Rules will automate most of this after a few weeks.</span></div></div>
+        <div class="step"><div class="sn">3</div><div class="step-b"><div class="step-t"><span data-i18n="lesson03.t148">As needed: review red variances</span></div><span data-i18n="lesson03.t149">Decide whether the target was unrealistic and should be updated, or whether spending needs to come down for the rest of this month or next month.</span></div></div>
+        <div class="step"><div class="sn g">4</div><div class="step-b"><div class="step-t"><span data-i18n="lesson03.t150">Month end: review Reports</span></div><span data-i18n="lesson03.t151">The Spending report shows which categories consistently run over. Use this data to set better targets next month.</span></div></div>
+      </div>
+    </div>
+
+  </div><!-- end #l3-tracking -->
+
+      <!-- CATEGORIES FRAMEWORK -->
+    <div class="concept">
+      <span class="concept-tag amber"><span data-i18n="lesson03.t152">Practical</span></span>
+      <h2><span data-i18n="lesson03.t153">Designing your categories — a starting framework</span></h2>
+      <p><span data-i18n-html="lesson03.t154">The right categories are personal, but here's a framework that works for most people. Start broad and refine. <strong>Fewer categories is better to start</strong> - you can always split later.</span></p>
+      <div class="g2" style="margin-top:18px">
+        <div class="mini-card"><div class="mini-card-title">🟢 <span data-i18n="lesson03.t155">Income</span></div><p style="font-size:13px;color:var(--ink2)"><span data-i18n="lesson03.t156">Income categories live inside a single income group.</span></p><ul class="plain" style="margin-top:10px;font-size:13px"><li><span data-i18n="lesson03.t157">Salary</span></li><li><span data-i18n="lesson03.t158">Freelance / Consulting</span></li><li><span data-i18n="lesson03.t159">Bonus / Other Income</span></li></ul></div>
+        <div class="mini-card"><div class="mini-card-title">🔴 <span data-i18n="lesson03.t160">Housing &amp; Utilities</span></div><p style="font-size:13px;color:var(--ink2)"><span data-i18n="lesson03.t161">Concrete home and utility costs that are easy to recognize.</span></p><ul class="plain" style="margin-top:10px;font-size:13px"><li><span data-i18n="lesson03.t162">Rent / Mortgage</span></li><li><span data-i18n="lesson03.t163">Electricity / Water / Gas</span></li><li><span data-i18n="lesson03.t164">Internet &amp; Phone</span></li><li><span data-i18n="lesson03.t165">Home Maintenance</span></li></ul></div>
+        <div class="mini-card"><div class="mini-card-title">🟡 <span data-i18n="lesson03.t166">Food &amp; Daily Living</span></div><p style="font-size:13px;color:var(--ink2)"><span data-i18n="lesson03.t167">Regular day-to-day spending that usually happens every month.</span></p><ul class="plain" style="margin-top:10px;font-size:13px"><li><span data-i18n="lesson03.t168">Groceries</span></li><li><span data-i18n="lesson03.t169">Eating Out / Restaurants</span></li><li><span data-i18n="lesson03.t170">Fuel / Transport</span></li><li><span data-i18n="lesson03.t171">Household &amp; Personal Care</span></li></ul></div>
+        <div class="mini-card"><div class="mini-card-title">🔵 <span data-i18n="lesson03.t172">Recurring Bills &amp; Commitments</span></div><p style="font-size:13px;color:var(--ink2)"><span data-i18n="lesson03.t173">Recurring commitments, not just entertainment subscriptions.</span></p><ul class="plain" style="margin-top:10px;font-size:13px"><li><span data-i18n="lesson03.t174">Insurance</span></li><li data-i18n="lesson03.t175">Streaming (Netflix, Spotify)</li><li><span data-i18n="lesson03.t176">Software / Apps</span></li><li><span data-i18n="lesson03.t177">Gym / Memberships</span></li></ul></div>
+        <div class="mini-card"><div class="mini-card-title">🟢 <span data-i18n="lesson03.t178">Savings &amp; Sinking Funds</span></div><p style="font-size:13px;color:var(--ink2)"><span data-i18n="lesson03.t179">Money you're deliberately setting aside for future costs or goals.</span></p><ul class="plain" style="margin-top:10px;font-size:13px"><li><span data-i18n="lesson03.t180">Emergency Fund</span></li><li><span data-i18n="lesson03.t181">Vacation / Travel</span></li><li><span data-i18n="lesson03.t182">Car Repair Fund</span></li><li><span data-i18n="lesson03.t183">Annual Fees / Renewals</span></li></ul></div>
+        <div class="mini-card"><div class="mini-card-title">🟣 <span data-i18n="lesson03.t184">Lifestyle &amp; Giving</span></div><p style="font-size:13px;color:var(--ink2)"><span data-i18n="lesson03.t185">Flexible personal spending that does not fit housing, daily living, bills, or savings.</span></p><ul class="plain" style="margin-top:10px;font-size:13px"><li><span data-i18n="lesson03.t186">Gifts</span></li><li><span data-i18n="lesson03.t187">Donations / Charity</span></li><li><span data-i18n="lesson03.t188">Clothing</span></li><li><span data-i18n="lesson03.t189">Entertainment</span></li></ul></div>
+      </div>
+      <div class="tip"><span class="tip-ic">💡</span><div><span data-i18n="lesson03.t190">Don't spend more than 10 minutes on categories before you have real transaction data. Set up something reasonable now, then refine it after your first import.</span></div></div>
+      <div class="call ci" style="margin-top:14px">
+        <span class="call-ic">💡</span>
+        <div data-i18n-html="lesson03.t191"><strong>Returns and reimbursements:</strong> If a store refunds a purchase, categorize the refund back to the original spending category instead of treating it as new income. For reimbursements from another person, check the official docs for the right workflow depending on whether you fronted the money.</div>
+      </div>
+    </div>
+
+  <!-- SHARED NEXT BAR -->
+  <div class="concept">
+    <span class="concept-tag blue"><span data-i18n="lesson03.t192">Official Docs</span></span>
+    <h2><span data-i18n="lesson03.t193">Read later</span></h2>
+    <ul class="plain">
+      <li data-i18n-html="lesson03.t194"><a href="https://actualbudget.org/docs/budgeting/" target="_blank" rel="noopener noreferrer">How Budgeting Works</a> — To Budget, overspending, and the monthly workflow</li>
+      <li data-i18n-html="lesson03.t195"><a href="https://actualbudget.org/docs/budgeting/categories/" target="_blank" rel="noopener noreferrer">Categories</a> — adding categories/groups, merging, and notes</li>
+      <li data-i18n-html="lesson03.t196"><a href="https://actualbudget.org/docs/budgeting/returns-and-reimbursements/" target="_blank" rel="noopener noreferrer">Returns and Reimbursements</a> — when money should flow back to a category</li>
+    </ul>
+  </div>
+  <div class="next-bar" style="margin-top:40px">
+    <div class="next-bar-info"><p><span data-i18n="lesson03.t197">Up next - Lesson 04</span></p><strong><span data-i18n="lesson03.t198">Accounts: Adding and Managing Your Money</span></strong></div>
+    <button class="next-btn" type="button" data-next-index="3"><span data-i18n="lesson03.t199">Next Lesson →</span></button>
+  </div>

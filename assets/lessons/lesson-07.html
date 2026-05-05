@@ -1,0 +1,133 @@
+<div class="opener">
+    <div class="opener-meta">
+      <span class="opener-num"><span data-i18n="lesson07.t001">Lesson 07 of 09</span></span>
+      <span class="opener-time"><span data-i18n="lesson07.t002">⏱ 7 min</span></span>
+    </div>
+    <h1><span data-i18n="lesson07.t003">Rules &amp; Automation: Let Actual Do the Work For You</span></h1>
+    <p class="opener-desc"><span data-i18n="lesson07.t004">Once your transactions are coming in and getting cleaned up correctly, use Rules and Schedules to reduce repetitive work. Rules clean and categorize imported transactions, while Schedules help you see recurring and expected transactions before they happen.</span></p>
+  </div>
+
+  <div class="learn-box">
+    <div class="learn-box-title">🎯 <span data-i18n="lesson07.t005">By the end of this lesson you will…</span></div>
+    <div class="learn-items">
+      <div class="learn-item"><span data-i18n="lesson07.t006">Understand what rules are and how they work</span></div>
+      <div class="learn-item"><span data-i18n="lesson07.t007">Know how Actual creates rules automatically from your behaviour</span></div>
+      <div class="learn-item"><span data-i18n="lesson07.t008">Know how to view, edit, and create rules manually</span></div>
+      <div class="learn-item"><span data-i18n="lesson07.t009">Understand rule stages and how Schedules support automation</span></div>
+    </div>
+  </div>
+
+  <div class="concept">
+    <span class="concept-tag blue"><span data-i18n="lesson07.t010">Concept</span></span>
+    <h2><span data-i18n="lesson07.t011">What a rule is: an "if → then" instruction</span></h2>
+    <p data-i18n-html="lesson07.t012">Every time a transaction is imported, Actual runs it through all your rules in order. A rule has two parts: <strong>conditions</strong> (when to fire) and <strong>actions</strong> (what to change). If all conditions match, all actions are applied.</p>
+    <p data-i18n="lesson07.t013">The most common use is cleaning up ugly payee names and setting categories automatically. For example:</p>
+
+    <div class="rb" style="margin-top:16px">
+      <div class="rb-lbl" data-i18n="lesson07.t014">If all these conditions are true…</div>
+      <div class="rb-row"><span class="rc" data-i18n="lesson07.t015">Imported payee</span><span class="rc c" data-i18n="lesson07.t016">contains</span><span class="rc c">"amazon"</span></div>
+      <hr class="rb-hr">
+      <div class="rb-lbl" data-i18n="lesson07.t017">Then apply these actions…</div>
+      <div class="rb-row"><span class="rc" data-i18n="lesson07.t018">Set Payee</span><span style="color:var(--ink3)">→</span><span class="rc a">Amazon</span></div>
+      <div class="rb-row"><span class="rc" data-i18n="lesson07.t019">Set Category</span><span style="color:var(--ink3)">→</span><span class="rc a" data-i18n="lesson07.t020">Shopping</span></div>
+    </div>
+    <p style="font-size:13px;color:var(--ink3);margin-top:8px" data-i18n-html="lesson07.t021">This turns <code style="background:#f3f4f6;padding:1px 5px;border-radius:3px">AMAZON.COM*5C7QC7MH0 AM 10/26</code> into "Amazon / Shopping" every single time - automatically.</p>
+  </div>
+
+  <div class="concept">
+    <span class="concept-tag green"><span data-i18n="lesson07.t022">The Good News</span></span>
+    <h2><span data-i18n="lesson07.t023">Actual writes most rules for you automatically</span></h2>
+    <p data-i18n="lesson07.t024">You don't need to build your rule library from scratch. Actual watches your behaviour and creates rules based on what you do:</p>
+    <div class="steps" style="margin-top:12px">
+      <div class="step"><div class="sn">A</div><div class="step-b" data-i18n-html="lesson07.t025"><div class="step-t">When you rename a payee</div>Actual asks: "Apply this rename automatically in future?" Click yes and it creates a pre-stage rule. That ugly bank name will never appear again.</div></div>
+      <div class="step"><div class="sn">B</div><div class="step-b" data-i18n-html="lesson07.t026"><div class="step-t">When you categorize a transaction</div>After you assign the same payee to a category a couple of times, Actual creates a rule to apply that category automatically going forward. After a few weeks of use, most transactions categorize themselves on import.</div></div>
+    </div>
+    <div class="call cs">
+      <span class="call-ic">✨</span>
+      <div data-i18n-html="lesson07.t027"><strong>The payoff:</strong> After a month or two of regular use, importing a week's worth of transactions takes about 2 minutes — Actual cleans up the names, assigns categories, and you just review and confirm. This is what makes the system sustainable long-term.</div>
+    </div>
+  </div>
+
+  <div class="concept">
+    <span class="concept-tag blue"><span data-i18n="lesson07.t028">Reference</span></span>
+    <h2><span data-i18n="lesson07.t029">Condition types and available fields</span></h2>
+    <table class="dt" style="margin-top:12px">
+      <thead><tr><th data-i18n="lesson07.t030">Condition</th><th data-i18n="lesson07.t031">What it matches</th><th data-i18n="lesson07.t032">Example</th></tr></thead>
+      <tbody>
+        <tr><td><code class="kp">is</code></td><td data-i18n="lesson07.t033">Exact match (case-insensitive)</td><td data-i18n-html="lesson07.t034">Payee <code class="kp">is</code> "Kroger"</td></tr>
+        <tr><td><code class="kp">contains</code></td><td data-i18n="lesson07.t035">Partial text match</td><td data-i18n-html="lesson07.t036">Payee <code class="kp">contains</code> "uber"</td></tr>
+        <tr><td><code class="kp">one of</code></td><td data-i18n="lesson07.t037">Matches any item in a list</td><td data-i18n-html="lesson07.t038">Payee <code class="kp">one of</code> [Netflix, Hulu]</td></tr>
+        <tr><td><code class="kp">matches</code></td><td data-i18n="lesson07.t039">Regular expression (advanced)</td><td data-i18n="lesson07.t040">Complex patterns</td></tr>
+        <tr><td><code class="kp">&gt; / &lt;</code></td><td data-i18n="lesson07.t041">Amount comparisons</td><td data-i18n-html="lesson07.t042">Amount <code class="kp">&gt;</code> $500</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--ink3);margin-top:10px" data-i18n="lesson07.t043">Conditions can check: imported payee, payee, account, category, date, notes, amount (inflow or outflow). All string matching is case-insensitive.</p>
+    <p style="font-size:13px;color:var(--ink3);margin-top:8px" data-i18n="lesson07.t044">Actions can set: payee, category, notes, account, date, amount, cleared status. They can also append or prepend text to notes.</p>
+  </div>
+
+  <div class="concept">
+    <span class="concept-tag amber"><span data-i18n="lesson07.t045">Practical</span></span>
+    <h2><span data-i18n="lesson07.t046">Rule stages: controlling the order</span></h2>
+    <p data-i18n="lesson07.t047">Rules run in three stages. Knowing this prevents confusion when multiple rules affect the same transaction.</p>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px">
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:14px;background:var(--purple-bg);border:1px solid var(--purple-border);border-radius:var(--radius-sm)">
+        <span class="badge bp" style="flex-shrink:0;margin-top:2px">pre</span>
+        <div style="font-size:14px" data-i18n-html="lesson07.t048"><strong>Pre-stage runs first, always.</strong> Actual automatically puts payee-renaming rules here. This ensures payee names are cleaned up before any categorization rules run.</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:14px;background:var(--blue-bg);border:1px solid var(--blue-border);border-radius:var(--radius-sm)">
+        <span class="badge bb" style="flex-shrink:0;margin-top:2px">default</span>
+        <div style="font-size:14px" data-i18n-html="lesson07.t049"><strong>Default-stage is where most rules live.</strong> Within this stage, more specific rules (using <code class="kp">is</code>) automatically rank after broader ones (using <code class="kp">contains</code>), so the specific rule always wins.</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:14px;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--radius-sm)">
+        <span class="badge ba" style="flex-shrink:0;margin-top:2px">post</span>
+        <div style="font-size:14px" data-i18n-html="lesson07.t050"><strong>Post-stage runs last, always.</strong> Use this for rules that must override everything else. Most users never need this.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept">
+    <span class="concept-tag green"><span data-i18n="lesson07.t051">Action</span></span>
+    <h2><span data-i18n="lesson07.t052">Viewing and managing your rules</span></h2>
+    <div class="steps">
+      <div class="step"><div class="sn">1</div><div class="step-b" data-i18n-html="lesson07.t053"><div class="step-t">Go to More → Rules in the sidebar</div>See all your rules, including the ones Actual created automatically for you.</div></div>
+      <div class="step"><div class="sn">2</div><div class="step-b" data-i18n-html="lesson07.t054"><div class="step-t">Click "edit" on any rule to view it in detail</div>The editor shows a live list of existing transactions that match your conditions — excellent feedback before saving.</div></div>
+      <div class="step"><div class="sn">3</div><div class="step-b" data-i18n-html="lesson07.t055"><div class="step-t">Select transactions and click "Apply actions" to backfill</div>Retroactively apply a rule to past transactions — great for re-categorizing a batch of old records in one click.</div></div>
+    </div>
+    <div class="tip"><span class="tip-ic">💡</span><div data-i18n-html="lesson07.t056"><strong>The rule editor is also a powerful bulk editor.</strong> Create a temporary rule with conditions that match what you want to change, apply actions to selected transactions, then delete the rule. Much faster than editing transactions one by one.</div></div>
+  </div>
+
+  <div class="concept">
+    <span class="concept-tag green"><span data-i18n="lesson07.t057">Planning</span></span>
+    <h2><span data-i18n="lesson07.t058">Schedules: recurring and expected transactions</span></h2>
+    <p data-i18n="lesson07.t059">Schedules help you see upcoming transactions before they happen: salary, rent, subscriptions, loan payments, or credit card autopay. They can be recurring or one-time, and can be entered automatically or left for manual approval.</p>
+    <div class="ss" style="margin-top:14px">
+      <img src="https://actualbudget.org/assets/images/schedules-overview-082e66ce8939714130d2c5af3fa2146a.webp" alt="Schedules overview in Actual" loading="lazy">
+      <div class="ss-cap" data-i18n-html="lesson07.t060"><span class="ss-cap-icon">📍</span>Schedules overview — recurring or expected transactions appear here so you can see what is coming before it happens.</div>
+    </div>
+    <div class="g2" style="margin-top:14px">
+      <div class="mini-card">
+        <div class="mini-card-title" data-i18n="lesson07.t061">Use them for</div>
+        <ul class="plain" style="font-size:13px"><li data-i18n="lesson07.t062">Recurring income like salary</li><li data-i18n="lesson07.t063">Bills, subscriptions, and loan payments</li><li data-i18n="lesson07.t064">Credit card autopay</li><li data-i18n="lesson07.t065">Approximate variable bills like utilities</li></ul>
+      </div>
+      <div class="mini-card">
+        <div class="mini-card-title" data-i18n="lesson07.t066">Why they help</div>
+        <ul class="plain" style="font-size:13px"><li data-i18n="lesson07.t067">Show upcoming items in the account before payment date</li><li data-i18n="lesson07.t068">Reduce manual entry for recurring transactions</li><li data-i18n="lesson07.t069">Can be linked with Rules for categories and notes</li><li data-i18n="lesson07.t070">Help you avoid surprise bills</li></ul>
+      </div>
+    </div>
+    <div class="tip"><span class="tip-ic">💡</span><div data-i18n="lesson07.t071">Start with only three or four schedules: salary, rent, key subscriptions, and card autopay if you use it. Add more when you notice a recurring pattern.</div></div>
+  </div>
+  <div class="concept">
+    <span class="concept-tag blue"><span data-i18n="lesson07.t072">Official Docs</span></span>
+    <h2><span data-i18n="lesson07.t073">Read later</span></h2>
+    <ul class="plain">
+      <li data-i18n-html="lesson07.t074"><a href="https://actualbudget.org/docs/budgeting/rules/" target="_blank" rel="noopener noreferrer">Rules</a> — conditions, fields, stages, and automatic rules</li>
+      <li data-i18n-html="lesson07.t075"><a href="https://actualbudget.org/docs/budgeting/rules/custom/" target="_blank" rel="noopener noreferrer">Rules Examples</a> — custom rules and Bank Sync transfer examples</li>
+      <li data-i18n-html="lesson07.t076"><a href="https://actualbudget.org/docs/schedules/" target="_blank" rel="noopener noreferrer">Schedules</a> — recurring and expected transactions</li>
+      <li data-i18n-html="lesson07.t077"><a href="https://actualbudget.org/docs/experimental/rule-templating/" target="_blank" rel="noopener noreferrer">Rule Action Templating</a> — experimental advanced rule actions</li>
+    </ul>
+  </div>
+
+  <div class="next-bar">
+    <div class="next-bar-info"><p><span data-i18n="lesson07.t078">Up next - Lesson 08</span></p><strong><span data-i18n="lesson07.t079">Reports: Understanding What Your Data Is Telling You</span></strong></div>
+    <button class="next-btn" type="button" data-next-index="7" data-i18n="lesson07.t080">Next Lesson →</button>
+  </div>

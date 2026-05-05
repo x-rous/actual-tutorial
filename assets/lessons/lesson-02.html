@@ -1,0 +1,108 @@
+<div class="opener">
+    <div class="opener-meta">
+      <span class="opener-num"><span data-i18n="lesson02.t001">Lesson 02 of 09</span></span>
+      <span class="opener-time"><span data-i18n="lesson02.t002">⏱ 7 min</span></span>
+    </div>
+    <h1><span data-i18n="lesson02.t003">Two Budgeting Modes — Choose Yours</span></h1>
+    <p class="opener-desc"><span data-i18n="lesson02.t004">Actual offers two valid budgeting workflows. Envelope is Actual's default and recommended cash-allocation method, while Tracking is a lighter traditional forecast workflow for income and expense targets. Choose the workflow that fits your situation - Lesson 03 will automatically adapt.</span></p>
+  </div>
+
+  <div class="learn-box">
+    <div class="learn-box-title">🎯 <span data-i18n="lesson02.t005">By the end of this lesson you will…</span></div>
+    <div class="learn-items">
+      <div class="learn-item"><span data-i18n="lesson02.t006">Understand what Tracking Budget mode is and how it works</span></div>
+      <div class="learn-item"><span data-i18n="lesson02.t007">Understand what Envelope (zero-sum) mode is and how it works</span></div>
+      <div class="learn-item"><span data-i18n="lesson02.t008">Choose the mode that fits your need for control or awareness</span></div>
+      <div class="learn-item"><span data-i18n="lesson02.t009">Know how to activate your chosen mode in Settings</span></div>
+    </div>
+  </div>
+
+  <!-- TWO CARDS SIDE BY SIDE -->
+  <div id="mode-cards-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px">
+    <!-- ENVELOPE CARD -->
+    <div id="mode-card-envelope" class="mode-select-card" role="button" tabindex="0" aria-pressed="true" style="text-align:left;font:inherit;background:var(--surface);border:2px solid var(--green);border-radius:var(--radius);padding:22px;cursor:pointer;transition:border-color .2s,box-shadow .2s;box-shadow:0 0 0 3px rgba(22,163,74,.12)" data-mode="envelope">
+      <div style="font-size:28px;margin-bottom:10px">📦</div>
+      <div style="font-size:15px;font-weight:700;margin-bottom:6px" data-i18n="lesson02.t010">Envelope Budget (Zero-Sum)</div>
+      <div style="font-size:12px;font-weight:600;color:var(--green);background:var(--green-bg);display:inline-block;padding:2px 9px;border-radius:20px;margin-bottom:12px"><span data-i18n="lesson02.t011">Actual default and recommended cash-control method</span></div>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.65"><span data-i18n="lesson02.t012">Budget only money you actually have. When income arrives it becomes Available Funds, then you assign it to expense and saving categories or hold it for next month.</span></p>
+      <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
+        <div style="font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px">✓ <span data-i18n="lesson02.t013">Shows whether you can afford spending before it happens</span></div>
+        <div style="font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px">✓ <span data-i18n="lesson02.t014">Every dollar is assigned or intentionally held for next month</span></div>
+        <div style="font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px">✓ <span data-i18n="lesson02.t015">Overspending requires funding or affects next month's To Budget</span></div>
+      </div>
+      <div id="envelope-selected-badge" style="display:block;margin-top:14px;background:var(--green-bg);border:1px solid var(--green-border);border-radius:var(--radius-sm);padding:8px 12px;font-size:12px;font-weight:700;color:var(--green);text-align:center">
+        ✓ <span data-i18n="lesson02.t016">Your chosen mode — Actual default</span>
+      </div>
+    </div>
+
+    <!-- TRACKING CARD -->
+    <div id="mode-card-tracking" class="mode-select-card" role="button" tabindex="0" aria-pressed="false" style="text-align:left;font:inherit;background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);padding:22px;cursor:pointer;transition:border-color .2s,box-shadow .2s" data-mode="tracking">
+      <div style="font-size:28px;margin-bottom:10px">📊</div>
+      <div style="font-size:15px;font-weight:700;margin-bottom:6px" data-i18n="lesson02.t017">Tracking Budget</div>
+      <div style="font-size:12px;font-weight:600;color:var(--amber);background:var(--amber-bg);display:inline-block;padding:2px 9px;border-radius:20px;margin-bottom:12px"><span data-i18n="lesson02.t018">Lower-maintenance planning and awareness</span></div>
+      <p style="font-size:13px;color:var(--ink2);line-height:1.65"><span data-i18n="lesson02.t019">Set monthly targets for expected income and expected expenses, then compare reality against the plan. This workflow does not require you to account for every available dollar or fund every overspend from another category.</span></p>
+      <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
+        <div style="font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px">✓ <span data-i18n="lesson02.t020">Good when you already have a comfortable cash buffer</span></div>
+        <div style="font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px">✓ <span data-i18n="lesson02.t021">Shows variance from target; does not reserve available cash</span></div>
+        <div style="font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:6px">✓ <span data-i18n="lesson02.t022">Funds do not automatically roll over month to month</span></div>
+      </div>
+      <div id="tracking-selected-badge" style="display:none;margin-top:14px;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--radius-sm);padding:8px 12px;font-size:12px;font-weight:700;color:var(--amber);text-align:center">
+        ✓ <span data-i18n="lesson02.t023">Your chosen mode — lighter planning and awareness</span>
+      </div>
+    </div>
+  </div>
+  <!-- COMPARISON TABLE -->
+  <div class="concept">
+    <span class="concept-tag blue"><span data-i18n="lesson02.t024">Side by Side</span></span>
+    <h2><span data-i18n="lesson02.t025">Full Comparison</span></h2>
+    <table class="dt" style="margin-top:12px">
+      <thead><tr><th data-i18n="lesson02.t026">Topic</th><th>� Envelope Budget</th><th>📊 Tracking Budget</th></tr></thead>
+      <tbody>
+        <tr><td data-i18n="lesson02.t027">Planning basis</td><td data-i18n="lesson02.t028">Available cash: money you actually have now</td><td data-i18n="lesson02.t029">Forecast: expected income and expected expense targets</td></tr>
+        <tr><td data-i18n="lesson02.t030">Income</td><td data-i18n="lesson02.t031">Income becomes Available Funds only when received</td><td data-i18n="lesson02.t032">You budget expected income for the month</td></tr>
+        <tr><td data-i18n="lesson02.t033">Expenses and savings</td><td data-i18n="lesson02.t034">You assign available money to expense and saving categories</td><td data-i18n="lesson02.t035">You set targets for what you expect to spend or save</td></tr>
+        <tr><td data-i18n="lesson02.t036">Overspending</td><td data-i18n="lesson02.t037">Funding decision. Move money from another category, or let overspending reduce next month's To Budget</td><td data-i18n="lesson02.t038">Variance from target. Increasing the amount updates the forecast and lowers Projected Savings; it does not move real cash</td></tr>
+        <tr><td data-i18n="lesson02.t039">Rollover</td><td data-i18n="lesson02.t040">Category balances roll forward, and Hold for Next Month can reserve money you do not want to use now</td><td data-i18n="lesson02.t041">Funds do not automatically roll over month to month</td></tr>
+        <tr><td data-i18n="lesson02.t042">Best for</td><td data-i18n="lesson02.t043">People who need cash control and a clear answer to: can I afford this spending?</td><td data-i18n="lesson02.t044">People with a comfortable cash buffer who want spending awareness and income/expense targets with lower maintenance</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- YOUR CHOICE CALLOUT (dynamic) -->
+  <div id="mode-choice-callout" class="call cs" style="margin-top:0">
+    <span class="call-ic">📦</span>
+    <div id="mode-choice-text" data-i18n-html="lesson02.t045"><strong>You've chosen Envelope Budget.</strong> This is Actual's default and recommended method for controlling available cash. Head to Lesson 03 to see how it works.</div>
+  </div>
+
+  <!-- HOW TO SWITCH (shown only for Tracking) -->
+  <div id="tracking-switch-section" style="display:none">
+    <div class="concept">
+      <span class="concept-tag blue"><span data-i18n="lesson02.t046">Action Required</span></span>
+      <h2><span data-i18n="lesson02.t047">How to enable Tracking Budget mode in the app</span></h2>
+      <p><span data-i18n="lesson02.t048">Actual starts in Envelope mode by default. If you choose Tracking as your income-and-expense forecast workflow, change this setting before building the budget. You can change modes later, but do not use switching as the main plan because historical budget values do not always carry the same meaning between modes.</span></p>
+      <div class="ss" style="margin-top:14px">
+        <img src="https://actualbudget.org/assets/images/tracking-budget-7-ae42ea7504a199ec97316732c73a1a10.webp" alt="Switch to tracking budgeting" loading="lazy">
+        <div class="ss-cap"><span class="ss-cap-icon">📍</span><span data-i18n="lesson02.t049">Settings → click "Switch to tracking budgeting." Do this before entering budget numbers so you start with the right workflow.</span></div>
+      </div>
+      <div class="steps" style="margin-top:4px">
+        <div class="step"><div class="sn">1</div><div class="step-b"><div class="step-t"><span data-i18n="lesson02.t050">Open Settings</span></div><span data-i18n="lesson02.t051">Click the arrow next to the budget name, or go to More → Settings in the sidebar.</span></div></div>
+        <div class="step"><div class="sn">2</div><div class="step-b"><div class="step-t"><span data-i18n="lesson02.t052">Click "Switch to tracking budgeting"</span></div><span data-i18n="lesson02.t053">It's near the top of the Budget section in Settings.</span></div></div>
+        <div class="step"><div class="sn g">✓</div><div class="step-b"><div class="step-t"><span data-i18n="lesson02.t054">Done — the budget view updates immediately</span></div><span data-i18n="lesson02.t055">The columns change from "To Budget / Available" to "Budgeted / Spent / Balance."</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept">
+    <span class="concept-tag blue"><span data-i18n="lesson02.t056">Official Docs</span></span>
+    <h2><span data-i18n="lesson02.t057">Read later</span></h2>
+    <ul class="plain">
+      <li data-i18n-html="lesson02.t058"><a href="https://actualbudget.org/docs/getting-started/envelope-budgeting/" target="_blank" rel="noopener noreferrer">Envelope budgeting</a> — the default cash-control workflow</li>
+      <li data-i18n-html="lesson02.t059"><a href="https://actualbudget.org/docs/getting-started/tracking-budget/" target="_blank" rel="noopener noreferrer">Tracking Budget</a> — the traditional income/expense forecast workflow</li>
+      <li data-i18n-html="lesson02.t060"><a href="https://actualbudget.org/docs/settings/" target="_blank" rel="noopener noreferrer">Settings</a> — where to change Budgeting Method</li>
+    </ul>
+  </div>
+
+  <div class="next-bar">
+    <div class="next-bar-info"><p><span data-i18n="lesson02.t061">Up next - Lesson 03</span></p><strong id="l3-next-title" data-i18n="lesson02.t062">Building Your Budget — Envelope Budget</strong></div>
+    <button class="next-btn" type="button" data-next-index="2"><span data-i18n="lesson02.t063">Next Lesson →</span></button>
+  </div>
