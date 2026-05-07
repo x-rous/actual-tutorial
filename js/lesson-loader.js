@@ -11,7 +11,7 @@ export async function loadLesson(index) {
   if (!container) return null;
 
   const lessonNumber = String(index + 1).padStart(2, '0');
-  const lessonPath = `./assets/lessons/lesson-${lessonNumber}.html`;
+  const lessonPath = `./lessons/lesson-${lessonNumber}.html`;
 
   try {
     const response = await fetch(lessonPath);
@@ -29,7 +29,7 @@ export async function loadLesson(index) {
         <div class="concept">
           <span class="concept-tag amber">Error</span>
           <h2>${escapeHtml(translate('errors.lessonLoadTitle') || 'Lesson could not be loaded')}</h2>
-          <p>${escapeHtml(translate('errors.lessonLoadMessage') || 'Refresh the page or check that the lesson file exists in assets/lessons/.')}</p>
+          <p>${escapeHtml(translate('errors.lessonLoadMessage') || 'Refresh the page or check that the lesson file exists in lessons/.')}</p>
         </div>
       </div>`;
     return container.firstElementChild;

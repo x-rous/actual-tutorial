@@ -16,7 +16,7 @@ let currentLanguage = DEFAULT_LANGUAGE;
 async function loadDictionary(language) {
   if (dictionaries[language]) return dictionaries[language];
 
-  const response = await fetch(`./assets/i18n/${language}.json`);
+  const response = await fetch(`./i18n/${language}.json`);
   if (!response.ok) {
     throw new Error(`Failed to load translation file for "${language}" (${response.status})`);
   }

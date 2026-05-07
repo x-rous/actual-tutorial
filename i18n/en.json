@@ -856,6 +856,6 @@
   "lesson03.title.envelope": "Building Your Budget — Envelope Budget",
   "lesson03.title.tracking": "Building Your Budget — Tracking Budget",
   "errors.lessonLoadTitle": "Lesson could not be loaded",
-  "errors.lessonLoadMessage": "Refresh the page or check that the lesson file exists in assets/lessons/.",
+  "errors.lessonLoadMessage": "Refresh the page or check that the lesson file exists in lessons/.",
   "errors.screenshotUnavailable": "Screenshot unavailable. Open the linked Actual documentation if you need the latest interface image."
 }

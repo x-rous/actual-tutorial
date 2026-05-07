@@ -856,6 +856,6 @@
   "lesson03.title.envelope": "Construir tu presupuesto — Envelope Budget",
   "lesson03.title.tracking": "Construir tu presupuesto — Tracking Budget",
   "errors.lessonLoadTitle": "No se pudo cargar la lección",
-  "errors.lessonLoadMessage": "Actualiza la página o comprueba que el archivo de la lección exista en assets/lessons/.",
+  "errors.lessonLoadMessage": "Actualiza la página o comprueba que el archivo de la lección exista en lessons/.",
   "errors.screenshotUnavailable": "Captura de pantalla no disponible. Abre la documentación enlazada de Actual si necesitas la imagen más reciente de la interfaz."
 }

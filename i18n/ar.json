@@ -856,6 +856,6 @@
   "lesson03.title.envelope": "بناء ميزانيتك — Envelope Budget",
   "lesson03.title.tracking": "بناء ميزانيتك — Tracking Budget",
   "errors.lessonLoadTitle": "تعذّر تحميل الدرس",
-  "errors.lessonLoadMessage": "حدّث الصفحة أو تأكد من وجود ملف الدرس داخل assets/lessons/.",
+  "errors.lessonLoadMessage": "حدّث الصفحة أو تأكد من وجود ملف الدرس داخل lessons/.",
   "errors.screenshotUnavailable": "تعذّر تحميل الصورة. افتح وثائق Actual الرسمية للاطلاع على أحدث صورة للواجهة."
 }
