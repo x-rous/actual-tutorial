@@ -495,6 +495,7 @@
   "lesson06.t022": "Type each transaction. Useful for cash spending or when other options aren't available.",
   "lesson06.t023": "Account → <strong>Add New</strong>",
   "lesson06.t024": "<strong>Why is OFX better than CSV?</strong> OFX files include a unique bank-assigned ID for every transaction. Actual uses this ID to automatically detect duplicates — meaning you can safely import the same time period twice without getting duplicate entries. CSV files don't have this, so duplicate detection is less reliable.",
+  "lesson06.t024a": "<strong>Migrating from another budget app?</strong> Actual has migration guides for <a href=\"https://actualbudget.org/docs/migration/ynab4/\" target=\"_blank\" rel=\"noopener noreferrer\">YNAB4</a> and <a href=\"https://actualbudget.org/docs/migration/nynab/\" target=\"_blank\" rel=\"noopener noreferrer\">nYNAB</a>. Community migration tools are also listed for <a href=\"https://github.com/NikxDa/actual-moneymoney\" target=\"_blank\" rel=\"noopener noreferrer\">MoneyMoney</a> and <a href=\"https://github.com/slimslickner/quicken-mac-to-actual-budget\" target=\"_blank\" rel=\"noopener noreferrer\">Quicken on Mac</a>.",
   "lesson06.t025": "Optional",
   "lesson06.t026": "Connecting Your Bank: Bank Sync",
   "lesson06.t027": "Bank Sync is optional. If your bank and regional provider are supported, you can connect the account and click <strong>Bank Sync</strong> to fetch new transactions. It does not remove the need to review: you still categorize transactions, check Rules, and reconcile accounts.",

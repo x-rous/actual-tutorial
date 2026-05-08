@@ -495,6 +495,7 @@
   "lesson06.t022": "اكتب كل معاملة بنفسك. مفيد لمصاريف الكاش أو عند عدم توفر الخيارات الأخرى.",
   "lesson06.t023": "من Account اختر <strong>Add New</strong>",
   "lesson06.t024": "<strong>لماذا OFX أفضل من CSV؟</strong> تحتوي ملفات OFX على معرف فريد من البنك لكل معاملة. يستخدم Actual هذا المعرف لاكتشاف التكرارات تلقائياً، لذلك يمكنك استيراد نفس الفترة مرتين بأمان. أما ملفات CSV فتفتقد هذا المعرف، فيكون اكتشاف التكرار أقل دقة.",
+  "lesson06.t024a": "<strong>هل تنتقل من تطبيق ميزانية آخر؟</strong> لدى Actual أدلة ترحيل من <a class=\"keep-ltr\" dir=\"ltr\" href=\"https://actualbudget.org/docs/migration/ynab4/\" target=\"_blank\" rel=\"noopener noreferrer\">YNAB4</a> و <a class=\"keep-ltr\" dir=\"ltr\" href=\"https://actualbudget.org/docs/migration/nynab/\" target=\"_blank\" rel=\"noopener noreferrer\">nYNAB</a>. كما توجد أدوات ترحيل مجتمعية لـ <a class=\"keep-ltr\" dir=\"ltr\" href=\"https://github.com/NikxDa/actual-moneymoney\" target=\"_blank\" rel=\"noopener noreferrer\">MoneyMoney</a> و <a class=\"keep-ltr\" dir=\"ltr\" href=\"https://github.com/slimslickner/quicken-mac-to-actual-budget\" target=\"_blank\" rel=\"noopener noreferrer\">Quicken on Mac</a>.",
   "lesson06.t025": "اختياري",
   "lesson06.t026": "Connecting Your Bank: مزامنة البنك",
   "lesson06.t027": "Bank Sync اختياري. إذا كان بنكك ومزود منطقتك مدعومين، يمكنك ربط الحساب ثم الضغط على <strong>Bank Sync</strong> لجلب معاملات جديدة. هذا لا يلغي الحاجة للمراجعة: ما زلت تحتاج تصنيف المعاملات، مراجعة Rules، ومطابقة الحسابات.",
